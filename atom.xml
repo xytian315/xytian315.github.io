@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-07-20T06:52:34.000Z</updated>
+  <updated>2016-07-20T06:56:20.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://xytian315.github.io/2016/07/19/leetcode-2/"/>
     <id>http://xytian315.github.io/2016/07/19/leetcode-2/</id>
     <published>2016-07-20T06:34:59.000Z</published>
-    <updated>2016-07-20T06:52:34.000Z</updated>
+    <updated>2016-07-20T06:56:20.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;2-Add-Two-Numbers&quot;&gt;&lt;a href=&quot;#2-Add-Two-Numbers&quot; class=&quot;headerlink&quot; title=&quot;2. Add Two Numbers&quot;&gt;&lt;/a&gt;2. Add Two Numbers&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/add-two-numbers/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://leetcode.com/problems/add-two-numbers/&lt;/a&gt;&lt;br&gt;You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.&lt;br&gt;Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)&lt;br&gt;Output: 7 -&amp;gt; 0 -&amp;gt; 8&lt;/p&gt;
 &lt;h2 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;
