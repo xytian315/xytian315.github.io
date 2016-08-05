@@ -120,6 +120,68 @@
       <ul class="post-list">
   
     <li class="post-list-item">
+        <article id="post-leetcode-3" 
+  class="article article-type-post" itemprop="blogPost">
+     
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/08/04/leetcode-3/">leetcode 3</a>
+    </h3>
+  
+
+
+
+    <div class="post-meta">
+        <time datetime="2016-08-04T23:44:34.000Z" itemprop="datePublished" class="post-time">
+  2016-08-04
+</time>
+
+        
+
+ 
+    </div>
+    
+    <div class="post-content" id="post-content" itemprop="postContent" >
+    
+        <h2 id="3-Longest-Substring-Without-Repeating-Characters"><a href="#3-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="3. Longest Substring Without Repeating Characters"></a>3. Longest Substring Without Repeating Characters</h2><p>Given a string, find the length of the longest substring without repeating characters.</p>
+<p>Examples:</p>
+<p>Given “abcabcbb”, the answer is “abc”, which the length is 3.</p>
+<p>Given “bbbbb”, the answer is “b”, with the length of 1.</p>
+<p>Given “pwwkew”, the answer is “wke”, with the length of 3. Note that the answer must be a substring, “pwke” is a subsequence and not a substring.</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p><code>` java
+public class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        if (s.isEmpty()) return 0;
+        int result = 0;
+        int start = 0;
+        Map&lt;Character, Integer&gt; map = new HashMap&lt;Character, Integer&gt;();
+        for(int i = 0; i &lt; s.length(); i++) {
+            if(map.containsKey(s.charAt(i))) {
+                if(result &lt; i - start ) {
+                    result = i - start;
+                }
+                if(map.get(s.charAt(i))+1 &gt; start){
+                    start = map.get(s.charAt(i)) + 1;
+                }
+            }
+            map.put(s.charAt(i), i);
+        }
+        if(result &lt; s.length()-start) {
+            result = s.length()-start;
+        }
+        return result;
+    }
+}</code> </p>
+
+    
+    </div>
+    
+</article>
+    </li>
+  
+    <li class="post-list-item">
         <article id="post-how-to-implement-a-singly-LinkedList" 
   class="article article-type-post" itemprop="blogPost">
      
