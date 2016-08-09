@@ -3,23 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>leetcode 2 | Kristy&#39;s blog | 冰冻三尺非一日之寒</title>
+  <title>leetcode 6 | Kristy&#39;s blog | 冰冻三尺非一日之寒</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="linked list,leetcode,Medium">
-  <meta name="description" content="2. Add Two Numbershttps://leetcode.com/problems/add-two-numbers/You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes con">
+  <meta name="keywords" content="leetcode">
+  <meta name="description" content="6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+P   A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 2">
-<meta property="og:url" content="http://xytian315.github.io/2016/07/19/leetcode-2/index.html">
+<meta property="og:title" content="leetcode 6">
+<meta property="og:url" content="http://xytian315.github.io/2016/08/08/leetcode-6/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="2. Add Two Numbershttps://leetcode.com/problems/add-two-numbers/You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes con">
-<meta property="og:updated_time" content="2016-08-04T23:28:41.000Z">
+<meta property="og:description" content="6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+P   A">
+<meta property="og:updated_time" content="2016-08-09T06:19:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 2">
-<meta name="twitter:description" content="2. Add Two Numbershttps://leetcode.com/problems/add-two-numbers/You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes con">
+<meta name="twitter:title" content="leetcode 6">
+<meta name="twitter:description" content="6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+P   A">
   
     <link rel="alternative" href="/atom.xml" title="Kristy&#39;s blog" type="application/atom+xml">
   
@@ -87,7 +90,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">leetcode 2</div>
+        <div class="flex-col header-title ellipsis">leetcode 6</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -108,11 +111,11 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">leetcode 2</h1>
+    <h1 class="author">leetcode 6</h1>
     <h5 class="subtitle">
         
-            <time datetime="2016-07-20T06:34:59.000Z" itemprop="datePublished" class="page-time">
-  2016-07-19
+            <time datetime="2016-08-09T04:47:46.000Z" itemprop="datePublished" class="page-time">
+  2016-08-08
 </time>
 
 
@@ -122,11 +125,11 @@
 </header>
 
     <div class="container body-wrap">
-      <article id="post-leetcode-2" 
+      <article id="post-leetcode-6" 
   class="article article-type-post" itemprop="blogPost">
     <div class="post-meat flex-row">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Medium/">Medium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linked-list/">linked list</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
 
     </div>
     <div class="post-body">
@@ -173,7 +176,7 @@
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-Add-Two-Numbers"><span class="post-toc-text">2. Add Two Numbers</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Solution"><span class="post-toc-text">Solution</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Note"><span class="post-toc-text">Note</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-ZigZag-Conversion"><span class="post-toc-text">6. ZigZag Conversion</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-text">Solution</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Notes"><span class="post-toc-text">Notes:</span></a></li></ol>
             </nav>
             
         </aside>
@@ -181,13 +184,16 @@
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="2-Add-Two-Numbers"><a href="#2-Add-Two-Numbers" class="headerlink" title="2. Add Two Numbers"></a>2. Add Two Numbers</h2><p><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="external">https://leetcode.com/problems/add-two-numbers/</a><br>You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.<br>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>Output: 7 -&gt; 0 -&gt; 8</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"> <span class="comment">/**</span><br><span class="line"> Wrote the following solution without seeing other people's solutions</span><br><span class="line"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">		ListNode head = <span class="keyword">null</span>;</span><br><span class="line">		ListNode tail = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span>(l1 != <span class="keyword">null</span>)&#123;</span><br><span class="line">				count += l1.val;</span><br><span class="line">				l1 = l1.next;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">				count += l2.val;</span><br><span class="line">				l2 = l2.next;</span><br><span class="line">			&#125;</span><br><span class="line">			ListNode ln = <span class="keyword">new</span> ListNode(count%<span class="number">10</span>);</span><br><span class="line">		    <span class="keyword">if</span>(head == <span class="keyword">null</span>) &#123;</span><br><span class="line">				head =  ln;</span><br><span class="line">				tail = ln;</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				tail.next = ln;</span><br><span class="line">				tail=ln;</span><br><span class="line">			&#125;</span><br><span class="line">			count = count/<span class="number">10</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	    <span class="keyword">if</span>(count&gt;<span class="number">0</span>) &#123;</span><br><span class="line">			tail.next= <span class="keyword">new</span> ListNode(count);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> head;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2>
+            <h3 id="6-ZigZag-Conversion"><a href="#6-ZigZag-Conversion" class="headerlink" title="6. ZigZag Conversion"></a>6. ZigZag Conversion</h3><p>The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>
+<p>P   A   H   N<br>A P L S I I G<br>Y   I   R<br>And then read line by line: “PAHNAPLSIIGYIR”<br>Write the code that will take a string and make this conversion given a number of rows:</p>
+<p>string convert(string text, int nRows);<br>convert(“PAYPALISHIRING”, 3) should return “PAHNAPLSIIGYIR”.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.isEmpty() || numRows &lt;= <span class="number">1</span> || numRows &gt;= s.length()) </span><br><span class="line">            <span class="keyword">return</span> s;</span><br><span class="line">        <span class="keyword">int</span> length = s.length();</span><br><span class="line">        <span class="keyword">int</span> step = <span class="number">2</span>*(numRows-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> interval = step-<span class="number">2</span>*i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &lt; length; j+=step)&#123;</span><br><span class="line">                sb.append(s.charAt(j));</span><br><span class="line">                count++;</span><br><span class="line">                <span class="keyword">if</span>(interval &gt;<span class="number">0</span> &amp;&amp; interval != step &amp;&amp; count &lt; length &amp;&amp; (j+interval)&lt;length )&#123;</span><br><span class="line">                    sb.append(s.charAt(j+interval));</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h3><p>I have no idea how to do this question at first, stucking for a while<br>here is the solution <a href="https://kevinclcn.gitbooks.io/leetcodejava/content/006_zigzag_conversion.html" target="_blank" rel="external">https://kevinclcn.gitbooks.io/leetcodejava/content/006_zigzag_conversion.html</a></p>
+
             <blockquote>
                 <p>
                 本文地址：
-                <a href="http://xytian315.github.io/2016/07/19/leetcode-2/" target="_blank" rel="external">http://xytian315.github.io/2016/07/19/leetcode-2/</a>
+                <a href="http://xytian315.github.io/2016/08/08/leetcode-6/" target="_blank" rel="external">http://xytian315.github.io/2016/08/08/leetcode-6/</a>
                 </p>
                 <footer><cite><a href="http://xytian315.github.io">@Kristy's blog</a></cite></footer>
             </blockquote>
@@ -195,19 +201,12 @@
             
 <nav class="post-nav">
   
-    <div class="waves-block waves-effect prev fl">
-      <a href="/2016/08/02/how-to-implement-a-singly-LinkedList/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">how to implement a singly LinkedList</h4>
-      </a>
-    </div>
-  
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/2016/07/19/leetcode-1/" id="post-next" class="post-nav-link">
+      <a href="/2016/08/05/leetcode-5/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">leetcode 1</h4>
+        <h4 class="title">leetcode 5</h4>
       </a>
     </div>
   
@@ -218,7 +217,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="leetcode-2" data-title="leetcode 2" data-url="http://xytian315.github.io/2016/07/19/leetcode-2/index.html"></div>
+	<div class="ds-thread" data-thread-key="leetcode-6" data-title="leetcode 6" data-url="http://xytian315.github.io/2016/08/08/leetcode-6/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -249,10 +248,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "leetcode 2",
+    title: "leetcode 6",
     pic: "/img/me.jpeg",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://xytian315.github.io/2016/07/19/leetcode-2/index.html"
+    url: "http://xytian315.github.io/2016/08/08/leetcode-6/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
