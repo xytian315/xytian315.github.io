@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>leetcode 66 Plus one | Kristy&#39;s blog | 冰冻三尺非一日之寒</title>
+  <title>leetcode 169 Majority element | Kristy&#39;s blog | 冰冻三尺非一日之寒</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="leetcode,array">
-  <meta name="description" content="66. Plus OneGiven a non-negative number represented as an array of digits, plus one to the number.The digits are stored such that the most significant digit is at the head of the list.
-Solution1234567">
+  <meta name="keywords" content="leetcode,array,easy">
+  <meta name="description" content="169. Majority ElementGiven an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+You may assume that the array is non-empty and the m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 66 Plus one">
-<meta property="og:url" content="http://xytian315.github.io/2016/08/31/leetcode-66-Plus-one/index.html">
+<meta property="og:title" content="leetcode 169 Majority element">
+<meta property="og:url" content="http://xytian315.github.io/2016/08/31/leetcode-169-Majority-element/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="66. Plus OneGiven a non-negative number represented as an array of digits, plus one to the number.The digits are stored such that the most significant digit is at the head of the list.
-Solution1234567">
-<meta property="og:updated_time" content="2016-09-01T06:12:38.000Z">
+<meta property="og:description" content="169. Majority ElementGiven an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+You may assume that the array is non-empty and the m">
+<meta property="og:updated_time" content="2016-09-01T06:41:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 66 Plus one">
-<meta name="twitter:description" content="66. Plus OneGiven a non-negative number represented as an array of digits, plus one to the number.The digits are stored such that the most significant digit is at the head of the list.
-Solution1234567">
+<meta name="twitter:title" content="leetcode 169 Majority element">
+<meta name="twitter:description" content="169. Majority ElementGiven an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+You may assume that the array is non-empty and the m">
   
     <link rel="alternative" href="/atom.xml" title="Kristy&#39;s blog" type="application/atom+xml">
   
@@ -90,7 +90,7 @@ Solution1234567">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">leetcode 66 Plus one</div>
+        <div class="flex-col header-title ellipsis">leetcode 169 Majority element</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -111,10 +111,10 @@ Solution1234567">
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">leetcode 66 Plus one</h1>
+    <h1 class="author">leetcode 169 Majority element</h1>
     <h5 class="subtitle">
         
-            <time datetime="2016-09-01T05:43:16.000Z" itemprop="datePublished" class="page-time">
+            <time datetime="2016-09-01T06:12:06.000Z" itemprop="datePublished" class="page-time">
   2016-08-31
 </time>
 
@@ -125,11 +125,11 @@ Solution1234567">
 </header>
 
     <div class="container body-wrap">
-      <article id="post-leetcode-66-Plus-one" 
+      <article id="post-leetcode-169-Majority-element" 
   class="article article-type-post" itemprop="blogPost">
     <div class="post-meat flex-row">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/easy/">easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
 
     </div>
     <div class="post-body">
@@ -176,7 +176,7 @@ Solution1234567">
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#66-Plus-One"><span class="post-toc-text">66. Plus One</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-text">Solution</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#169-Majority-Element"><span class="post-toc-text">169. Majority Element</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-text">Solution</span></a></li></ol>
             </nav>
             
         </aside>
@@ -184,12 +184,15 @@ Solution1234567">
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="66-Plus-One"><a href="#66-Plus-One" class="headerlink" title="66. Plus One"></a>66. Plus One</h3><p>Given a non-negative number represented as an array of digits, plus one to the number.<br>The digits are stored such that the most significant digit is at the head of the list.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** my solution */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] plusOne(<span class="keyword">int</span>[] digits) &#123;</span><br><span class="line">        <span class="keyword">int</span> i = digits.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        digits[i] = digits[i]+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            digits[i] = digits[i]+carry;</span><br><span class="line">            <span class="keyword">if</span>(digits[i]&gt;=<span class="number">10</span>)&#123;</span><br><span class="line">                digits[i] = digits[i]-<span class="number">10</span>;</span><br><span class="line">                carry=<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                carry=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(carry == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> digits;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[digits.length+<span class="number">1</span>];</span><br><span class="line">            result[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> j=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(index&lt;digits.length)&#123;</span><br><span class="line">                result[j] = digits[index];</span><br><span class="line">                j++;</span><br><span class="line">                index++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h3 id="169-Majority-Element"><a href="#169-Majority-Element" class="headerlink" title="169. Majority Element"></a>169. Majority Element</h3><p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/** my solution **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">return</span> nums[nums.length/<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Notes: sort will be o(nlog) time we can also use hashmap to record<br>there are also another genius solution o(n) time o(1) space so called Moores’s Voting algorithm<br><a href="https://discuss.leetcode.com/topic/8692/o-n-time-o-1-space-fastest-solution" target="_blank" rel="external">https://discuss.leetcode.com/topic/8692/o-n-time-o-1-space-fastest-solution</a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] num)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> major=num[<span class="number">0</span>], count = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;num.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(count==<span class="number">0</span>)&#123;</span><br><span class="line">                count++;</span><br><span class="line">                major=num[i];</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(major==num[i])&#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;<span class="keyword">else</span> count--;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> major;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
             <blockquote>
                 <p>
                 本文地址：
-                <a href="http://xytian315.github.io/2016/08/31/leetcode-66-Plus-one/" target="_blank" rel="external">http://xytian315.github.io/2016/08/31/leetcode-66-Plus-one/</a>
+                <a href="http://xytian315.github.io/2016/08/31/leetcode-169-Majority-element/" target="_blank" rel="external">http://xytian315.github.io/2016/08/31/leetcode-169-Majority-element/</a>
                 </p>
                 <footer><cite><a href="http://xytian315.github.io">@Kristy's blog</a></cite></footer>
             </blockquote>
@@ -197,19 +200,12 @@ Solution1234567">
             
 <nav class="post-nav">
   
-    <div class="waves-block waves-effect prev fl">
-      <a href="/2016/08/31/leetcode-169-Majority-element/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">leetcode 169 Majority element</h4>
-      </a>
-    </div>
-  
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/2016/08/31/leetcode-88-Merge-sorted-array/" id="post-next" class="post-nav-link">
+      <a href="/2016/08/31/leetcode-66-Plus-one/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">leetcode 88 Merge sorted array</h4>
+        <h4 class="title">leetcode 66 Plus one</h4>
       </a>
     </div>
   
@@ -220,7 +216,7 @@ Solution1234567">
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="leetcode-66-Plus-one" data-title="leetcode 66 Plus one" data-url="http://xytian315.github.io/2016/08/31/leetcode-66-Plus-one/index.html"></div>
+	<div class="ds-thread" data-thread-key="leetcode-169-Majority-element" data-title="leetcode 169 Majority element" data-url="http://xytian315.github.io/2016/08/31/leetcode-169-Majority-element/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -251,10 +247,10 @@ Solution1234567">
 
 <script>
 var BLOG_SHARE = {
-    title: "leetcode 66 Plus one",
+    title: "leetcode 169 Majority element",
     pic: "/img/me.jpeg",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://xytian315.github.io/2016/08/31/leetcode-66-Plus-one/index.html"
+    url: "http://xytian315.github.io/2016/08/31/leetcode-169-Majority-element/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
