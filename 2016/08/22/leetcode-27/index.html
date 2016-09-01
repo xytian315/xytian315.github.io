@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>leetcode 6 | Kristy&#39;s blog | 冰冻三尺非一日之寒</title>
+  <title>leetcode-27 | Kristy&#39;s blog | 冰冻三尺非一日之寒</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="leetcode">
-  <meta name="description" content="6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
-P   A">
+  <meta name="keywords" content="leetcode,array">
+  <meta name="description" content="27. Remove ElementGiven an array and a value, remove all instances of that value in place and return the new length.
+Do not allocate extra space for another array, you must do this in place with const">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 6">
-<meta property="og:url" content="http://xytian315.github.io/2016/08/08/leetcode-6/index.html">
+<meta property="og:title" content="leetcode-27">
+<meta property="og:url" content="http://xytian315.github.io/2016/08/22/leetcode-27/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
-P   A">
-<meta property="og:updated_time" content="2016-08-09T06:25:06.000Z">
+<meta property="og:description" content="27. Remove ElementGiven an array and a value, remove all instances of that value in place and return the new length.
+Do not allocate extra space for another array, you must do this in place with const">
+<meta property="og:updated_time" content="2016-09-01T03:07:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 6">
-<meta name="twitter:description" content="6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
-P   A">
+<meta name="twitter:title" content="leetcode-27">
+<meta name="twitter:description" content="27. Remove ElementGiven an array and a value, remove all instances of that value in place and return the new length.
+Do not allocate extra space for another array, you must do this in place with const">
   
     <link rel="alternative" href="/atom.xml" title="Kristy&#39;s blog" type="application/atom+xml">
   
@@ -90,7 +90,7 @@ P   A">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">leetcode 6</div>
+        <div class="flex-col header-title ellipsis">leetcode-27</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -111,11 +111,11 @@ P   A">
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">leetcode 6</h1>
+    <h1 class="author">leetcode-27</h1>
     <h5 class="subtitle">
         
-            <time datetime="2016-08-09T04:47:46.000Z" itemprop="datePublished" class="page-time">
-  2016-08-08
+            <time datetime="2016-08-22T22:41:40.000Z" itemprop="datePublished" class="page-time">
+  2016-08-22
 </time>
 
 
@@ -125,11 +125,11 @@ P   A">
 </header>
 
     <div class="container body-wrap">
-      <article id="post-leetcode-6" 
+      <article id="post-leetcode-27" 
   class="article article-type-post" itemprop="blogPost">
     <div class="post-meat flex-row">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
 
     </div>
     <div class="post-body">
@@ -176,7 +176,7 @@ P   A">
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-ZigZag-Conversion"><span class="post-toc-text">6. ZigZag Conversion</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-text">Solution</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Notes"><span class="post-toc-text">Notes:</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#27-Remove-Element"><span class="post-toc-text">27. Remove Element</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-text">Solution</span></a></li></ol>
             </nav>
             
         </aside>
@@ -184,16 +184,16 @@ P   A">
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="6-ZigZag-Conversion"><a href="#6-ZigZag-Conversion" class="headerlink" title="6. ZigZag Conversion"></a>6. ZigZag Conversion</h3><p>The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>
-<p>P   A   H   N<br>A P L S I I G<br>Y   I   R<br>And then read line by line: “PAHNAPLSIIGYIR”<br>Write the code that will take a string and make this conversion given a number of rows:</p>
-<p>string convert(string text, int nRows);<br>convert(“PAYPALISHIRING”, 3) should return “PAHNAPLSIIGYIR”.<br><a href="https://leetcode.com/problems/zigzag-conversion/" target="_blank" rel="external">https://leetcode.com/problems/zigzag-conversion/</a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.isEmpty() || numRows &lt;= <span class="number">1</span> || numRows &gt;= s.length()) </span><br><span class="line">            <span class="keyword">return</span> s;</span><br><span class="line">        <span class="keyword">int</span> length = s.length();</span><br><span class="line">        <span class="keyword">int</span> step = <span class="number">2</span>*(numRows-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> interval = step-<span class="number">2</span>*i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &lt; length; j+=step)&#123;</span><br><span class="line">                sb.append(s.charAt(j));</span><br><span class="line">                count++;</span><br><span class="line">                <span class="keyword">if</span>(interval &gt;<span class="number">0</span> &amp;&amp; interval != step &amp;&amp; count &lt; length &amp;&amp; (j+interval)&lt;length )&#123;</span><br><span class="line">                    sb.append(s.charAt(j+interval));</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h3><p>I have no idea how to do this question at first, stucking for a while<br>here is the solution <a href="https://kevinclcn.gitbooks.io/leetcodejava/content/006_zigzag_conversion.html" target="_blank" rel="external">https://kevinclcn.gitbooks.io/leetcodejava/content/006_zigzag_conversion.html</a></p>
-
+            <h3 id="27-Remove-Element"><a href="#27-Remove-Element" class="headerlink" title="27. Remove Element"></a>27. Remove Element</h3><p>Given an array and a value, remove all instances of that value in place and return the new length.</p>
+<p>Do not allocate extra space for another array, you must do this in place with constant memory.</p>
+<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
+<p>Example:<br>Given input array nums = [3,2,2,3], val = 3</p>
+<p>Your function should return length = 2, with the first two elements of nums being 2.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** my solution **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> end = nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (start&lt; end) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[start] == val) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[end] != val) &#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = nums[start];</span><br><span class="line">                    nums[start] = nums[end];</span><br><span class="line">                    nums[end] = temp;</span><br><span class="line">                    start++;</span><br><span class="line">                    end--;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    end--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                start++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (nums[start]!= val)</span><br><span class="line">            <span class="keyword">return</span> start+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> start;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
             <blockquote>
                 <p>
                 本文地址：
-                <a href="http://xytian315.github.io/2016/08/08/leetcode-6/" target="_blank" rel="external">http://xytian315.github.io/2016/08/08/leetcode-6/</a>
+                <a href="http://xytian315.github.io/2016/08/22/leetcode-27/" target="_blank" rel="external">http://xytian315.github.io/2016/08/22/leetcode-27/</a>
                 </p>
                 <footer><cite><a href="http://xytian315.github.io">@Kristy's blog</a></cite></footer>
             </blockquote>
@@ -201,19 +201,12 @@ P   A">
             
 <nav class="post-nav">
   
-    <div class="waves-block waves-effect prev fl">
-      <a href="/2016/08/09/leetcode-7-Reverse-Integer/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">leetcode 7 Reverse Integer</h4>
-      </a>
-    </div>
-  
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/2016/08/05/leetcode-5/" id="post-next" class="post-nav-link">
+      <a href="/2016/08/09/leetcode-7-Reverse-Integer/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">leetcode 5</h4>
+        <h4 class="title">leetcode 7 Reverse Integer</h4>
       </a>
     </div>
   
@@ -224,7 +217,7 @@ P   A">
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="leetcode-6" data-title="leetcode 6" data-url="http://xytian315.github.io/2016/08/08/leetcode-6/index.html"></div>
+	<div class="ds-thread" data-thread-key="leetcode-27" data-title="leetcode-27" data-url="http://xytian315.github.io/2016/08/22/leetcode-27/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -255,10 +248,10 @@ P   A">
 
 <script>
 var BLOG_SHARE = {
-    title: "leetcode 6",
+    title: "leetcode-27",
     pic: "/img/me.jpeg",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://xytian315.github.io/2016/08/08/leetcode-6/index.html"
+    url: "http://xytian315.github.io/2016/08/22/leetcode-27/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
