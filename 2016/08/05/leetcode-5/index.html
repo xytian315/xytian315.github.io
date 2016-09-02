@@ -66,7 +66,7 @@
       <div id="brand">
         
         <a onClick="openUserCard()">
-          <img id="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg"/>
+          <img id="avatar" src="https://avatars2.githubusercontent.com/u/4520812?v=3&s=460"/>
           <div id="homelink">Kristy's blog</div>
         </a>
       </div>
@@ -112,7 +112,7 @@
           
             <li>
           
-            <a href="https://github.com/stiekel/hexo-theme-random">Github</a>
+            <a href="https://github.com/xytian315">Github</a>
             
           </li>
         
@@ -131,9 +131,9 @@
   <article id="post">
     <h1>leetcode 5</h1>
     <p class="page-title-sub">
-      <span id = "post-title-date">Created at 2016-08-05</span>
+      <span id = "post-title-date">撰写于 2016-08-05</span>
       
-        <span id = "post-title-updated">Updated at 2016-08-08</span>
+        <span id = "post-title-updated">修改于 2016-08-08</span>
       
       
       
@@ -143,10 +143,10 @@
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * I only did the brute force solution O(n3)</span><br><span class="line"> */</span></span><br><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.isEmpty() || s.length() == <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">        String result = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i+<span class="number">1</span>; j&lt; s.length(); j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(isPalindrome(s, i, j) &amp;&amp; result.length() &lt; j-i+<span class="number">1</span>)&#123;</span><br><span class="line">                     result = s.substring(i,j+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> </span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boolean <span class="title">isPalindrome</span><span class="params">(String s, <span class="keyword">int</span> i , <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i)!=s.charAt(j))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            i++;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </article>
   <div class="random-toc-area">
-  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
-  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
   <div class="random-toc">
-    <h2>Table of Content</h2>
+    <h2>目录</h2>
     <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Longest-Palindromic-Substring"><span class="toc-text">5. Longest Palindromic Substring</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li></ol>
   </div>
 </div>
@@ -154,13 +154,13 @@
   
 <nav id="pagination">
   
-    <a href="/2016/08/08/leetcode-6/" class="prev">&larr; Prev post leetcode 6</a>
+    <a href="/2016/08/08/leetcode-6/" class="prev">&larr; 上一篇 leetcode 6</a>
   
 
   
 
   
-    <a href="/2016/08/04/leetcode-3/" class="next">Next post leetcode 3 &rarr;</a>
+    <a href="/2016/08/04/leetcode-3/" class="next">下一篇 leetcode 3 &rarr;</a>
   
 </nav>
 
@@ -191,7 +191,7 @@
 
 <div id="user-card">
   <div class="center-field">
-    <img class="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg">
+    <img class="avatar" src="https://avatars2.githubusercontent.com/u/4520812?v=3&s=460">
     <p id="description"></p>
     <ul class="social-icon">
   
@@ -200,6 +200,14 @@
       <a href="https://github.com/xytian315">
         
           <i class="icon iconfont github">&#xe606;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="null">
+        
+          Facebook
         
       </a>
     </li>
