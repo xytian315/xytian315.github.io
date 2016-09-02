@@ -133,14 +133,14 @@ Given “abcabcbb”, the answer is “abc”, which the le...">
   <article id="post">
     <h1>leetcode 3</h1>
     <p class="page-title-sub">
-      <span id = "post-title-date">撰写于 2016-08-04</span>
+      <span id = "post-title-date">Created at 2016-08-04</span>
       
-        <span id = "post-title-updated">修改于 2016-08-04</span>
+        <span id = "post-title-updated">Updated at 2016-08-04</span>
       
       
       
       <span id = "post-title-tags">
-      标签
+      Tag
       
       
         
@@ -165,10 +165,10 @@ Given “abcabcbb”, the answer is “abc”, which the le...">
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">my solution without looking at the answers</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s.isEmpty()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(s.charAt(i))) &#123;</span><br><span class="line">                <span class="keyword">if</span>(result &lt; i - start ) &#123;</span><br><span class="line">                    result = i - start;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(map.get(s.charAt(i))+<span class="number">1</span> &gt; start)&#123;</span><br><span class="line">                    start = map.get(s.charAt(i)) + <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(s.charAt(i), i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(result &lt; s.length()-start) &#123;</span><br><span class="line">            result = s.length()-start;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </article>
   <div class="random-toc-area">
-  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
-  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
   <div class="random-toc">
-    <h2>目录</h2>
+    <h2>Table of Content</h2>
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Longest-Substring-Without-Repeating-Characters"><span class="toc-text">3. Longest Substring Without Repeating Characters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li></ol>
   </div>
 </div>
@@ -176,13 +176,13 @@ Given “abcabcbb”, the answer is “abc”, which the le...">
   
 <nav id="pagination">
   
-    <a href="/2016/08/05/leetcode-5/" class="prev">&larr; 上一篇 leetcode 5</a>
+    <a href="/2016/08/05/leetcode-5/" class="prev">&larr; Prev post leetcode 5</a>
   
 
   
 
   
-    <a href="/2016/08/02/how-to-implement-a-singly-LinkedList/" class="next">下一篇 how to implement a singly LinkedList &rarr;</a>
+    <a href="/2016/08/02/how-to-implement-a-singly-LinkedList/" class="next">Next post how to implement a singly LinkedList &rarr;</a>
   
 </nav>
 
@@ -222,14 +222,6 @@ Given “abcabcbb”, the answer is “abc”, which the le...">
       <a href="https://github.com/xytian315">
         
           <i class="icon iconfont github">&#xe606;</i>
-        
-      </a>
-    </li>
-  
-    <li>
-      <a href="null">
-        
-          Facebook
         
       </a>
     </li>
