@@ -1,8 +1,6 @@
 
 
 
-  
-
 
 
 
@@ -18,9 +16,12 @@
   
   
   
-    <meta name="description" content="">
+    <meta name="description" content="189. Rotate ArrayRotate an array of n elements to the right by k steps.
+For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
+Solutionjava
+public class Solutio...">
   
-  <title>Tag: map [ Kristy's blog ]</title>
+  <title>leetcode 189 Rotate Array [ Kristy's blog ]</title>
   
     <link rel="alternate" href="/atom.xml" title="Kristy's blog">
   
@@ -41,6 +42,24 @@
 <body>
 <div class="side-navigate hide-area">
   
+    <div class="item prev">
+      <a href="/2016/10/03/leetcode-26/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        leetcode 26 Remove Duplicates from Sorted Array
+      </div>
+    </div>
+  
+  
+    <div class="item next">
+      <a href="/2016/09/08/leetcode-11/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        leetcode 11 Container With Most Water
+      </div>
+    </div>
   
 </div>
 <div id="outer-container" class="hide-area">
@@ -73,7 +92,7 @@
           </li>
         
           
-            <li class="active">
+            <li>
           
             <a href="/tags">Tags</a>
             
@@ -112,214 +131,84 @@
     <div id="content-inner">
       
       
-  <div id="tag">
-    <h1>map</h1>
-    
+  <article id="post">
+    <h1>leetcode 189 Rotate Array</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">Created at 2016-09-12</span>
+      
+        <span id = "post-title-updated">Updated at 2016-09-14</span>
+      
+      
+      
+      <span id = "post-title-tags">
+      Tag
       
       
         
+        
+        <a href="/tags/leetcode/">leetcode</a>
       
         
-          
+          /
         
-      
         
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2016/07/19/leetcode-1/">
-  
-    leetcode 1
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">7-19</span>
-    
-    
-    <span id = "post-title-tags">
-    Tag
-    
-    
-      
-      
-      <a href="/tags/leetcode/">leetcode</a>
-    
-      
-        /
-      
-      
-      <a href="/tags/map/">map</a>
-    
-      
-        /
-      
-      
-      <a href="/tags/easy/">easy</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
-      
-      
-      
-    
-      
+        <a href="/tags/easy/">easy</a>
       
         
+          /
+        
+        
+        <a href="/tags/array/">array</a>
       
+      </span>
       
+    </p>
     
-      
-      
-        
-      
-        
-      
-        
-      
-      
-    
-      
-      
-        
-      
-        
-      
-        
-      
-      
-    
-      
-      
-        
-      
-        
-      
-        
-      
-      
-    
-      
-      
-        
-      
-        
-      
-      
-    
-      
-      
-        
-      
-        
-      
-        
-      
-      
-    
-      
-      
-        
-      
-        
-          
-        
-      
-        
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2016/08/04/leetcode-3/">
-  
-    leetcode 3 Longest Substring Without Repeating Characters
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">8-4</span>
-    
-    
-    <span id = "post-title-tags">
-    Tag
-    
-    
-      
-      
-      <a href="/tags/leetcode/">leetcode</a>
-    
-      
-        /
-      
-      
-      <a href="/tags/map/">map</a>
-    
-      
-        /
-      
-      
-      <a href="/tags/medium/">medium</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
-      
-      
-        
-      
-      
-    
-      
-      
-        
-      
-        
-      
-      
-    
-      
-      
-        
-      
-        
-      
-      
-    
-      
-      
-        
-      
-      
-    
-      
-      
-        
-      
-        
-      
-      
-    
+    <h3 id="189-Rotate-Array"><a href="#189-Rotate-Array" class="headerlink" title="189. Rotate Array"></a>189. Rotate Array</h3><p>Rotate an array of n elements to the right by k steps.</p>
+<p>For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p><code>java
+public class Solution {
+    public void rotate(int[] nums, int k) {
+        if(k==0) return;
+        k=k%(nums.length);
+        for(int i =1; i&lt;=k; i++) {
+            int temp = nums[nums.length-1];
+            for(int j=nums.length-1; j&gt;0; j--) {
+                nums[j] = nums[j-1];
+            }
+            nums[0] = temp;
+        }
+    }
+}</code>*</p>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Remeber the </p>
+
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <div class="random-toc">
+    <h2>Table of Content</h2>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#189-Rotate-Array"><span class="toc-text">189. Rotate Array</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Notes"><span class="toc-text">Notes</span></a></li></ol>
   </div>
+</div>
 
   
+<nav id="pagination">
+  
+    <a href="/2016/10/03/leetcode-26/" class="prev">&larr; Prev post leetcode 26 Remove Duplicates from Sorted Array</a>
+  
+
+  
+
+  
+    <a href="/2016/09/08/leetcode-11/" class="next">Next post leetcode 11 Container With Most Water &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
 
       
       
@@ -423,6 +312,8 @@ var unsplashConfig = {"gravity":"north"};
 var turnoffBackgroundImage = false;
 
 
+
+  turnoffBackgroundImage = true;
 
 
 var backgroundColor = "D7CCC8";
