@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-10-03T23:15:07.000Z</updated>
+  <updated>2016-12-02T06:52:08.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -16,18 +16,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 448 Find All Numbers Disappeared in an Array</title>
+    <link href="http://xytian315.github.io/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/"/>
+    <id>http://xytian315.github.io/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/</id>
+    <published>2016-12-02T06:47:49.000Z</published>
+    <updated>2016-12-02T06:52:08.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Find-All-Numbers-Disappeared-in-an-Array&quot;&gt;&lt;a href=&quot;#Find-All-Numbers-Disappeared-in-an-Array&quot; class=&quot;headerlink&quot; title=&quot;Find All Numbers Disappeared in an Array&quot;&gt;&lt;/a&gt;Find All Numbers Disappeared in an Array&lt;/h2&gt;&lt;p&gt;Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.&lt;/p&gt;
+&lt;p&gt;Find all the elements of [1, n] inclusive that do not appear in this array.&lt;/p&gt;
+&lt;p&gt;Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;Input:&lt;br&gt;[4,3,2,7,8,2,3,1]&lt;/p&gt;
+&lt;p&gt;Output:&lt;br&gt;[5,6]&lt;/p&gt;
+&lt;h2 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; List&amp;lt;Integer&amp;gt; &lt;span class=&quot;title&quot;&gt;findDisappearedNumbers&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        List&amp;lt;Integer&amp;gt; result = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ArrayList&amp;lt;Integer&amp;gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Set&amp;lt;Integer&amp;gt; set = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; HashSet&amp;lt;Integer&amp;gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i =&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i&amp;lt;nums.length;i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            set.add(nums[i]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i&amp;lt;= nums.length;i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!set.contains(i))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                result.add(i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes&quot;&gt;&lt;/a&gt;Notes&lt;/h3&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Find-All-Numbers-Disappeared-in-an-Array&quot;&gt;&lt;a href=&quot;#Find-All-Numbers-Disappeared-in-an-Array&quot; class=&quot;headerlink&quot; title=&quot;Find All Num
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode 26 Remove Duplicates from Sorted Array</title>
     <link href="http://xytian315.github.io/2016/10/03/leetcode-26/"/>
     <id>http://xytian315.github.io/2016/10/03/leetcode-26/</id>
     <published>2016-10-03T23:13:09.000Z</published>
-    <updated>2016-10-03T23:15:07.000Z</updated>
+    <updated>2016-10-03T23:25:28.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;26-Remove-Duplicates-from-Sorted-Array&quot;&gt;&lt;a href=&quot;#26-Remove-Duplicates-from-Sorted-Array&quot; class=&quot;headerlink&quot; title=&quot;26. Remove Duplicates from Sorted Array&quot;&gt;&lt;/a&gt;26. Remove Duplicates from Sorted Array&lt;/h2&gt;&lt;p&gt;Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.&lt;/p&gt;
 &lt;p&gt;Do not allocate extra space for another array, you must do this in place with constant memory.&lt;/p&gt;
 &lt;p&gt;For example,&lt;br&gt;Given input array nums = [1,1,2],&lt;/p&gt;
 &lt;p&gt;Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn’t matter what you leave beyond the new length.&lt;/p&gt;
 &lt;h2 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes:&quot;&gt;&lt;/a&gt;Notes:&lt;/h2&gt;&lt;p&gt;Two pointer technique&lt;br&gt;&lt;a href=&quot;https://leetcode.com/articles/two-pointer-technique/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://leetcode.com/articles/two-pointer-technique/&lt;/a&gt;&lt;br&gt;two pointer: one fast runner, one slow runner&lt;/p&gt;
-&lt;h2 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;removeDuplicates&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(nums.length == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; || nums.length == &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; nums.length;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; current = nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; count = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i&amp;lt; nums.length; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(nums[i] == current) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;continue&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                current = nums[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                nums[count] = nums[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                count++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; count;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;removeDuplicates&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(nums.length == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; || nums.length == &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; nums.length;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; current = nums[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; count = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i&amp;lt; nums.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(nums[i] != current) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                current = nums[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                nums[count] = nums[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                count++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; count;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
     <summary type="html">
@@ -43,6 +74,8 @@
     
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
+      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
+    
   </entry>
   
   <entry>
@@ -50,7 +83,7 @@
     <link href="http://xytian315.github.io/2016/09/12/leetcode-189/"/>
     <id>http://xytian315.github.io/2016/09/12/leetcode-189/</id>
     <published>2016-09-12T19:06:08.000Z</published>
-    <updated>2016-10-03T23:17:41.000Z</updated>
+    <updated>2016-10-03T23:25:29.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;189-Rotate-Array&quot;&gt;&lt;a href=&quot;#189-Rotate-Array&quot; class=&quot;headerlink&quot; title=&quot;189. Rotate Array&quot;&gt;&lt;/a&gt;189. Rotate Array&lt;/h3&gt;&lt;p&gt;Rotate an array of n elements to the right by k steps.&lt;/p&gt;
 &lt;p&gt;For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].&lt;/p&gt;
@@ -77,7 +110,7 @@
     <link href="http://xytian315.github.io/2016/09/08/leetcode-11/"/>
     <id>http://xytian315.github.io/2016/09/08/leetcode-11/</id>
     <published>2016-09-09T02:44:35.000Z</published>
-    <updated>2016-09-09T02:45:25.000Z</updated>
+    <updated>2016-10-03T23:26:11.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;11-Container-With-Most-Water&quot;&gt;&lt;a href=&quot;#11-Container-With-Most-Water&quot; class=&quot;headerlink&quot; title=&quot;11. Container With Most Water&quot;&gt;&lt;/a&gt;11. Container With Most Water&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/container-with-most-water/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://leetcode.com/problems/container-with-most-water/&lt;/a&gt;&lt;br&gt;Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;/p&gt;
 &lt;p&gt;Note: You may not slant the container.&lt;/p&gt;
@@ -89,6 +122,14 @@
     
     </summary>
     
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
+    
+      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
   </entry>
   
@@ -175,7 +216,7 @@
     <link href="http://xytian315.github.io/2016/08/22/leetcode-27-Remove-element/"/>
     <id>http://xytian315.github.io/2016/08/22/leetcode-27-Remove-element/</id>
     <published>2016-08-22T22:41:40.000Z</published>
-    <updated>2016-09-09T02:24:17.000Z</updated>
+    <updated>2016-10-03T23:25:21.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;27-Remove-Element&quot;&gt;&lt;a href=&quot;#27-Remove-Element&quot; class=&quot;headerlink&quot; title=&quot;27. Remove Element&quot;&gt;&lt;/a&gt;27. Remove Element&lt;/h3&gt;&lt;p&gt;Given an array and a value, remove all instances of that value in place and return the new length.&lt;/p&gt;
 &lt;p&gt;Do not allocate extra space for another array, you must do this in place with constant memory.&lt;/p&gt;
@@ -342,9 +383,9 @@
     </summary>
     
     
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
       <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
     

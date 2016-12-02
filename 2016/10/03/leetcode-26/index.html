@@ -40,6 +40,15 @@ Do not allocate extra space for anothe...">
 <body>
 <div class="side-navigate hide-area">
   
+    <div class="item prev">
+      <a href="/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        leetcode 448 Find All Numbers Disappeared in an Array
+      </div>
+    </div>
+  
   
     <div class="item next">
       <a href="/2016/09/12/leetcode-189/">
@@ -123,14 +132,14 @@ Do not allocate extra space for anothe...">
   <article id="post">
     <h1>leetcode 26 Remove Duplicates from Sorted Array</h1>
     <p class="page-title-sub">
-      <span id = "post-title-date">Created at 2016-10-03</span>
+      <span id = "post-title-date">撰写于 2016-10-03</span>
       
-        <span id = "post-title-updated">Updated at 2016-10-03</span>
+        <span id = "post-title-updated">修改于 2016-10-03</span>
       
       
       
       <span id = "post-title-tags">
-      Tag
+      标签
       
       
         
@@ -149,6 +158,12 @@ Do not allocate extra space for anothe...">
         
         <a href="/tags/array/">array</a>
       
+        
+          /
+        
+        
+        <a href="/tags/two-pointers/">two pointers</a>
+      
       </span>
       
     </p>
@@ -158,14 +173,14 @@ Do not allocate extra space for anothe...">
 <p>For example,<br>Given input array nums = [1,1,2],</p>
 <p>Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn’t matter what you leave beyond the new length.</p>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h2><p>Two pointer technique<br><a href="https://leetcode.com/articles/two-pointer-technique/" target="_blank" rel="external">https://leetcode.com/articles/two-pointer-technique/</a><br>two pointer: one fast runner, one slow runner</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">0</span> || nums.length == <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> nums.length;</span><br><span class="line">        <span class="keyword">int</span> current = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt; nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] == current) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                current = nums[i];</span><br><span class="line">                nums[count] = nums[i];</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">0</span> || nums.length == <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> nums.length;</span><br><span class="line">        <span class="keyword">int</span> current = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] != current) &#123;</span><br><span class="line">                current = nums[i];</span><br><span class="line">                nums[count] = nums[i];</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </article>
   <div class="random-toc-area">
-  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
-  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
   <div class="random-toc">
-    <h2>Table of Content</h2>
+    <h2>目录</h2>
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#26-Remove-Duplicates-from-Sorted-Array"><span class="toc-text">26. Remove Duplicates from Sorted Array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Notes"><span class="toc-text">Notes:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li></ol>
   </div>
 </div>
@@ -173,11 +188,13 @@ Do not allocate extra space for anothe...">
   
 <nav id="pagination">
   
-
+    <a href="/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/" class="prev">&larr; 上一篇 leetcode 448 Find All Numbers Disappeared in an Array</a>
   
 
   
-    <a href="/2016/09/12/leetcode-189/" class="next">Next post leetcode 189 Rotate Array &rarr;</a>
+
+  
+    <a href="/2016/09/12/leetcode-189/" class="next">下一篇 leetcode 189 Rotate Array &rarr;</a>
   
 </nav>
 
