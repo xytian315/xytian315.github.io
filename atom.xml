@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-03T23:23:35.000Z</updated>
+  <updated>2016-12-04T18:32:32.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 219 contains duplicate II</title>
+    <link href="http://xytian315.github.io/2016/12/04/leetcode-219-contains-duplicate-II/"/>
+    <id>http://xytian315.github.io/2016/12/04/leetcode-219-contains-duplicate-II/</id>
+    <published>2016-12-04T18:17:25.000Z</published>
+    <updated>2016-12-04T18:32:32.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;219-Contains-Duplicate-II&quot;&gt;&lt;a href=&quot;#219-Contains-Duplicate-II&quot; class=&quot;headerlink&quot; title=&quot;219. Contains Duplicate II&quot;&gt;&lt;/a&gt;219. Contains Duplicate II&lt;/h3&gt;&lt;p&gt;Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.&lt;/p&gt;
+&lt;h3 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//my solution use a hashmap&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;containsNearbyDuplicate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(nums.length&amp;lt;=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; || k&amp;lt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Map&amp;lt;Integer, Integer&amp;gt; map = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; HashMap&amp;lt;Integer, Integer&amp;gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i =&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i&amp;lt; nums.length; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(map.containsKey(nums[i]) &amp;amp;&amp;amp; (i-map.get(nums[i])&amp;lt;=k))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                map.put(nums[i],i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//better solution you can use hashset &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;containsNearbyDuplicate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Set&amp;lt;Integer&amp;gt; set = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; HashSet&amp;lt;Integer&amp;gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; nums.length; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(i &amp;gt; k) set.remove(nums[i-k-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!set.add(nums[i])) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes&quot;&gt;&lt;/a&gt;Notes&lt;/h3&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;219-Contains-Duplicate-II&quot;&gt;&lt;a href=&quot;#219-Contains-Duplicate-II&quot; class=&quot;headerlink&quot; title=&quot;219. Contains Duplicate II&quot;&gt;&lt;/a&gt;219. Conta
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 217 contains duplicate</title>
@@ -35,9 +62,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -69,9 +96,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -99,9 +126,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -127,9 +154,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -183,9 +210,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -213,11 +240,11 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -242,9 +269,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -298,9 +325,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -479,9 +506,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="map" scheme="http://xytian315.github.io/tags/map/"/>
-    
       <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
+    
+      <category term="map" scheme="http://xytian315.github.io/tags/map/"/>
     
   </entry>
   
@@ -531,35 +558,6 @@
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 1</title>
-    <link href="http://xytian315.github.io/2016/07/19/leetcode-1/"/>
-    <id>http://xytian315.github.io/2016/07/19/leetcode-1/</id>
-    <published>2016-07-20T05:03:20.000Z</published>
-    <updated>2016-09-02T21:39:31.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;1-Two-sum&quot;&gt;&lt;a href=&quot;#1-Two-sum&quot; class=&quot;headerlink&quot; title=&quot;1. Two sum&quot;&gt;&lt;/a&gt;1. Two sum&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/two-sum/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://leetcode.com/problems/two-sum/&lt;/a&gt;&lt;br&gt;Given an array of integers, return indices of the two numbers such that they add up to a specific target.&lt;br&gt;You may assume that each input would have exactly one solution.&lt;/p&gt;
-&lt;p&gt;Example:&lt;br&gt;Given nums = [2, 7, 11, 15], target = 9,&lt;br&gt;Because nums[0] + nums[1] = 2 + 7 = 9,&lt;br&gt;return [0, 1].&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] twoSum(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] nums, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; target) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Map&amp;lt;Integer, Integer&amp;gt; map = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; HashMap&amp;lt;Integer, Integer&amp;gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i =&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i&amp;lt; nums.length; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(map.containsKey(target-nums[i]))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[]&amp;#123;map.get(target-nums[i]), i&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                map.put(nums[i],i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Note&quot;&gt;&lt;a href=&quot;#Note&quot; class=&quot;headerlink&quot; title=&quot;Note&quot;&gt;&lt;/a&gt;Note&lt;/h2&gt;&lt;p&gt;Map&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1-Two-sum&quot;&gt;&lt;a href=&quot;#1-Two-sum&quot; class=&quot;headerlink&quot; title=&quot;1. Two sum&quot;&gt;&lt;/a&gt;1. Two sum&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/two-sum/&quot;&gt;https://leetcode.com/problems/two-sum/&lt;/a&gt;&lt;br&gt;Given an array of integers, return indices of the two numbers such that they add up to a specific target.&lt;br&gt;You may assume that each input would have exactly one solution.&lt;/p&gt;
-&lt;p&gt;Example:&lt;br&gt;Given nums = [2, 7, 11, 15], target = 9,&lt;br&gt;Because nums[0] + nums[1] = 2 + 7 = 9,&lt;br&gt;return [0, 1].&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="map" scheme="http://xytian315.github.io/tags/map/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
