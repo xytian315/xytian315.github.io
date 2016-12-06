@@ -74,8 +74,6 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Kristy's blog" type="application/atom+xml" />
-
 
 
 
@@ -86,19 +84,19 @@
 
 
 
-<meta name="description" content="88. Merge Sorted ArrayGiven two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note:You may assume that nums1 has enough space (size that is greater or equal to m +">
+<meta name="description" content="Question: 88. Merge Sorted ArrayGiven two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+Note:You may assume that nums1 has enough space (size that is greater or eq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 88 merge sorted array">
+<meta property="og:title" content="leetcode 88 Merge sorted array">
 <meta property="og:url" content="http://xytian315.github.io/2016/12/05/leetcode-88-merge-sorted-array-0/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="88. Merge Sorted ArrayGiven two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note:You may assume that nums1 has enough space (size that is greater or equal to m +">
-<meta property="og:updated_time" content="2016-12-06T00:47:32.000Z">
+<meta property="og:description" content="Question: 88. Merge Sorted ArrayGiven two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+Note:You may assume that nums1 has enough space (size that is greater or eq">
+<meta property="og:updated_time" content="2016-12-06T05:14:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 88 merge sorted array">
-<meta name="twitter:description" content="88. Merge Sorted ArrayGiven two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note:You may assume that nums1 has enough space (size that is greater or equal to m +">
+<meta name="twitter:title" content="leetcode 88 Merge sorted array">
+<meta name="twitter:description" content="Question: 88. Merge Sorted ArrayGiven two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+Note:You may assume that nums1 has enough space (size that is greater or eq">
 
 
 
@@ -132,7 +130,7 @@ Note:You may assume that nums1 has enough space (size that is greater or equal t
 
 
 
-  <title> leetcode 88 merge sorted array | Kristy's blog </title>
+  <title> leetcode 88 Merge sorted array | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -214,6 +212,26 @@ Note:You may assume that nums1 has enough space (size that is greater or equal t
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -267,7 +285,7 @@ Note:You may assume that nums1 has enough space (size that is greater or equal t
             
             
               
-                leetcode 88 merge sorted array
+                leetcode 88 Merge sorted array
               
             
           </h1>
@@ -290,6 +308,24 @@ Note:You may assume that nums1 has enough space (size that is greater or equal t
             
           </span>
 
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -316,10 +352,10 @@ Note:You may assume that nums1 has enough space (size that is greater or equal t
       
 
       
-        <h3 id="88-Merge-Sorted-Array"><a href="#88-Merge-Sorted-Array" class="headerlink" title="88. Merge Sorted Array"></a>88. Merge Sorted Array</h3><p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</p>
-<p>Note:<br>You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.</p>
+        <h3 id="Question-88-Merge-Sorted-Array"><a href="#Question-88-Merge-Sorted-Array" class="headerlink" title="Question: 88. Merge Sorted Array"></a>Question: 88. Merge Sorted Array</h3><p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</p>
+<p>Note:<br>You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.<br><a id="more"></a></p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//not good solution did by myself</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span> m, <span class="keyword">int</span>[] nums2, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> start1=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> start2=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> start =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] temp = nums1.clone();</span><br><span class="line">        <span class="keyword">while</span>(start1&lt;m &amp;&amp; start2&lt;n)&#123;</span><br><span class="line">            <span class="keyword">if</span>(temp[start1]&lt;=nums2[start2])&#123;</span><br><span class="line">                nums1[start]=temp[start1];</span><br><span class="line">                start1++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                nums1[start]=nums2[start2];</span><br><span class="line">                start2++;</span><br><span class="line">            &#125;</span><br><span class="line">            start++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(start1!=m)&#123;</span><br><span class="line">            <span class="keyword">while</span>(start1&lt;m)&#123;</span><br><span class="line">                nums1[start]=temp[start1];</span><br><span class="line">                start1++;</span><br><span class="line">                start++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(start2!=n)&#123;</span><br><span class="line">            <span class="keyword">while</span>(start2&lt;n)&#123;</span><br><span class="line">                nums1[start]=nums2[start2];</span><br><span class="line">                start2++;</span><br><span class="line">                start++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//better solution after reading the discussion</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span> m, <span class="keyword">int</span>[] nums2, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i=m-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> j=n-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> index = m+n-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&gt;=<span class="number">0</span> &amp;&amp; j&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums1[i]&gt;=nums2[j])&#123;</span><br><span class="line">                nums1[index]=nums1[i];</span><br><span class="line">                i--;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                nums1[index]=nums2[j];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            index--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(j&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            nums1[index]=nums2[j];</span><br><span class="line">            j--;</span><br><span class="line">            index--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>when doing things in place in array, thinking about starting backwords.<br>also noted after comparing two array, we only need to check if nums2 is already finished do not need to check nums1 since nums1’s elements are already in the right place</p>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>when doing things in place in array, thinking about starting backwords.<br>also noted after comparing two array, we only need to check if nums2 is already finished do not need to check nums1 since nums1’s elements are already in the right place</p>
 
       
     </div>
@@ -438,6 +474,13 @@ Note:You may assume that nums1 has enough space (size that is greater or equal t
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
@@ -451,15 +494,19 @@ Note:You may assume that nums1 has enough space (size that is greater or equal t
         </nav>
 
         
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xytian315" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
           
         </div>
 
@@ -484,7 +531,7 @@ Note:You may assume that nums1 has enough space (size that is greater or equal t
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#88-Merge-Sorted-Array"><span class="nav-number">1.</span> <span class="nav-text">88. Merge Sorted Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">3.</span> <span class="nav-text">Notes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-88-Merge-Sorted-Array"><span class="nav-number">1.</span> <span class="nav-text">Question: 88. Merge Sorted Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
             
 
           </div>
