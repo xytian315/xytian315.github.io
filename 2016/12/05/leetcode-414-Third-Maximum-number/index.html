@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode," />
+  <meta name="keywords" content="leetcode,array,easy," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="Question: 7. Reverse IntegerReverse digits of an integer.
-Example1: x = 123, return 321Example2: x = -123, return -321">
+<meta name="description" content="Question: 414. Third Maximum NumberGiven a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 7 Reverse Integer">
-<meta property="og:url" content="http://xytian315.github.io/2016/08/09/leetcode-7-Reverse-Integer/index.html">
+<meta property="og:title" content="leetcode 414 Third Maximum number">
+<meta property="og:url" content="http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 7. Reverse IntegerReverse digits of an integer.
-Example1: x = 123, return 321Example2: x = -123, return -321">
-<meta property="og:updated_time" content="2016-12-06T05:14:06.000Z">
+<meta property="og:description" content="Question: 414. Third Maximum NumberGiven a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O">
+<meta property="og:updated_time" content="2016-12-06T05:57:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 7 Reverse Integer">
-<meta name="twitter:description" content="Question: 7. Reverse IntegerReverse digits of an integer.
-Example1: x = 123, return 321Example2: x = -123, return -321">
+<meta name="twitter:title" content="leetcode 414 Third Maximum number">
+<meta name="twitter:description" content="Question: 414. Third Maximum NumberGiven a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O">
 
 
 
@@ -124,13 +121,13 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/08/09/leetcode-7-Reverse-Integer/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/"/>
 
 
 
 
 
-  <title> leetcode 7 Reverse Integer | Kristy's blog </title>
+  <title> leetcode 414 Third Maximum number | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -261,7 +258,7 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/08/09/leetcode-7-Reverse-Integer/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -285,7 +282,7 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
             
             
               
-                leetcode 7 Reverse Integer
+                leetcode 414 Third Maximum number
               
             
           </h1>
@@ -298,8 +295,8 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-09T21:34:29-07:00">
-                2016-08-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-05T21:55:27-08:00">
+                2016-12-05
               </time>
             
 
@@ -352,10 +349,16 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
       
 
       
-        <h3 id="Question-7-Reverse-Integer"><a href="#Question-7-Reverse-Integer" class="headerlink" title="Question: 7. Reverse Integer"></a>Question: 7. Reverse Integer</h3><p>Reverse digits of an integer.</p>
-<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>Do not forget to think about overflow problem.</p>
+        <h3 id="Question-414-Third-Maximum-Number"><a href="#Question-414-Third-Maximum-Number" class="headerlink" title="Question: 414. Third Maximum Number"></a>Question: 414. Third Maximum Number</h3><p>Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).</p>
+<p>Example 1:<br>Input: [3, 2, 1]</p>
+<p>Output: 1</p>
+<p>Explanation: The third maximum is 1.<br>Example 2:<br>Input: [1, 2]</p>
+<p>Output: 2</p>
+<p>Explanation: The third maximum does not exist, so the maximum (2) is returned instead.<br>Example 3:<br>Input: [2, 2, 3, 1]</p>
+<p>Output: 1</p>
+<p>Explanation: Note that the third maximum here means the third maximum distinct number.<br>Both numbers with value 2 are both considered as second maximum.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">thirdMax</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> max = Long.MIN_VALUE;</span><br><span class="line">        <span class="keyword">long</span> mid = Long.MIN_VALUE;;</span><br><span class="line">        <span class="keyword">long</span> min = Long.MIN_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&gt;max)&#123;</span><br><span class="line">                min=mid;</span><br><span class="line">                mid=max;</span><br><span class="line">                max=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i&lt;max &amp;&amp; i&gt;mid)&#123;</span><br><span class="line">                min=mid;</span><br><span class="line">                mid=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i&gt;min &amp;&amp; i&lt;mid)&#123;</span><br><span class="line">                min=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(min!=Long.MIN_VALUE)&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)min;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)max;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>should use long to initiate min value</p>
 
       
     </div>
@@ -381,6 +384,10 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
+            <a href="/tags/array/" rel="tag"># array</a>
+          
+            <a href="/tags/easy/" rel="tag"># easy</a>
+          
         </div>
       
 
@@ -388,8 +395,8 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/08/leetcode-6/" rel="next" title="leetcode 6 ZigZag Conversion">
-                <i class="fa fa-chevron-left"></i> leetcode 6 ZigZag Conversion
+              <a href="/2016/12/05/leetcode-88-merge-sorted-array-0/" rel="next" title="leetcode 88 Merge sorted array">
+                <i class="fa fa-chevron-left"></i> leetcode 88 Merge sorted array
               </a>
             
           </div>
@@ -397,10 +404,6 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/31/leetcode-66-Plus-one/" rel="prev" title="leetcode 66 Plus one">
-                leetcode 66 Plus one <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -531,7 +534,7 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-7-Reverse-Integer"><span class="nav-number">1.</span> <span class="nav-text">Question: 7. Reverse Integer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-414-Third-Maximum-Number"><span class="nav-number">1.</span> <span class="nav-text">Question: 414. Third Maximum Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
             
 
           </div>

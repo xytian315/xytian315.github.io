@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-06T05:14:13.000Z</updated>
+  <updated>2016-12-06T05:57:28.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 414 Third Maximum number</title>
+    <link href="http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/"/>
+    <id>http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/</id>
+    <published>2016-12-06T05:55:27.000Z</published>
+    <updated>2016-12-06T05:57:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-414-Third-Maximum-Number"><a href="#Question-414-Third-Maximum-Number" class="headerlink" title="Question: 414. Third Maximum Number"></a>Question: 414. Third Maximum Number</h3><p>Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).</p>
+<p>Example 1:<br>Input: [3, 2, 1]</p>
+<p>Output: 1</p>
+<p>Explanation: The third maximum is 1.<br>Example 2:<br>Input: [1, 2]</p>
+<p>Output: 2</p>
+<p>Explanation: The third maximum does not exist, so the maximum (2) is returned instead.<br>Example 3:<br>Input: [2, 2, 3, 1]</p>
+<p>Output: 1</p>
+<p>Explanation: Note that the third maximum here means the third maximum distinct number.<br>Both numbers with value 2 are both considered as second maximum.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">thirdMax</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> max = Long.MIN_VALUE;</span><br><span class="line">        <span class="keyword">long</span> mid = Long.MIN_VALUE;;</span><br><span class="line">        <span class="keyword">long</span> min = Long.MIN_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&gt;max)&#123;</span><br><span class="line">                min=mid;</span><br><span class="line">                mid=max;</span><br><span class="line">                max=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i&lt;max &amp;&amp; i&gt;mid)&#123;</span><br><span class="line">                min=mid;</span><br><span class="line">                mid=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i&gt;min &amp;&amp; i&lt;mid)&#123;</span><br><span class="line">                min=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(min!=Long.MIN_VALUE)&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)min;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)max;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>should use long to initiate min value</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-414-Third-Maximum-Number&quot;&gt;&lt;a href=&quot;#Question-414-Third-Maximum-Number&quot; class=&quot;headerlink&quot; title=&quot;Question: 414. Third Maximum Number&quot;&gt;&lt;/a&gt;Question: 414. Third Maximum Number&lt;/h3&gt;&lt;p&gt;Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).&lt;/p&gt;
+&lt;p&gt;Example 1:&lt;br&gt;Input: [3, 2, 1]&lt;/p&gt;
+&lt;p&gt;Output: 1&lt;/p&gt;
+&lt;p&gt;Explanation: The third maximum is 1.&lt;br&gt;Example 2:&lt;br&gt;Input: [1, 2]&lt;/p&gt;
+&lt;p&gt;Output: 2&lt;/p&gt;
+&lt;p&gt;Explanation: The third maximum does not exist, so the maximum (2) is returned instead.&lt;br&gt;Example 3:&lt;br&gt;Input: [2, 2, 3, 1]&lt;/p&gt;
+&lt;p&gt;Output: 1&lt;/p&gt;
+&lt;p&gt;Explanation: Note that the third maximum here means the third maximum distinct number.&lt;br&gt;Both numbers with value 2 are both considered as second maximum.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 88 Merge sorted array</title>
@@ -623,29 +666,6 @@
       <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
     
       <category term="map" scheme="http://xytian315.github.io/tags/map/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>how to implement a singly LinkedList</title>
-    <link href="http://xytian315.github.io/2016/08/02/how-to-implement-a-singly-LinkedList/"/>
-    <id>http://xytian315.github.io/2016/08/02/how-to-implement-a-singly-LinkedList/</id>
-    <published>2016-08-02T23:02:36.000Z</published>
-    <updated>2016-12-06T05:12:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SinglyLinkedList</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * Nested node class</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">		<span class="keyword">private</span> E element;</span><br><span class="line">		<span class="keyword">private</span> Node&lt;E&gt; next;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(E element, Node&lt;E&gt; next)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.element = element;</span><br><span class="line">			<span class="keyword">this</span>.next = next;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> E <span class="title">getElement</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>.element;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> Node&lt;E&gt; <span class="title">getNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>.next;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNext</span><span class="params">(Node&lt;E&gt; next)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.next = next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * end of nested node class</span><br><span class="line">	 */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> Node&lt;E&gt; head = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">private</span> Node&lt;E&gt; tail = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">private</span> Integer size = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">SinglyLinkedList</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Integer <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.size;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Boolean <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.size == <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> E <span class="title">first</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(isEmpty()) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">return</span> head.getElement();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> E <span class="title">last</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(isEmpty()) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">return</span> tail.getElement();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addFirst</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">		Node&lt;E&gt; newHead = <span class="keyword">new</span> Node(e, head);</span><br><span class="line">		<span class="keyword">this</span>.head = newHead;</span><br><span class="line">		size++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addLast</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">		Node&lt;E&gt; newNode = <span class="keyword">new</span> Node(e, <span class="keyword">null</span>);</span><br><span class="line">		<span class="keyword">if</span>(isEmpty())&#123;</span><br><span class="line">			head = newNode;</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			tail.setNext(newNode);</span><br><span class="line">			<span class="keyword">this</span>.tail = newNode;</span><br><span class="line">		&#125;</span><br><span class="line">		size++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> E <span class="title">removeFirst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(isEmpty()) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		E result = head.getElement();</span><br><span class="line">		<span class="keyword">this</span>.head = head.getNext();</span><br><span class="line">		size--;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Nested class: when defining a class which is strongly affiliated with another class helps to increase encapsulation and avoid name conflicts</p>
-<p>Static means its value/method is associated with the class itself, rather than with each individual instance of the class.<br>That means it is not invoked on a particular instance of the class using traditional dot notation.<br>Instead, it is typically using the name of the class as a qualifier. useful for providing utility behaviors related to a class that need not rely on the state of any particular instance of the class.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Solution&quot;&gt;&lt;a href=&quot;#Solution&quot; class=&quot;headerlink&quot; title=&quot;Solution&quot;&gt;&lt;/a&gt;Solution&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla
-    
-    </summary>
-    
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
