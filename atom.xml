@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-06T05:58:09.000Z</updated>
+  <updated>2016-12-07T04:37:18.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 36 valid sudoku</title>
+    <link href="http://xytian315.github.io/2016/12/06/leetcode-36-valid-sudoku/"/>
+    <id>http://xytian315.github.io/2016/12/06/leetcode-36-valid-sudoku/</id>
+    <published>2016-12-07T04:31:17.000Z</published>
+    <updated>2016-12-07T04:37:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-36-Valid-Sudoku"><a href="#Question-36-Valid-Sudoku" class="headerlink" title="Question: 36. Valid Sudoku"></a>Question: 36. Valid Sudoku</h3><p>Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.</p>
+<p>The Sudoku board could be partially filled, where empty cells are filled with the character ‘.’.<br>Note:<br>A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidSudoku</span><span class="params">(<span class="keyword">char</span>[][] board)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//validate rows</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!validate(i, i + <span class="number">1</span>, <span class="number">0</span>, <span class="number">9</span>, board)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//validate columns</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!validate(<span class="number">0</span>, <span class="number">9</span>, i, i + <span class="number">1</span>, board)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//validate cells</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i += <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span>; j += <span class="number">3</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!validate(i, i + <span class="number">3</span>, j, j + <span class="number">3</span>, board)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">validate</span><span class="params">(<span class="keyword">int</span> rowStart, <span class="keyword">int</span> rowEnd, <span class="keyword">int</span> colStart, <span class="keyword">int</span> colEnd, <span class="keyword">char</span>[][] board)</span> </span>&#123;</span><br><span class="line">        Set&lt;Character&gt; set = <span class="keyword">new</span> HashSet&lt;Character&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = rowStart; i &lt; rowEnd; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = colStart; j &lt; colEnd; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!set.add(board[i][j]) &amp;&amp; board[i][j] != <span class="string">'.'</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><ol>
+<li>Soduku will be always 9rows 9 columns I don’t need to get the length like this board.length</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-36-Valid-Sudoku&quot;&gt;&lt;a href=&quot;#Question-36-Valid-Sudoku&quot; class=&quot;headerlink&quot; title=&quot;Question: 36. Valid Sudoku&quot;&gt;&lt;/a&gt;Question: 36
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 414 Third Maximum number</title>
@@ -404,7 +436,7 @@
     <link href="http://xytian315.github.io/2016/10/03/leetcode-26/"/>
     <id>http://xytian315.github.io/2016/10/03/leetcode-26/</id>
     <published>2016-10-03T23:13:09.000Z</published>
-    <updated>2016-12-06T05:13:19.000Z</updated>
+    <updated>2016-12-07T04:32:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Question-26-Remove-Duplicates-from-Sorted-Array"><a href="#Question-26-Remove-Duplicates-from-Sorted-Array" class="headerlink" title="Question: 26. Remove Duplicates from Sorted Array"></a>Question: 26. Remove Duplicates from Sorted Array</h3><p>Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.</p>
 <p>Do not allocate extra space for another array, you must do this in place with constant memory.</p>
@@ -634,42 +666,6 @@
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 3 Longest Substring Without Repeating Characters</title>
-    <link href="http://xytian315.github.io/2016/08/04/leetcode-3/"/>
-    <id>http://xytian315.github.io/2016/08/04/leetcode-3/</id>
-    <published>2016-08-04T23:44:34.000Z</published>
-    <updated>2016-12-06T05:13:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-3-Longest-Substring-Without-Repeating-Characters"><a href="#Question-3-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="Question: 3. Longest Substring Without Repeating Characters"></a>Question: 3. Longest Substring Without Repeating Characters</h3><p>Given a string, find the length of the longest substring without repeating characters.</p>
-<p>Examples:</p>
-<p>Given “abcabcbb”, the answer is “abc”, which the length is 3.</p>
-<p>Given “bbbbb”, the answer is “b”, with the length of 1.</p>
-<p>Given “pwwkew”, the answer is “wke”, with the length of 3. Note that the answer must be a substring, “pwke” is a subsequence and not a substring.</p>
-<a id="more"></a>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">my solution without looking at the answers</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s.isEmpty()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(s.charAt(i))) &#123;</span><br><span class="line">                <span class="keyword">if</span>(result &lt; i - start ) &#123;</span><br><span class="line">                    result = i - start;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(map.get(s.charAt(i))+<span class="number">1</span> &gt; start)&#123;</span><br><span class="line">                    start = map.get(s.charAt(i)) + <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(s.charAt(i), i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(result &lt; s.length()-start) &#123;</span><br><span class="line">            result = s.length()-start;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-3-Longest-Substring-Without-Repeating-Characters&quot;&gt;&lt;a href=&quot;#Question-3-Longest-Substring-Without-Repeating-Characters&quot; class=&quot;headerlink&quot; title=&quot;Question: 3. Longest Substring Without Repeating Characters&quot;&gt;&lt;/a&gt;Question: 3. Longest Substring Without Repeating Characters&lt;/h3&gt;&lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;/p&gt;
-&lt;p&gt;Examples:&lt;/p&gt;
-&lt;p&gt;Given “abcabcbb”, the answer is “abc”, which the length is 3.&lt;/p&gt;
-&lt;p&gt;Given “bbbbb”, the answer is “b”, with the length of 1.&lt;/p&gt;
-&lt;p&gt;Given “pwwkew”, the answer is “wke”, with the length of 3. Note that the answer must be a substring, “pwke” is a subsequence and not a substring.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
-    
-      <category term="map" scheme="http://xytian315.github.io/tags/map/"/>
     
   </entry>
   

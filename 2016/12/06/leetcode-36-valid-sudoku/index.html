@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,array,easy," />
+  <meta name="keywords" content="leetcode,easy,hash table," />
 
 
 
@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
-Find all the elements of [1, n]">
+<meta name="description" content="Question: 36. Valid SudokuDetermine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+The Sudoku board could be partially filled, where empty cells are filled with the character ‘.’.Note">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 448 Find All Numbers Disappeared in an Array">
-<meta property="og:url" content="http://xytian315.github.io/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/index.html">
+<meta property="og:title" content="leetcode 36 valid sudoku">
+<meta property="og:url" content="http://xytian315.github.io/2016/12/06/leetcode-36-valid-sudoku/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
-Find all the elements of [1, n]">
-<meta property="og:updated_time" content="2016-12-06T05:13:33.000Z">
+<meta property="og:description" content="Question: 36. Valid SudokuDetermine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+The Sudoku board could be partially filled, where empty cells are filled with the character ‘.’.Note">
+<meta property="og:updated_time" content="2016-12-07T04:37:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 448 Find All Numbers Disappeared in an Array">
-<meta name="twitter:description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
-Find all the elements of [1, n]">
+<meta name="twitter:title" content="leetcode 36 valid sudoku">
+<meta name="twitter:description" content="Question: 36. Valid SudokuDetermine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+The Sudoku board could be partially filled, where empty cells are filled with the character ‘.’.Note">
 
 
 
@@ -124,13 +124,13 @@ Find all the elements of [1, n]">
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2016/12/06/leetcode-36-valid-sudoku/"/>
 
 
 
 
 
-  <title> leetcode 448 Find All Numbers Disappeared in an Array | Kristy's blog </title>
+  <title> leetcode 36 valid sudoku | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -261,7 +261,7 @@ Find all the elements of [1, n]">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/06/leetcode-36-valid-sudoku/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -285,7 +285,7 @@ Find all the elements of [1, n]">
             
             
               
-                leetcode 448 Find All Numbers Disappeared in an Array
+                leetcode 36 valid sudoku
               
             
           </h1>
@@ -298,8 +298,8 @@ Find all the elements of [1, n]">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-01T22:47:49-08:00">
-                2016-12-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-06T20:31:17-08:00">
+                2016-12-06
               </time>
             
 
@@ -352,15 +352,12 @@ Find all the elements of [1, n]">
       
 
       
-        <h3 id="Question-Find-All-Numbers-Disappeared-in-an-Array"><a href="#Question-Find-All-Numbers-Disappeared-in-an-Array" class="headerlink" title="Question: Find All Numbers Disappeared in an Array"></a>Question: Find All Numbers Disappeared in an Array</h3><p>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.</p>
-<p>Find all the elements of [1, n] inclusive that do not appear in this array.</p>
-<p>Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.</p>
-<p>Example:</p>
-<p>Input:<br>[4,3,2,7,8,2,3,1]</p>
-<p>Output:<br>[5,6]</p>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>思路：<br>第一种简单解法O(n) space O(n) time<br>1把数组中的所有数字放到一个set中<br>2loop 从1到n, 如果数字i不在set中，即是答案disappeared number<br>第二种优化解法O(1) space O(n)time<br>1用index来标记是否数字出现于数组中， 如果数字在数组中，相应的index变成负数。nums[nums[i]-1] = -nums[nums[i]-1]<br>2loop array, 如果数字是正数，说明这个数字没有出现在数组中，既是答案<br>注：因为index是从0开始的，0到n-1, 而我们需要1到n, 所以纪录时要减1，最后结果要加1</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//O(n) space O(n) time</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i&lt;nums.length;i++)&#123;</span><br><span class="line">            set.add(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;= nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.contains(i))&#123;</span><br><span class="line">                result.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// NO extra space solution O(1) space O(n)time</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span> ; i&lt;nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> value = Math.abs(nums[i])-<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[value]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                nums[value] = -nums[value];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                result.add(i+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="Question-36-Valid-Sudoku"><a href="#Question-36-Valid-Sudoku" class="headerlink" title="Question: 36. Valid Sudoku"></a>Question: 36. Valid Sudoku</h3><p>Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.</p>
+<p>The Sudoku board could be partially filled, where empty cells are filled with the character ‘.’.<br>Note:<br>A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidSudoku</span><span class="params">(<span class="keyword">char</span>[][] board)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//validate rows</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!validate(i, i + <span class="number">1</span>, <span class="number">0</span>, <span class="number">9</span>, board)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//validate columns</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!validate(<span class="number">0</span>, <span class="number">9</span>, i, i + <span class="number">1</span>, board)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//validate cells</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i += <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span>; j += <span class="number">3</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!validate(i, i + <span class="number">3</span>, j, j + <span class="number">3</span>, board)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">validate</span><span class="params">(<span class="keyword">int</span> rowStart, <span class="keyword">int</span> rowEnd, <span class="keyword">int</span> colStart, <span class="keyword">int</span> colEnd, <span class="keyword">char</span>[][] board)</span> </span>&#123;</span><br><span class="line">        Set&lt;Character&gt; set = <span class="keyword">new</span> HashSet&lt;Character&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = rowStart; i &lt; rowEnd; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = colStart; j &lt; colEnd; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!set.add(board[i][j]) &amp;&amp; board[i][j] != <span class="string">'.'</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><ol>
+<li>Soduku will be always 9rows 9 columns I don’t need to get the length like this board.length</li>
+</ol>
 
       
     </div>
@@ -386,9 +383,9 @@ Find all the elements of [1, n]">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/array/" rel="tag"># array</a>
-          
             <a href="/tags/easy/" rel="tag"># easy</a>
+          
+            <a href="/tags/hash-table/" rel="tag"># hash table</a>
           
         </div>
       
@@ -397,8 +394,8 @@ Find all the elements of [1, n]">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/03/leetcode-26/" rel="next" title="leetcode 26 Remove Duplicates from Sorted Array">
-                <i class="fa fa-chevron-left"></i> leetcode 26 Remove Duplicates from Sorted Array
+              <a href="/2016/12/05/leetcode-414-Third-Maximum-number/" rel="next" title="leetcode 414 Third Maximum number">
+                <i class="fa fa-chevron-left"></i> leetcode 414 Third Maximum number
               </a>
             
           </div>
@@ -406,10 +403,6 @@ Find all the elements of [1, n]">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/02/leetcode-283-Move-zeroes/" rel="prev" title="leetcode 283 Move zeroes">
-                leetcode 283 Move zeroes <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -540,7 +533,7 @@ Find all the elements of [1, n]">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-Find-All-Numbers-Disappeared-in-an-Array"><span class="nav-number">1.</span> <span class="nav-text">Question: Find All Numbers Disappeared in an Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">2.</span> <span class="nav-text">Thoughts:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">3.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-36-Valid-Sudoku"><span class="nav-number">1.</span> <span class="nav-text">Question: 36. Valid Sudoku</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
             
 
           </div>

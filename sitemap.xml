@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2016/12/06/leetcode-36-valid-sudoku/</loc>
+    
+    <lastmod>2016-12-07T04:37:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xytian315.github.io/2016/10/03/leetcode-26/</loc>
+    
+    <lastmod>2016-12-07T04:32:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2016/09/12/leetcode-189/</loc>
     
     <lastmod>2016-12-06T07:59:03.000Z</lastmod>
@@ -75,13 +89,6 @@
     <loc>http://xytian315.github.io/2016/12/04/leetcode-27-remove-element-0/</loc>
     
     <lastmod>2016-12-06T05:13:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xytian315.github.io/2016/10/03/leetcode-26/</loc>
-    
-    <lastmod>2016-12-06T05:13:19.000Z</lastmod>
     
   </url>
   
