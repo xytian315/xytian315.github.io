@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,array,easy," />
+  <meta name="keywords" content="leetcode,easy,hash table," />
 
 
 
@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="Question: 121. Best Time to Buy and Sell StockSay you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (ie">
+<meta name="description" content="Question: 136. Single NumberGiven an array of integers, every element appears twice except for one. Find that single one.
+Note:Your algorithm should have a linear runtime complexity. Could you impleme">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 121 best time to buy and sell stock">
-<meta property="og:url" content="http://xytian315.github.io/2016/12/03/leetcode-121-best-time-to-buy-and-sell-stock/index.html">
+<meta property="og:title" content="leetcode 136 Single number">
+<meta property="og:url" content="http://xytian315.github.io/2016/12/06/leetcode-136-Single-number/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 121. Best Time to Buy and Sell StockSay you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (ie">
-<meta property="og:updated_time" content="2016-12-06T05:12:56.000Z">
+<meta property="og:description" content="Question: 136. Single NumberGiven an array of integers, every element appears twice except for one. Find that single one.
+Note:Your algorithm should have a linear runtime complexity. Could you impleme">
+<meta property="og:updated_time" content="2016-12-07T05:30:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 121 best time to buy and sell stock">
-<meta name="twitter:description" content="Question: 121. Best Time to Buy and Sell StockSay you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (ie">
+<meta name="twitter:title" content="leetcode 136 Single number">
+<meta name="twitter:description" content="Question: 136. Single NumberGiven an array of integers, every element appears twice except for one. Find that single one.
+Note:Your algorithm should have a linear runtime complexity. Could you impleme">
 
 
 
@@ -124,13 +124,13 @@ If you were only permitted to complete at most one transaction (ie">
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/12/03/leetcode-121-best-time-to-buy-and-sell-stock/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2016/12/06/leetcode-136-Single-number/"/>
 
 
 
 
 
-  <title> leetcode 121 best time to buy and sell stock | Kristy's blog </title>
+  <title> leetcode 136 Single number | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -261,7 +261,7 @@ If you were only permitted to complete at most one transaction (ie">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/03/leetcode-121-best-time-to-buy-and-sell-stock/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/06/leetcode-136-Single-number/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -285,7 +285,7 @@ If you were only permitted to complete at most one transaction (ie">
             
             
               
-                leetcode 121 best time to buy and sell stock
+                leetcode 136 Single number
               
             
           </h1>
@@ -298,8 +298,8 @@ If you were only permitted to complete at most one transaction (ie">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-03T12:35:27-08:00">
-                2016-12-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-06T21:18:33-08:00">
+                2016-12-06
               </time>
             
 
@@ -352,16 +352,10 @@ If you were only permitted to complete at most one transaction (ie">
       
 
       
-        <h3 id="Question-121-Best-Time-to-Buy-and-Sell-Stock"><a href="#Question-121-Best-Time-to-Buy-and-Sell-Stock" class="headerlink" title="Question: 121. Best Time to Buy and Sell Stock"></a>Question: 121. Best Time to Buy and Sell Stock</h3><p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
-<p>If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
-<p>Example 1:<br>Input: [7, 1, 5, 3, 6, 4]<br>Output: 5</p>
-<p>max. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)<br>Example 2:<br>Input: [7, 6, 4, 3, 1]<br>Output: 0</p>
-<p>In this case, no transaction is done, i.e. max profit = 0.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//after reading kadane's algorithm, I wrote this solution</span></span><br><span class="line"><span class="comment">//O(n) time</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(prices.length == <span class="number">0</span>) <span class="keyword">return</span> max;</span><br><span class="line">        <span class="keyword">int</span> start =prices[prices.length-<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=prices.length-<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            start= Math.max(prices[i], start);</span><br><span class="line">            max=Math.max(max,start-prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//brute force</span></span><br><span class="line"><span class="comment">//O(n2)time</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> index = prices.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(index&gt;=<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> j = index-<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(j&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">int</span> profit = prices[index]-prices[j];</span><br><span class="line">                <span class="keyword">if</span>(profit&gt;result)&#123;</span><br><span class="line">                    result=profit;</span><br><span class="line">                &#125;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            index--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>max subarray problem (kadane’s algorithm) <a href="https://en.wikipedia.org/wiki/Maximum_subarray_problem" target="_blank" rel="external">https://en.wikipedia.org/wiki/Maximum_subarray_problem</a></p>
-<p>Kadane’s algorithm consists of a scan through the array values, computing at each position the maximum (positive sum) subarray ending at that position. This subarray is either empty (in which case its sum is zero) or consists of one more element than the maximum subarray ending at the previous position. The algorithm only needs to keep track of the ending position because the implied starting position is just after the last position at which the sum went negative; a higher sum can always be found by dropping any negative-sum prefix. Thus, the problem can be solved with the following code, expressed here in Python:</p>
-<p>def max_subarray(A):<br>    max_ending_here = max_so_far = 0<br>    for x in A:<br>        max_ending_here = max(0, max_ending_here + x)<br>        max_so_far = max(max_so_far, max_ending_here)<br>    return max_so_far</p>
+        <h3 id="Question-136-Single-Number"><a href="#Question-136-Single-Number" class="headerlink" title="Question: 136. Single Number"></a>Question: 136. Single Number</h3><p>Given an array of integers, every element appears twice except for one. Find that single one.</p>
+<p>Note:<br>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//the solution from discussion</span></span><br><span class="line"><span class="comment">//O(n) time 0 extra space</span></span><br><span class="line"><span class="comment">//A XOR A = 0 and the XOR operator is commutative</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            result=result^nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//mysolution1 O(n) time O(n) extra space</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length==<span class="number">1</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.add(element))&#123;</span><br><span class="line">                set.remove(element);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                set.add(element);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Object[] result =set.toArray()</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)result[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//mysolution2 O(n) time O(n) extra space</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length==<span class="number">1</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(element))&#123;</span><br><span class="line">                map.put(element,map.get(element)+<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(element,<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element:nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.get(element)==<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> element;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>if without extra space, thinking about bit manipulation?<br>XOR bitwise manipulation A XOR A = 0; A XOR A XOR B = B;</p>
 
       
     </div>
@@ -387,9 +381,9 @@ If you were only permitted to complete at most one transaction (ie">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/array/" rel="tag"># array</a>
-          
             <a href="/tags/easy/" rel="tag"># easy</a>
+          
+            <a href="/tags/hash-table/" rel="tag"># hash table</a>
           
         </div>
       
@@ -398,8 +392,8 @@ If you were only permitted to complete at most one transaction (ie">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/02/leetcode-119-pascals-traingle-II/" rel="next" title="leetcode 119 pascals traingle II">
-                <i class="fa fa-chevron-left"></i> leetcode 119 pascals traingle II
+              <a href="/2016/12/06/leetcode-36-valid-sudoku/" rel="next" title="leetcode 36 valid sudoku">
+                <i class="fa fa-chevron-left"></i> leetcode 36 valid sudoku
               </a>
             
           </div>
@@ -407,10 +401,6 @@ If you were only permitted to complete at most one transaction (ie">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/03/leetcode-217-contains-duplicate/" rel="prev" title="leetcode 217 contains duplicate">
-                leetcode 217 contains duplicate <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +531,7 @@ If you were only permitted to complete at most one transaction (ie">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-121-Best-Time-to-Buy-and-Sell-Stock"><span class="nav-number">1.</span> <span class="nav-text">Question: 121. Best Time to Buy and Sell Stock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-136-Single-Number"><span class="nav-number">1.</span> <span class="nav-text">Question: 136. Single Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
             
 
           </div>

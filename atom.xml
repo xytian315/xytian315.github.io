@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-07T04:46:07.000Z</updated>
+  <updated>2016-12-07T05:30:57.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 136 Single number</title>
+    <link href="http://xytian315.github.io/2016/12/06/leetcode-136-Single-number/"/>
+    <id>http://xytian315.github.io/2016/12/06/leetcode-136-Single-number/</id>
+    <published>2016-12-07T05:18:33.000Z</published>
+    <updated>2016-12-07T05:30:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-136-Single-Number"><a href="#Question-136-Single-Number" class="headerlink" title="Question: 136. Single Number"></a>Question: 136. Single Number</h3><p>Given an array of integers, every element appears twice except for one. Find that single one.</p>
+<p>Note:<br>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//the solution from discussion</span></span><br><span class="line"><span class="comment">//O(n) time 0 extra space</span></span><br><span class="line"><span class="comment">//A XOR A = 0 and the XOR operator is commutative</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            result=result^nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//mysolution1 O(n) time O(n) extra space</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length==<span class="number">1</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.add(element))&#123;</span><br><span class="line">                set.remove(element);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                set.add(element);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Object[] result =set.toArray()</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>)result[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//mysolution2 O(n) time O(n) extra space</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length==<span class="number">1</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(element))&#123;</span><br><span class="line">                map.put(element,map.get(element)+<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(element,<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element:nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.get(element)==<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> element;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>if without extra space, thinking about bit manipulation?<br>XOR bitwise manipulation A XOR A = 0; A XOR A XOR B = B;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-136-Single-Number&quot;&gt;&lt;a href=&quot;#Question-136-Single-Number&quot; class=&quot;headerlink&quot; title=&quot;Question: 136. Single Number&quot;&gt;&lt;/a&gt;Question: 136. Single Number&lt;/h3&gt;&lt;p&gt;Given an array of integers, every element appears twice except for one. Find that single one.&lt;/p&gt;
+&lt;p&gt;Note:&lt;br&gt;Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?&lt;br&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 36 valid sudoku</title>
@@ -643,31 +674,6 @@
     
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 5 Longest Palindromic Substring</title>
-    <link href="http://xytian315.github.io/2016/08/05/leetcode-5/"/>
-    <id>http://xytian315.github.io/2016/08/05/leetcode-5/</id>
-    <published>2016-08-05T14:00:47.000Z</published>
-    <updated>2016-12-06T05:13:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-5-Longest-Palindromic-Substring"><a href="#Question-5-Longest-Palindromic-Substring" class="headerlink" title="Question: 5. Longest Palindromic Substring"></a>Question: 5. Longest Palindromic Substring</h3><p>Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * I only did the brute force solution O(n3)</span><br><span class="line"> */</span></span><br><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.isEmpty() || s.length() == <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">        String result = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i+<span class="number">1</span>; j&lt; s.length(); j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(isPalindrome(s, i, j) &amp;&amp; result.length() &lt; j-i+<span class="number">1</span>)&#123;</span><br><span class="line">                     result = s.substring(i,j+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> </span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boolean <span class="title">isPalindrome</span><span class="params">(String s, <span class="keyword">int</span> i , <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i)!=s.charAt(j))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            i++;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-5-Longest-Palindromic-Substring&quot;&gt;&lt;a href=&quot;#Question-5-Longest-Palindromic-Substring&quot; class=&quot;headerlink&quot; title=&quot;Question: 5. Longest Palindromic Substring&quot;&gt;&lt;/a&gt;Question: 5. Longest Palindromic Substring&lt;/h3&gt;&lt;p&gt;Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
     
   </entry>
   
