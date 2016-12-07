@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-07T05:30:57.000Z</updated>
+  <updated>2016-12-07T06:47:41.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -16,11 +16,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 202 Happy number</title>
+    <link href="http://xytian315.github.io/2016/12/06/leetcode-202-Happy-number/"/>
+    <id>http://xytian315.github.io/2016/12/06/leetcode-202-Happy-number/</id>
+    <published>2016-12-07T06:43:35.000Z</published>
+    <updated>2016-12-07T06:47:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-202-Happy-Number"><a href="#Question-202-Happy-Number" class="headerlink" title="Question: 202. Happy Number"></a>Question: 202. Happy Number</h3><p>Write an algorithm to determine if a number is “happy”.</p>
+<p>A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.</p>
+<p>Example: 19 is a happy number</p>
+<p>12 + 92 = 82<br>82 + 22 = 68<br>62 + 82 = 100<br>12 + 02 + 02 = 1<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(set.add(n))&#123;</span><br><span class="line">            sum=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                sum +=(n%<span class="number">10</span>)*(n%<span class="number">10</span>);</span><br><span class="line">                n=n/<span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(sum==<span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            n=sum;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><ol>
+<li>Endless cycle is the hint for using the set to track the numbers since if it is endless cycle, it must return the same number again.</li>
+<li>Use a while loop to keep summing the numbers</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-202-Happy-Number&quot;&gt;&lt;a href=&quot;#Question-202-Happy-Number&quot; class=&quot;headerlink&quot; title=&quot;Question: 202. Happy Number&quot;&gt;&lt;/a&gt;Question: 202. Happy Number&lt;/h3&gt;&lt;p&gt;Write an algorithm to determine if a number is “happy”.&lt;/p&gt;
+&lt;p&gt;A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.&lt;/p&gt;
+&lt;p&gt;Example: 19 is a happy number&lt;/p&gt;
+&lt;p&gt;12 + 92 = 82&lt;br&gt;82 + 22 = 68&lt;br&gt;62 + 82 = 100&lt;br&gt;12 + 02 + 02 = 1&lt;br&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
+    
+      <category term="math" scheme="http://xytian315.github.io/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode 136 Single number</title>
     <link href="http://xytian315.github.io/2016/12/06/leetcode-136-Single-number/"/>
     <id>http://xytian315.github.io/2016/12/06/leetcode-136-Single-number/</id>
     <published>2016-12-07T05:18:33.000Z</published>
-    <updated>2016-12-07T05:30:57.000Z</updated>
+    <updated>2016-12-07T06:44:11.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Question-136-Single-Number"><a href="#Question-136-Single-Number" class="headerlink" title="Question: 136. Single Number"></a>Question: 136. Single Number</h3><p>Given an array of integers, every element appears twice except for one. Find that single one.</p>
 <p>Note:<br>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?<br><a id="more"></a></p>
@@ -209,7 +249,7 @@
     <link href="http://xytian315.github.io/2016/12/04/leetcode-1-two-sum/"/>
     <id>http://xytian315.github.io/2016/12/04/leetcode-1-two-sum/</id>
     <published>2016-12-04T20:11:31.000Z</published>
-    <updated>2016-12-06T05:12:30.000Z</updated>
+    <updated>2016-12-07T05:33:35.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Question-1-Two-Sum"><a href="#Question-1-Two-Sum" class="headerlink" title="Question: 1. Two Sum"></a>Question: 1. Two Sum</h3><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
 <p>You may assume that each input would have exactly one solution.</p>
@@ -234,6 +274,8 @@
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
     
   </entry>
   
@@ -638,35 +680,6 @@
     
       &lt;h3 id=&quot;Question-7-Reverse-Integer&quot;&gt;&lt;a href=&quot;#Question-7-Reverse-Integer&quot; class=&quot;headerlink&quot; title=&quot;Question: 7. Reverse Integer&quot;&gt;&lt;/a&gt;Question: 7. Reverse Integer&lt;/h3&gt;&lt;p&gt;Reverse digits of an integer.&lt;/p&gt;
 &lt;p&gt;Example1: x = 123, return 321&lt;br&gt;Example2: x = -123, return -321&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 6 ZigZag Conversion</title>
-    <link href="http://xytian315.github.io/2016/08/08/leetcode-6/"/>
-    <id>http://xytian315.github.io/2016/08/08/leetcode-6/</id>
-    <published>2016-08-09T04:47:46.000Z</published>
-    <updated>2016-12-06T05:13:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-6-ZigZag-Conversion"><a href="#Question-6-ZigZag-Conversion" class="headerlink" title="Question: 6. ZigZag Conversion"></a>Question: 6. ZigZag Conversion</h3><p>The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>
-<p>P   A   H   N<br>A P L S I I G<br>Y   I   R<br>And then read line by line: “PAHNAPLSIIGYIR”<br>Write the code that will take a string and make this conversion given a number of rows:</p>
-<p>string convert(string text, int nRows);<br>convert(“PAYPALISHIRING”, 3) should return “PAHNAPLSIIGYIR”.<br><a href="https://leetcode.com/problems/zigzag-conversion/" target="_blank" rel="external">https://leetcode.com/problems/zigzag-conversion/</a><br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.isEmpty() || numRows &lt;= <span class="number">1</span> || numRows &gt;= s.length()) </span><br><span class="line">            <span class="keyword">return</span> s;</span><br><span class="line">        <span class="keyword">int</span> length = s.length();</span><br><span class="line">        <span class="keyword">int</span> step = <span class="number">2</span>*(numRows-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> interval = step-<span class="number">2</span>*i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &lt; length; j+=step)&#123;</span><br><span class="line">                sb.append(s.charAt(j));</span><br><span class="line">                count++;</span><br><span class="line">                <span class="keyword">if</span>(interval &gt;<span class="number">0</span> &amp;&amp; interval != step &amp;&amp; count &lt; length &amp;&amp; (j+interval)&lt;length )&#123;</span><br><span class="line">                    sb.append(s.charAt(j+interval));</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>I have no idea how to do this question at first, stucking for a while<br>here is the solution <a href="https://kevinclcn.gitbooks.io/leetcodejava/content/006_zigzag_conversion.html" target="_blank" rel="external">https://kevinclcn.gitbooks.io/leetcodejava/content/006_zigzag_conversion.html</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-6-ZigZag-Conversion&quot;&gt;&lt;a href=&quot;#Question-6-ZigZag-Conversion&quot; class=&quot;headerlink&quot; title=&quot;Question: 6. ZigZag Conversion&quot;&gt;&lt;/a&gt;Question: 6. ZigZag Conversion&lt;/h3&gt;&lt;p&gt;The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)&lt;/p&gt;
-&lt;p&gt;P   A   H   N&lt;br&gt;A P L S I I G&lt;br&gt;Y   I   R&lt;br&gt;And then read line by line: “PAHNAPLSIIGYIR”&lt;br&gt;Write the code that will take a string and make this conversion given a number of rows:&lt;/p&gt;
-&lt;p&gt;string convert(string text, int nRows);&lt;br&gt;convert(“PAYPALISHIRING”, 3) should return “PAHNAPLSIIGYIR”.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/zigzag-conversion/&quot;&gt;https://leetcode.com/problems/zigzag-conversion/&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
