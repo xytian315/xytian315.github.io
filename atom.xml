@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-07T06:47:41.000Z</updated>
+  <updated>2016-12-08T03:17:38.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 204 count primes</title>
+    <link href="http://xytian315.github.io/2016/12/07/leetcode-204-count-primes/"/>
+    <id>http://xytian315.github.io/2016/12/07/leetcode-204-count-primes/</id>
+    <published>2016-12-08T03:13:02.000Z</published>
+    <updated>2016-12-08T03:17:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-204-Count-Primes"><a href="#Question-204-Count-Primes" class="headerlink" title="Question: 204. Count Primes"></a>Question: 204. Count Primes</h3><p>Description:<br>Count the number of prime numbers less than a non-negative number, n.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countPrimes</span><span class="params">(<span class="keyword">int</span> n)</span> </span>{
+        <span class="keyword">boolean</span>[] notPrime = <span class="keyword">new</span> <span class="keyword">boolean</span>[n];
+        <span class="keyword">int</span> count=<span class="number">0</span>;
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;n;i++){
+            <span class="keyword">if</span>(notPrime[i]==<span class="keyword">false</span>){
+                count++;
+                <span class="keyword">int</span> j=<span class="number">2</span>;
+                <span class="keyword">while</span>(i*j&lt;=n-<span class="number">1</span>){
+                    notPrime[i*j]=<span class="keyword">true</span>;
+                    j++;
+                }
+            }
+        }
+        <span class="keyword">return</span> count;
+    }
+}
+</code></pre>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>use boolean array to record if it is prime or not<br>the initial value of boolean is false</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-204-Count-Primes&quot;&gt;&lt;a href=&quot;#Question-204-Count-Primes&quot; class=&quot;headerlink&quot; title=&quot;Question: 204. Count Primes&quot;&gt;&lt;/a&gt;Question:
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
+    
+      <category term="math" scheme="http://xytian315.github.io/tags/math/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 202 Happy number</title>
@@ -537,9 +583,9 @@
     
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   
@@ -599,9 +645,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
       <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
+    
+      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
@@ -660,33 +706,6 @@
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 7 Reverse Integer</title>
-    <link href="http://xytian315.github.io/2016/08/09/leetcode-7-Reverse-Integer/"/>
-    <id>http://xytian315.github.io/2016/08/09/leetcode-7-Reverse-Integer/</id>
-    <published>2016-08-10T04:34:29.000Z</published>
-    <updated>2016-12-06T05:14:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-7-Reverse-Integer"><a href="#Question-7-Reverse-Integer" class="headerlink" title="Question: 7. Reverse Integer"></a>Question: 7. Reverse Integer</h3><p>Reverse digits of an integer.</p>
-<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>Do not forget to think about overflow problem.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-7-Reverse-Integer&quot;&gt;&lt;a href=&quot;#Question-7-Reverse-Integer&quot; class=&quot;headerlink&quot; title=&quot;Question: 7. Reverse Integer&quot;&gt;&lt;/a&gt;Question: 7. Reverse Integer&lt;/h3&gt;&lt;p&gt;Reverse digits of an integer.&lt;/p&gt;
-&lt;p&gt;Example1: x = 123, return 321&lt;br&gt;Example2: x = -123, return -321&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
   </entry>
   
