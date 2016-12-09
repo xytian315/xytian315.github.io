@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-09T06:41:31.000Z</updated>
+  <updated>2016-12-09T06:42:54.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -16,11 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 299 Bulls and Cows</title>
+    <link href="http://xytian315.github.io/2016/12/08/leetcode-299-Bulls-and-Cows/"/>
+    <id>http://xytian315.github.io/2016/12/08/leetcode-299-Bulls-and-Cows/</id>
+    <published>2016-12-09T06:42:54.000Z</published>
+    <updated>2016-12-09T06:42:54.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>leetcode 242 Valid Anagram</title>
     <link href="http://xytian315.github.io/2016/12/08/leetcode-242-Valid-Anagram/"/>
     <id>http://xytian315.github.io/2016/12/08/leetcode-242-Valid-Anagram/</id>
     <published>2016-12-09T05:35:06.000Z</published>
-    <updated>2016-12-09T06:41:31.000Z</updated>
+    <updated>2016-12-09T06:42:02.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Question-242-Valid-Anagram"><a href="#Question-242-Valid-Anagram" class="headerlink" title="Question: 242. Valid Anagram"></a>Question: 242. Valid Anagram</h3><p>Given two strings s and t, write a function to determine if t is an anagram of s.</p>
 <p>For example,<br>s = “anagram”, t = “nagaram”, return true.<br>s = “rat”, t = “car”, return false.</p>
@@ -690,37 +704,6 @@
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 11 Container With Most Water</title>
-    <link href="http://xytian315.github.io/2016/09/08/leetcode-11/"/>
-    <id>http://xytian315.github.io/2016/09/08/leetcode-11/</id>
-    <published>2016-09-09T02:44:35.000Z</published>
-    <updated>2016-12-06T05:12:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-11-Container-With-Most-Water"><a href="#Question-11-Container-With-Most-Water" class="headerlink" title="Question: 11. Container With Most Water"></a>Question: 11. Container With Most Water</h3><p><a href="https://leetcode.com/problems/container-with-most-water/" target="_blank" rel="external">https://leetcode.com/problems/container-with-most-water/</a><br>Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>
-<p>Note: You may not slant the container.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-11-Container-With-Most-Water&quot;&gt;&lt;a href=&quot;#Question-11-Container-With-Most-Water&quot; class=&quot;headerlink&quot; title=&quot;Question: 11. Container With Most Water&quot;&gt;&lt;/a&gt;Question: 11. Container With Most Water&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/container-with-most-water/&quot;&gt;https://leetcode.com/problems/container-with-most-water/&lt;/a&gt;&lt;br&gt;Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;/p&gt;
-&lt;p&gt;Note: You may not slant the container.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
-      <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
-    
-      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
   </entry>
   
