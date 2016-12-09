@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,array,easy," />
+  <meta name="keywords" content="leetcode,easy,hash table," />
 
 
 
@@ -84,19 +84,22 @@
 
 
 
-<meta name="description" content="Question: 27. Remove ElementGiven an array and a value, remove all instances of that value in place and return the new length.
-Do not allocate extra space for another array, you must do this in place">
+<meta name="description" content="Question: 205. Isomorphic StringsGiven two strings s and t, determine if they are isomorphic.
+Two strings are isomorphic if the characters in s can be replaced to get t.
+All occurrences of a character">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 27 remove element">
-<meta property="og:url" content="http://xytian315.github.io/2016/12/04/leetcode-27-remove-element-0/index.html">
+<meta property="og:title" content="leetcode 205 Isomorphic strings">
+<meta property="og:url" content="http://xytian315.github.io/2016/12/08/leetcode-205-Isomorphic-strings/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 27. Remove ElementGiven an array and a value, remove all instances of that value in place and return the new length.
-Do not allocate extra space for another array, you must do this in place">
-<meta property="og:updated_time" content="2016-12-06T05:13:22.000Z">
+<meta property="og:description" content="Question: 205. Isomorphic StringsGiven two strings s and t, determine if they are isomorphic.
+Two strings are isomorphic if the characters in s can be replaced to get t.
+All occurrences of a character">
+<meta property="og:updated_time" content="2016-12-09T04:13:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 27 remove element">
-<meta name="twitter:description" content="Question: 27. Remove ElementGiven an array and a value, remove all instances of that value in place and return the new length.
-Do not allocate extra space for another array, you must do this in place">
+<meta name="twitter:title" content="leetcode 205 Isomorphic strings">
+<meta name="twitter:description" content="Question: 205. Isomorphic StringsGiven two strings s and t, determine if they are isomorphic.
+Two strings are isomorphic if the characters in s can be replaced to get t.
+All occurrences of a character">
 
 
 
@@ -124,13 +127,13 @@ Do not allocate extra space for another array, you must do this in place">
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/12/04/leetcode-27-remove-element-0/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2016/12/08/leetcode-205-Isomorphic-strings/"/>
 
 
 
 
 
-  <title> leetcode 27 remove element | Kristy's blog </title>
+  <title> leetcode 205 Isomorphic strings | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -261,7 +264,7 @@ Do not allocate extra space for another array, you must do this in place">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/04/leetcode-27-remove-element-0/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/08/leetcode-205-Isomorphic-strings/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -285,7 +288,7 @@ Do not allocate extra space for another array, you must do this in place">
             
             
               
-                leetcode 27 remove element
+                leetcode 205 Isomorphic strings
               
             
           </h1>
@@ -298,8 +301,8 @@ Do not allocate extra space for another array, you must do this in place">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-04T12:28:35-08:00">
-                2016-12-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-08T19:56:50-08:00">
+                2016-12-08
               </time>
             
 
@@ -352,26 +355,11 @@ Do not allocate extra space for another array, you must do this in place">
       
 
       
-        <h3 id="Question-27-Remove-Element"><a href="#Question-27-Remove-Element" class="headerlink" title="Question: 27. Remove Element"></a>Question: 27. Remove Element</h3><p>Given an array and a value, remove all instances of that value in place and return the new length.</p>
-<p>Do not allocate extra space for another array, you must do this in place with constant memory.</p>
-<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
-<p>Example:<br>Given input array nums = [3,2,2,3], val = 3</p>
-<p>Your function should return length = 2, with the first two elements of nums being 2.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">//my solution</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span>{
-        <span class="keyword">int</span> current =<span class="number">0</span>;
-        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;nums.length;i++){
-            <span class="keyword">if</span>(nums[i]!=val){
-                nums[current]=nums[i];
-                current++;
-            }
-        }
-        <span class="keyword">return</span> current;
-    }
-}
-</code></pre>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>return current not (current+1)</p>
+        <h3 id="Question-205-Isomorphic-Strings"><a href="#Question-205-Isomorphic-Strings" class="headerlink" title="Question: 205. Isomorphic Strings"></a>Question: 205. Isomorphic Strings</h3><p>Given two strings s and t, determine if they are isomorphic.</p>
+<p>Two strings are isomorphic if the characters in s can be replaced to get t.</p>
+<p>All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isIsomorphic</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        Map&lt;Character, Character&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Character&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(s.charAt(i)))&#123;</span><br><span class="line">                <span class="keyword">if</span>(map.get(s.charAt(i))!=t.charAt(i))</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(map.containsValue((t.charAt(i))))</span><br><span class="line">                        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                map.put(s.charAt(i), t.charAt(i));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>Keywords: No two characters may map to the same character.<br>define a map which tracks the char-char mappings. If a value is already mapped, it can not be mapped again.</p>
 
       
     </div>
@@ -397,9 +385,9 @@ Do not allocate extra space for another array, you must do this in place">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/array/" rel="tag"># array</a>
-          
             <a href="/tags/easy/" rel="tag"># easy</a>
+          
+            <a href="/tags/hash-table/" rel="tag"># hash table</a>
           
         </div>
       
@@ -408,8 +396,8 @@ Do not allocate extra space for another array, you must do this in place">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/04/leetcode-1-two-sum/" rel="next" title="leetcode 1 two sum">
-                <i class="fa fa-chevron-left"></i> leetcode 1 two sum
+              <a href="/2016/12/07/leetcode-204-count-primes/" rel="next" title="leetcode 204 count primes">
+                <i class="fa fa-chevron-left"></i> leetcode 204 count primes
               </a>
             
           </div>
@@ -417,10 +405,6 @@ Do not allocate extra space for another array, you must do this in place">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/05/leetcode-88-merge-sorted-array-0/" rel="prev" title="leetcode 88 Merge sorted array">
-                leetcode 88 Merge sorted array <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -551,7 +535,7 @@ Do not allocate extra space for another array, you must do this in place">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-27-Remove-Element"><span class="nav-number">1.</span> <span class="nav-text">Question: 27. Remove Element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-205-Isomorphic-Strings"><span class="nav-number">1.</span> <span class="nav-text">Question: 205. Isomorphic Strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
             
 
           </div>
