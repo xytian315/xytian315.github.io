@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="leetcode,easy,hash table," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description">
+<meta name="description" content="Question: 299. Bulls and CowsYou are playing the following Bulls and Cows game with your friend: You write down a number and ask your friend to guess what the number is. Each time your friend makes a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode 299 Bulls and Cows">
 <meta property="og:url" content="http://xytian315.github.io/2016/12/08/leetcode-299-Bulls-and-Cows/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-12-09T06:42:54.000Z">
+<meta property="og:description" content="Question: 299. Bulls and CowsYou are playing the following Bulls and Cows game with your friend: You write down a number and ask your friend to guess what the number is. Each time your friend makes a">
+<meta property="og:updated_time" content="2016-12-10T06:48:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode 299 Bulls and Cows">
-<meta name="twitter:description">
+<meta name="twitter:description" content="Question: 299. Bulls and CowsYou are playing the following Bulls and Cows game with your friend: You write down a number and ask your friend to guess what the number is. Each time your friend makes a">
 
 
 
@@ -306,6 +306,24 @@
           </span>
 
           
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -338,7 +356,14 @@
       
 
       
-        
+        <h3 id="Question-299-Bulls-and-Cows"><a href="#Question-299-Bulls-and-Cows" class="headerlink" title="Question: 299. Bulls and Cows"></a>Question: 299. Bulls and Cows</h3><p>You are playing the following Bulls and Cows game with your friend: You write down a number and ask your friend to guess what the number is. Each time your friend makes a guess, you provide a hint that indicates how many digits in said guess match your secret number exactly in both digit and position (called “bulls”) and how many digits match the secret number but locate in the wrong position (called “cows”). Your friend will use successive guesses and hints to eventually derive the secret number.</p>
+<p>For example:</p>
+<p>Secret number:  “1807”<br>Friend’s guess: “7810”<br>Hint: 1 bull and 3 cows. (The bull is 8, the cows are 0, 1 and 7.)<br>Write a function to return a hint according to the secret number and friend’s guess, use A to indicate the bulls and B to indicate the cows. In the above example, your function should return “1A3B”.</p>
+<p>Please note that both secret number and friend’s guess may contain duplicate digits, for example:</p>
+<p>Secret number:  “1123”<br>Friend’s guess: “0111”<br>In this case, the 1st 1 in friend’s guess is a bull, the 2nd or 3rd 1 is a cow, and your function should return “1A1B”.<br>You may assume that the secret number and your friend’s guess only contain digits, and their lengths are always equal.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//solution from discussion</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getHint</span><span class="params">(String secret, String guess)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] numbers = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">int</span> bulls=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> cows=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;secret.length();i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> s = Character.getNumericValue(secret.charAt(i));</span><br><span class="line">            <span class="keyword">int</span> g = Character.getNumericValue(guess.charAt(i));</span><br><span class="line">            <span class="keyword">if</span>(s==g)&#123;</span><br><span class="line">                bulls++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(numbers[s]&lt;<span class="number">0</span>) cows++;</span><br><span class="line">                <span class="keyword">if</span>(numbers[g]&gt;<span class="number">0</span>) cows++;</span><br><span class="line">                numbers[s]++;</span><br><span class="line">                numbers[g]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> bulls+<span class="string">"A"</span>+cows+<span class="string">"B"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//my complicated solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getHint</span><span class="params">(String secret, String guess)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> bulls =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> cows =<span class="number">0</span>;</span><br><span class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;secret.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(secret.charAt(i)==guess.charAt(i))&#123;</span><br><span class="line">                bulls++;</span><br><span class="line">                set.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                Character s = secret.charAt(i);</span><br><span class="line">                <span class="keyword">if</span> (map.containsKey(s)) &#123;</span><br><span class="line">                    map.put(s, map.get(s) + <span class="number">1</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    map.put(s, <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;guess.length();i++)&#123;</span><br><span class="line">            Character g = guess.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(g)&amp;&amp;!set.contains(i))&#123;</span><br><span class="line">                map.put(g,map.get(g)-<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">if</span>(map.get(g) &gt;=<span class="number">0</span>) cows++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">        sb.append(bulls);</span><br><span class="line">        sb.append(<span class="string">"A"</span>);</span><br><span class="line">        sb.append(cows);</span><br><span class="line">        sb.append(<span class="string">"B"</span>);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>The idea is to iterate over the numbers in secret and in guess and count all bulls right away. For cows maintain an array that stores count of the number appearances in secret and in guess. Increment cows when either number from secret was already seen in guest or vice versa.</p>
+
       
     </div>
 
@@ -358,6 +383,16 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+            <a href="/tags/easy/" rel="tag"># easy</a>
+          
+            <a href="/tags/hash-table/" rel="tag"># hash table</a>
+          
+        </div>
       
 
       
@@ -426,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/4520812?v=3&s=460"
@@ -491,6 +535,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-299-Bulls-and-Cows"><span class="nav-number">1.</span> <span class="nav-text">Question: 299. Bulls and Cows</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
