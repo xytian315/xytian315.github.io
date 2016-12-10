@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-10T06:48:04.000Z</updated>
+  <updated>2016-12-10T07:38:51.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -16,11 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 290 word pattern</title>
+    <link href="http://xytian315.github.io/2016/12/09/leetcode-290-word-pattern/"/>
+    <id>http://xytian315.github.io/2016/12/09/leetcode-290-word-pattern/</id>
+    <published>2016-12-10T07:37:22.000Z</published>
+    <updated>2016-12-10T07:38:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-290-Word-Pattern"><a href="#Question-290-Word-Pattern" class="headerlink" title="Question: 290. Word Pattern"></a>Question: 290. Word Pattern</h3><p>Given a pattern and a string str, find if str follows the same pattern.</p>
+<p>Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in str.</p>
+<p>Examples:<br>pattern = “abba”, str = “dog cat cat dog” should return true.<br>pattern = “abba”, str = “dog cat cat fish” should return false.<br>pattern = “aaaa”, str = “dog cat cat dog” should return false.<br>pattern = “abba”, str = “dog dog dog dog” should return false.<br>Notes:<br>You may assume pattern contains only lowercase letters, and str contains lowercase letters separated by a single space.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordPattern</span><span class="params">(String pattern, String str)</span> </span>&#123;</span><br><span class="line">        String[] strings =str.split(<span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span>(pattern.length()!=strings.length) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">        <span class="keyword">int</span> last=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pattern.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(pattern.charAt(i)))&#123;</span><br><span class="line">                <span class="keyword">int</span> index = map.get(pattern.charAt(i));</span><br><span class="line">                <span class="keyword">if</span>(strings[i].compareTo(strings[index])!=<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(!map.isEmpty() &amp;&amp; strings[i].compareTo(strings[last])==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                map.put(pattern.charAt(i),i);</span><br><span class="line">                last =i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-290-Word-Pattern&quot;&gt;&lt;a href=&quot;#Question-290-Word-Pattern&quot; class=&quot;headerlink&quot; title=&quot;Question: 290. Word Pattern&quot;&gt;&lt;/a&gt;Question: 290. Word Pattern&lt;/h3&gt;&lt;p&gt;Given a pattern and a string str, find if str follows the same pattern.&lt;/p&gt;
+&lt;p&gt;Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in str.&lt;/p&gt;
+&lt;p&gt;Examples:&lt;br&gt;pattern = “abba”, str = “dog cat cat dog” should return true.&lt;br&gt;pattern = “abba”, str = “dog cat cat fish” should return false.&lt;br&gt;pattern = “aaaa”, str = “dog cat cat dog” should return false.&lt;br&gt;pattern = “abba”, str = “dog dog dog dog” should return false.&lt;br&gt;Notes:&lt;br&gt;You may assume pattern contains only lowercase letters, and str contains lowercase letters separated by a single space.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode 299 Bulls and Cows</title>
     <link href="http://xytian315.github.io/2016/12/08/leetcode-299-Bulls-and-Cows/"/>
     <id>http://xytian315.github.io/2016/12/08/leetcode-299-Bulls-and-Cows/</id>
     <published>2016-12-09T06:42:54.000Z</published>
-    <updated>2016-12-10T06:48:04.000Z</updated>
+    <updated>2016-12-10T07:37:44.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Question-299-Bulls-and-Cows"><a href="#Question-299-Bulls-and-Cows" class="headerlink" title="Question: 299. Bulls and Cows"></a>Question: 299. Bulls and Cows</h3><p>You are playing the following Bulls and Cows game with your friend: You write down a number and ask your friend to guess what the number is. Each time your friend makes a guess, you provide a hint that indicates how many digits in said guess match your secret number exactly in both digit and position (called “bulls”) and how many digits match the secret number but locate in the wrong position (called “cows”). Your friend will use successive guesses and hints to eventually derive the secret number.</p>
 <p>For example:</p>
@@ -691,42 +723,9 @@
     
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 189 Rotate Array</title>
-    <link href="http://xytian315.github.io/2016/09/12/leetcode-189/"/>
-    <id>http://xytian315.github.io/2016/09/12/leetcode-189/</id>
-    <published>2016-09-12T19:06:08.000Z</published>
-    <updated>2016-12-06T07:59:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-189-Rotate-Array"><a href="#Question-189-Rotate-Array" class="headerlink" title="Question: 189. Rotate Array"></a>Question: 189. Rotate Array</h3><p>Rotate an array of n elements to the right by k steps.</p>
-<p>For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//O(n) time o(1) space</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(k==<span class="number">0</span> || nums.length&lt;=<span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">        k=k%nums.length;</span><br><span class="line">        reverse(nums,<span class="number">0</span>,nums.length-<span class="number">1</span>);</span><br><span class="line">        reverse(nums,<span class="number">0</span>, k-<span class="number">1</span>);</span><br><span class="line">        reverse(nums,k, nums.length-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span>[] nums,<span class="keyword">int</span> start, <span class="keyword">int</span> end)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(start&lt;end)&#123;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[start];</span><br><span class="line">            nums[start] = nums[end];</span><br><span class="line">            nums[end] = temp;</span><br><span class="line">            start++;</span><br><span class="line">            end--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><ol>
-<li>Don’t forget to do  k=k%nums.length;</li>
-<li>use a customized method to do common things: in this case reverse the array</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-189-Rotate-Array&quot;&gt;&lt;a href=&quot;#Question-189-Rotate-Array&quot; class=&quot;headerlink&quot; title=&quot;Question: 189. Rotate Array&quot;&gt;&lt;/a&gt;Question:
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   

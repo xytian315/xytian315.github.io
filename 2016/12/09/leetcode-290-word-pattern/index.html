@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,array,easy,two pointers," />
+  <meta name="keywords" content="leetcode,easy,hash table," />
 
 
 
@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="Question: 26. Remove Duplicates from Sorted ArrayGiven a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
-Do not allocate extra space for">
+<meta name="description" content="Question: 290. Word PatternGiven a pattern and a string str, find if str follows the same pattern.
+Here follow means a full match, such that there is a bijection between a letter in pattern and a non-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 26 Remove Duplicates from Sorted Array">
-<meta property="og:url" content="http://xytian315.github.io/2016/10/03/leetcode-26/index.html">
+<meta property="og:title" content="leetcode 290 word pattern">
+<meta property="og:url" content="http://xytian315.github.io/2016/12/09/leetcode-290-word-pattern/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 26. Remove Duplicates from Sorted ArrayGiven a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
-Do not allocate extra space for">
-<meta property="og:updated_time" content="2016-12-07T04:32:28.000Z">
+<meta property="og:description" content="Question: 290. Word PatternGiven a pattern and a string str, find if str follows the same pattern.
+Here follow means a full match, such that there is a bijection between a letter in pattern and a non-">
+<meta property="og:updated_time" content="2016-12-10T07:38:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 26 Remove Duplicates from Sorted Array">
-<meta name="twitter:description" content="Question: 26. Remove Duplicates from Sorted ArrayGiven a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
-Do not allocate extra space for">
+<meta name="twitter:title" content="leetcode 290 word pattern">
+<meta name="twitter:description" content="Question: 290. Word PatternGiven a pattern and a string str, find if str follows the same pattern.
+Here follow means a full match, such that there is a bijection between a letter in pattern and a non-">
 
 
 
@@ -124,13 +124,13 @@ Do not allocate extra space for">
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/10/03/leetcode-26/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2016/12/09/leetcode-290-word-pattern/"/>
 
 
 
 
 
-  <title> leetcode 26 Remove Duplicates from Sorted Array | Kristy's blog </title>
+  <title> leetcode 290 word pattern | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -261,7 +261,7 @@ Do not allocate extra space for">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/10/03/leetcode-26/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/09/leetcode-290-word-pattern/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -285,7 +285,7 @@ Do not allocate extra space for">
             
             
               
-                leetcode 26 Remove Duplicates from Sorted Array
+                leetcode 290 word pattern
               
             
           </h1>
@@ -298,8 +298,8 @@ Do not allocate extra space for">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-03T16:13:09-07:00">
-                2016-10-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-09T23:37:22-08:00">
+                2016-12-09
               </time>
             
 
@@ -332,8 +332,8 @@ Do not allocate extra space for">
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/10/03/leetcode-26/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/03/leetcode-26/" itemprop="commentCount"></span>
+                <a href="/2016/12/09/leetcode-290-word-pattern/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/09/leetcode-290-word-pattern/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -359,12 +359,10 @@ Do not allocate extra space for">
       
 
       
-        <h3 id="Question-26-Remove-Duplicates-from-Sorted-Array"><a href="#Question-26-Remove-Duplicates-from-Sorted-Array" class="headerlink" title="Question: 26. Remove Duplicates from Sorted Array"></a>Question: 26. Remove Duplicates from Sorted Array</h3><p>Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.</p>
-<p>Do not allocate extra space for another array, you must do this in place with constant memory.</p>
-<p>For example,<br>Given input array nums = [1,1,2],</p>
-<p>Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn’t matter what you leave beyond the new length.<br><a id="more"></a></p>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>Two pointer technique<br><a href="https://leetcode.com/articles/two-pointer-technique/" target="_blank" rel="external">https://leetcode.com/articles/two-pointer-technique/</a><br>two pointer: one fast runner, one slow runner</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">0</span> || nums.length == <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> nums.length;</span><br><span class="line">        <span class="keyword">int</span> current = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] != current) &#123;</span><br><span class="line">                current = nums[i];</span><br><span class="line">                nums[count] = nums[i];</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="Question-290-Word-Pattern"><a href="#Question-290-Word-Pattern" class="headerlink" title="Question: 290. Word Pattern"></a>Question: 290. Word Pattern</h3><p>Given a pattern and a string str, find if str follows the same pattern.</p>
+<p>Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in str.</p>
+<p>Examples:<br>pattern = “abba”, str = “dog cat cat dog” should return true.<br>pattern = “abba”, str = “dog cat cat fish” should return false.<br>pattern = “aaaa”, str = “dog cat cat dog” should return false.<br>pattern = “abba”, str = “dog dog dog dog” should return false.<br>Notes:<br>You may assume pattern contains only lowercase letters, and str contains lowercase letters separated by a single space.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordPattern</span><span class="params">(String pattern, String str)</span> </span>&#123;</span><br><span class="line">        String[] strings =str.split(<span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span>(pattern.length()!=strings.length) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">        <span class="keyword">int</span> last=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pattern.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(pattern.charAt(i)))&#123;</span><br><span class="line">                <span class="keyword">int</span> index = map.get(pattern.charAt(i));</span><br><span class="line">                <span class="keyword">if</span>(strings[i].compareTo(strings[index])!=<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(!map.isEmpty() &amp;&amp; strings[i].compareTo(strings[last])==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                map.put(pattern.charAt(i),i);</span><br><span class="line">                last =i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -390,11 +388,9 @@ Do not allocate extra space for">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/array/" rel="tag"># array</a>
-          
             <a href="/tags/easy/" rel="tag"># easy</a>
           
-            <a href="/tags/two-pointers/" rel="tag"># two pointers</a>
+            <a href="/tags/hash-table/" rel="tag"># hash table</a>
           
         </div>
       
@@ -403,8 +399,8 @@ Do not allocate extra space for">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/12/leetcode-189/" rel="next" title="leetcode 189 Rotate Array">
-                <i class="fa fa-chevron-left"></i> leetcode 189 Rotate Array
+              <a href="/2016/12/08/leetcode-299-Bulls-and-Cows/" rel="next" title="leetcode 299 Bulls and Cows">
+                <i class="fa fa-chevron-left"></i> leetcode 299 Bulls and Cows
               </a>
             
           </div>
@@ -412,10 +408,6 @@ Do not allocate extra space for">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/" rel="prev" title="leetcode 448 Find All Numbers Disappeared in an Array">
-                leetcode 448 Find All Numbers Disappeared in an Array <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,7 +545,7 @@ Do not allocate extra space for">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-26-Remove-Duplicates-from-Sorted-Array"><span class="nav-number">1.</span> <span class="nav-text">Question: 26. Remove Duplicates from Sorted Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">2.</span> <span class="nav-text">Thoughts:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">3.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-290-Word-Pattern"><span class="nav-number">1.</span> <span class="nav-text">Question: 290. Word Pattern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li></ol></div>
             
 
           </div>
@@ -684,9 +676,9 @@ Do not allocate extra space for">
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/10/03/leetcode-26/';
+      var disqus_identifier = '2016/12/09/leetcode-290-word-pattern/';
 
-      var disqus_title = "leetcode 26 Remove Duplicates from Sorted Array";
+      var disqus_title = "leetcode 290 word pattern";
 
 
       function run_disqus_script(disqus_script) {
