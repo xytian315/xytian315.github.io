@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,easy,hash table," />
+  <meta name="keywords" content="leetcode,array,hash table,two pointers,sort," />
 
 
 
@@ -84,19 +84,22 @@
 
 
 
-<meta name="description" content="Question: 349. Intersection of Two ArraysGiven two arrays, write a function to compute their intersection.
-Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element in the resul">
+<meta name="description" content="Question: 350. Intersection of Two Arrays IIGiven two arrays, write a function to compute their intersection.
+Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].
+Note:Each element in th">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 349 Intersection of two arrays">
-<meta property="og:url" content="http://xytian315.github.io/2016/12/10/leetcode-349-Intersection-of-two-arrays/index.html">
+<meta property="og:title" content="350 Intersection or two arrays II">
+<meta property="og:url" content="http://xytian315.github.io/2016/12/10/leetcode-350-Intersection-or-two-arrays-II/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 349. Intersection of Two ArraysGiven two arrays, write a function to compute their intersection.
-Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element in the resul">
-<meta property="og:updated_time" content="2016-12-11T06:09:47.000Z">
+<meta property="og:description" content="Question: 350. Intersection of Two Arrays IIGiven two arrays, write a function to compute their intersection.
+Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].
+Note:Each element in th">
+<meta property="og:updated_time" content="2016-12-11T06:28:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 349 Intersection of two arrays">
-<meta name="twitter:description" content="Question: 349. Intersection of Two ArraysGiven two arrays, write a function to compute their intersection.
-Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element in the resul">
+<meta name="twitter:title" content="350 Intersection or two arrays II">
+<meta name="twitter:description" content="Question: 350. Intersection of Two Arrays IIGiven two arrays, write a function to compute their intersection.
+Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].
+Note:Each element in th">
 
 
 
@@ -124,13 +127,13 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/12/10/leetcode-349-Intersection-of-two-arrays/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2016/12/10/leetcode-350-Intersection-or-two-arrays-II/"/>
 
 
 
 
 
-  <title> leetcode 349 Intersection of two arrays | Kristy's blog </title>
+  <title> 350 Intersection or two arrays II | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -261,7 +264,7 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/10/leetcode-349-Intersection-of-two-arrays/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/10/leetcode-350-Intersection-or-two-arrays-II/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -285,7 +288,7 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
             
             
               
-                leetcode 349 Intersection of two arrays
+                350 Intersection or two arrays II
               
             
           </h1>
@@ -298,7 +301,7 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-10T22:05:28-08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-10T22:17:59-08:00">
                 2016-12-10
               </time>
             
@@ -332,8 +335,8 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/10/leetcode-349-Intersection-of-two-arrays/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/10/leetcode-349-Intersection-of-two-arrays/" itemprop="commentCount"></span>
+                <a href="/2016/12/10/leetcode-350-Intersection-or-two-arrays-II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/10/leetcode-350-Intersection-or-two-arrays-II/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -359,10 +362,15 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
       
 
       
-        <h3 id="Question-349-Intersection-of-Two-Arrays"><a href="#Question-349-Intersection-of-Two-Arrays" class="headerlink" title="Question: 349. Intersection of Two Arrays"></a>Question: 349. Intersection of Two Arrays</h3><p>Given two arrays, write a function to compute their intersection.</p>
-<p>Example:<br>Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].<br>Note:<br>Each element in the result must be unique.<br>The result can be in any order.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersection(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">        Set&lt;Integer&gt; set1 = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set2 = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele: nums1)&#123;</span><br><span class="line">            set1.add(ele);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele: nums2)&#123;</span><br><span class="line">            set2.add(ele);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele:set1)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set2.add(ele))&#123;</span><br><span class="line">                set.add(ele);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] result= <span class="keyword">new</span> <span class="keyword">int</span>[set.size()];</span><br><span class="line">        <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element:set)&#123;</span><br><span class="line">            result[index]=element;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//actually you can use only two sets</span></span><br><span class="line"><span class="comment">// time O(n) space O(n)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersection(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">        Set&lt;Integer&gt; set1 = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele: nums1)&#123;</span><br><span class="line">            set1.add(ele);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele:nums2)&#123;</span><br><span class="line">            <span class="keyword">if</span>(set1.contains(ele))&#123;</span><br><span class="line">                set.add(ele);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] result= <span class="keyword">new</span> <span class="keyword">int</span>[set.size()];</span><br><span class="line">        <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element:set)&#123;</span><br><span class="line">            result[index]=element;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>use one set to record all the unique numbers. Looping the second array, if the set contain that number, put it into intersection set</p>
+        <h3 id="Question-350-Intersection-of-Two-Arrays-II"><a href="#Question-350-Intersection-of-Two-Arrays-II" class="headerlink" title="Question: 350. Intersection of Two Arrays II"></a>Question: 350. Intersection of Two Arrays II</h3><p>Given two arrays, write a function to compute their intersection.</p>
+<p>Example:<br>Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].</p>
+<p>Note:<br>Each element in the result should appear as many times as it shows in both arrays.<br>The result can be in any order.<br>Follow up:<br>What if the given array is already sorted? How would you optimize your algorithm?<br>What if nums1’s size is small compared to nums2’s size? Which algorithm is better?<br>What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my solution </span></span><br><span class="line"><span class="comment">//time O(nlogn) (sort)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersect(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">        Arrays.sort(nums1);</span><br><span class="line">        Arrays.sort(nums2);</span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">        ArrayList&lt;Integer&gt; array=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">while</span>(i&lt;nums1.length &amp;&amp; j&lt;nums2.length)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums1[i]&lt;nums2[j])&#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span>(nums1[i]&gt;nums2[j])&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                array.add(nums1[i]);</span><br><span class="line">                i++;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[array.size()];</span><br><span class="line">        <span class="keyword">int</span> index =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> e: array)&#123;</span><br><span class="line">            result[index]=e;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//another solution using hashmap</span></span><br><span class="line"><span class="comment">//time O(n) spaceO(n)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersect(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        ArrayList&lt;Integer&gt; array=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> e: nums1)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(e))&#123;</span><br><span class="line">                map.put(e, map.get(e)+<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(e, <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> e: nums2)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(e) &amp;&amp; map.get(e)&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                array.add(e);</span><br><span class="line">                map.put(e, map.get(e)-<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[array.size()];</span><br><span class="line">        <span class="keyword">int</span> index =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> e: array)&#123;</span><br><span class="line">            result[index]=e;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>1.sort two array, used two pointers to compare each number. based comparison,increment the corresponding index.<br>2.use hashmap to tracking all the numbers and count. loop the second array, if it contains the key and value&gt;0, put it into result, also decrease the count(value);</p>
+<ol>
+<li>follow up answer from discussion<br>What if elements of nums2 are stored on disk, and the memory is<br>limited such that you cannot load all elements into the memory at<br>once?<br>If only nums2 cannot fit in memory, put all elements of nums1 into a HashMap, read chunks of array that fit into the memory, and record the intersections.</li>
+</ol>
+<p>If both nums1 and nums2 are so huge that neither fit into the memory, sort them individually (external sort), then read 2 elements from each array at a time in memory, record intersections.</p>
 
       
     </div>
@@ -388,9 +396,13 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/easy/" rel="tag"># easy</a>
+            <a href="/tags/array/" rel="tag"># array</a>
           
             <a href="/tags/hash-table/" rel="tag"># hash table</a>
+          
+            <a href="/tags/two-pointers/" rel="tag"># two pointers</a>
+          
+            <a href="/tags/sort/" rel="tag"># sort</a>
           
         </div>
       
@@ -399,8 +411,8 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/09/leetcode-290-word-pattern/" rel="next" title="leetcode 290 word pattern">
-                <i class="fa fa-chevron-left"></i> leetcode 290 word pattern
+              <a href="/2016/12/10/leetcode-349-Intersection-of-two-arrays/" rel="next" title="leetcode 349 Intersection of two arrays">
+                <i class="fa fa-chevron-left"></i> leetcode 349 Intersection of two arrays
               </a>
             
           </div>
@@ -408,10 +420,6 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/10/leetcode-350-Intersection-or-two-arrays-II/" rel="prev" title="350 Intersection or two arrays II">
-                350 Intersection or two arrays II <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -549,7 +557,7 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-349-Intersection-of-Two-Arrays"><span class="nav-number">1.</span> <span class="nav-text">Question: 349. Intersection of Two Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-350-Intersection-of-Two-Arrays-II"><span class="nav-number">1.</span> <span class="nav-text">Question: 350. Intersection of Two Arrays II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
             
 
           </div>
@@ -680,9 +688,9 @@ Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/12/10/leetcode-349-Intersection-of-two-arrays/';
+      var disqus_identifier = '2016/12/10/leetcode-350-Intersection-or-two-arrays-II/';
 
-      var disqus_title = "leetcode 349 Intersection of two arrays";
+      var disqus_title = "350 Intersection or two arrays II";
 
 
       function run_disqus_script(disqus_script) {
