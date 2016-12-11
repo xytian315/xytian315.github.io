@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode," />
+  <meta name="keywords" content="leetcode,easy,hash table," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="Question: 6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibilit">
+<meta name="description" content="Question: 349. Intersection of Two ArraysGiven two arrays, write a function to compute their intersection.
+Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element in the resul">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 6 ZigZag Conversion">
-<meta property="og:url" content="http://xytian315.github.io/2016/08/08/leetcode-6/index.html">
+<meta property="og:title" content="leetcode 349 Intersection of two arrays">
+<meta property="og:url" content="http://xytian315.github.io/2016/12/10/leetcode-349-Intersection-of-two-arrays/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibilit">
-<meta property="og:updated_time" content="2016-12-06T05:13:40.000Z">
+<meta property="og:description" content="Question: 349. Intersection of Two ArraysGiven two arrays, write a function to compute their intersection.
+Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element in the resul">
+<meta property="og:updated_time" content="2016-12-11T06:09:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 6 ZigZag Conversion">
-<meta name="twitter:description" content="Question: 6. ZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibilit">
+<meta name="twitter:title" content="leetcode 349 Intersection of two arrays">
+<meta name="twitter:description" content="Question: 349. Intersection of Two ArraysGiven two arrays, write a function to compute their intersection.
+Example:Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].Note:Each element in the resul">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/08/08/leetcode-6/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2016/12/10/leetcode-349-Intersection-of-two-arrays/"/>
 
 
 
 
 
-  <title> leetcode 6 ZigZag Conversion | Kristy's blog </title>
+  <title> leetcode 349 Intersection of two arrays | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -258,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/08/08/leetcode-6/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/10/leetcode-349-Intersection-of-two-arrays/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -282,7 +285,7 @@
             
             
               
-                leetcode 6 ZigZag Conversion
+                leetcode 349 Intersection of two arrays
               
             
           </h1>
@@ -295,8 +298,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-08T21:47:46-07:00">
-                2016-08-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-10T22:05:28-08:00">
+                2016-12-10
               </time>
             
 
@@ -329,8 +332,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/08/08/leetcode-6/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/08/leetcode-6/" itemprop="commentCount"></span>
+                <a href="/2016/12/10/leetcode-349-Intersection-of-two-arrays/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/10/leetcode-349-Intersection-of-two-arrays/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,11 +359,10 @@
       
 
       
-        <h3 id="Question-6-ZigZag-Conversion"><a href="#Question-6-ZigZag-Conversion" class="headerlink" title="Question: 6. ZigZag Conversion"></a>Question: 6. ZigZag Conversion</h3><p>The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>
-<p>P   A   H   N<br>A P L S I I G<br>Y   I   R<br>And then read line by line: “PAHNAPLSIIGYIR”<br>Write the code that will take a string and make this conversion given a number of rows:</p>
-<p>string convert(string text, int nRows);<br>convert(“PAYPALISHIRING”, 3) should return “PAHNAPLSIIGYIR”.<br><a href="https://leetcode.com/problems/zigzag-conversion/" target="_blank" rel="external">https://leetcode.com/problems/zigzag-conversion/</a><br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(String s, <span class="keyword">int</span> numRows)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.isEmpty() || numRows &lt;= <span class="number">1</span> || numRows &gt;= s.length()) </span><br><span class="line">            <span class="keyword">return</span> s;</span><br><span class="line">        <span class="keyword">int</span> length = s.length();</span><br><span class="line">        <span class="keyword">int</span> step = <span class="number">2</span>*(numRows-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numRows; i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> interval = step-<span class="number">2</span>*i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &lt; length; j+=step)&#123;</span><br><span class="line">                sb.append(s.charAt(j));</span><br><span class="line">                count++;</span><br><span class="line">                <span class="keyword">if</span>(interval &gt;<span class="number">0</span> &amp;&amp; interval != step &amp;&amp; count &lt; length &amp;&amp; (j+interval)&lt;length )&#123;</span><br><span class="line">                    sb.append(s.charAt(j+interval));</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>I have no idea how to do this question at first, stucking for a while<br>here is the solution <a href="https://kevinclcn.gitbooks.io/leetcodejava/content/006_zigzag_conversion.html" target="_blank" rel="external">https://kevinclcn.gitbooks.io/leetcodejava/content/006_zigzag_conversion.html</a></p>
+        <h3 id="Question-349-Intersection-of-Two-Arrays"><a href="#Question-349-Intersection-of-Two-Arrays" class="headerlink" title="Question: 349. Intersection of Two Arrays"></a>Question: 349. Intersection of Two Arrays</h3><p>Given two arrays, write a function to compute their intersection.</p>
+<p>Example:<br>Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].<br>Note:<br>Each element in the result must be unique.<br>The result can be in any order.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersection(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">        Set&lt;Integer&gt; set1 = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set2 = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele: nums1)&#123;</span><br><span class="line">            set1.add(ele);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele: nums2)&#123;</span><br><span class="line">            set2.add(ele);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele:set1)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set2.add(ele))&#123;</span><br><span class="line">                set.add(ele);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] result= <span class="keyword">new</span> <span class="keyword">int</span>[set.size()];</span><br><span class="line">        <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element:set)&#123;</span><br><span class="line">            result[index]=element;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//actually you can use only two sets</span></span><br><span class="line"><span class="comment">// time O(n) space O(n)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] intersection(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span>[] nums2) &#123;</span><br><span class="line">        Set&lt;Integer&gt; set1 = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele: nums1)&#123;</span><br><span class="line">            set1.add(ele);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> ele:nums2)&#123;</span><br><span class="line">            <span class="keyword">if</span>(set1.contains(ele))&#123;</span><br><span class="line">                set.add(ele);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] result= <span class="keyword">new</span> <span class="keyword">int</span>[set.size()];</span><br><span class="line">        <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> element:set)&#123;</span><br><span class="line">            result[index]=element;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>use one set to record all the unique numbers. Looping the second array, if the set contain that number, put it into intersection set</p>
 
       
     </div>
@@ -386,6 +388,10 @@
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
+            <a href="/tags/easy/" rel="tag"># easy</a>
+          
+            <a href="/tags/hash-table/" rel="tag"># hash table</a>
+          
         </div>
       
 
@@ -393,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/05/leetcode-5/" rel="next" title="leetcode 5 Longest Palindromic Substring">
-                <i class="fa fa-chevron-left"></i> leetcode 5 Longest Palindromic Substring
+              <a href="/2016/12/09/leetcode-290-word-pattern/" rel="next" title="leetcode 290 word pattern">
+                <i class="fa fa-chevron-left"></i> leetcode 290 word pattern
               </a>
             
           </div>
@@ -402,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/09/leetcode-7-Reverse-Integer/" rel="prev" title="leetcode 7 Reverse Integer">
-                leetcode 7 Reverse Integer <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -543,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-6-ZigZag-Conversion"><span class="nav-number">1.</span> <span class="nav-text">Question: 6. ZigZag Conversion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-349-Intersection-of-Two-Arrays"><span class="nav-number">1.</span> <span class="nav-text">Question: 349. Intersection of Two Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
             
 
           </div>
@@ -674,9 +676,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/08/08/leetcode-6/';
+      var disqus_identifier = '2016/12/10/leetcode-349-Intersection-of-two-arrays/';
 
-      var disqus_title = "leetcode 6 ZigZag Conversion";
+      var disqus_title = "leetcode 349 Intersection of two arrays";
 
 
       function run_disqus_script(disqus_script) {
