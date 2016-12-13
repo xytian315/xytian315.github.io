@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/</loc>
+    
+    <lastmod>2016-12-13T08:12:55.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xytian315.github.io/2016/12/11/leetcode-409-Longest-Palindrome/</loc>
+    
+    <lastmod>2016-12-12T05:28:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2016/12/10/leetcode-389-find-the-difference/</loc>
     
     <lastmod>2016-12-11T06:49:17.000Z</lastmod>

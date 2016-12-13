@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2016-12-11T06:49:17.000Z</updated>
+  <updated>2016-12-13T08:12:55.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,85 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 438 Find all anagrams in a string</title>
+    <link href="http://xytian315.github.io/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/"/>
+    <id>http://xytian315.github.io/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/</id>
+    <published>2016-12-13T08:11:15.000Z</published>
+    <updated>2016-12-13T08:12:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-438-Find-All-Anagrams-in-a-String"><a href="#Question-438-Find-All-Anagrams-in-a-String" class="headerlink" title="Question: 438. Find All Anagrams in a String"></a>Question: 438. Find All Anagrams in a String</h3><p>Given a string s and a non-empty string p, find all the start indices of p’s anagrams in s.</p>
+<p>Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.</p>
+<p>The order of output does not matter.</p>
+<p>Example 1:</p>
+<p>Input:<br>s: “cbaebabacd” p: “abc”</p>
+<p>Output:<br>[0, 6]</p>
+<p>Explanation:<br>The substring with start index = 0 is “cba”, which is an anagram of “abc”.<br>The substring with start index = 6 is “bac”, which is an anagram of “abc”.<br>Example 2:</p>
+<p>Input:<br>s: “abab” p: “ab”</p>
+<p>Output:<br>[0, 1, 2]</p>
+<p>Explanation:<br>The substring with start index = 0 is “ab”, which is an anagram of “ab”.<br>The substring with start index = 1 is “ba”, which is an anagram of “ab”.<br>The substring with start index = 2 is “ab”, which is an anagram of “ab”.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public List&lt;Integer&gt; findAnagrams(String s, String p) &#123;</span><br><span class="line">        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">    if (s == null || s.length() == 0 || p == null || p.length() == 0) return list;</span><br><span class="line">    </span><br><span class="line">    int[] hash = new int[256]; //character hash</span><br><span class="line">    </span><br><span class="line">    //record each character in p to hash</span><br><span class="line">    for (char c : p.toCharArray()) &#123;</span><br><span class="line">        hash[c]++;</span><br><span class="line">    &#125;</span><br><span class="line">    //two points, initialize count to p's length</span><br><span class="line">    int left = 0, right = 0, count = p.length();</span><br><span class="line">    </span><br><span class="line">    while (right &lt; s.length()) &#123;</span><br><span class="line">        //move right everytime, if the character exists in p's hash, decrease the count</span><br><span class="line">        //current hash value &gt;= 1 means the character is existing in p</span><br><span class="line">        if (hash[s.charAt(right)] &gt;= 1) &#123;</span><br><span class="line">            count--;</span><br><span class="line">        &#125;</span><br><span class="line">        hash[s.charAt(right)]--;</span><br><span class="line">        right++;</span><br><span class="line">        </span><br><span class="line">        //when the count is down to 0, means we found the right anagram</span><br><span class="line">        //then add window's left to result list</span><br><span class="line">        if (count == 0) &#123;</span><br><span class="line">            list.add(left);</span><br><span class="line">        &#125;</span><br><span class="line">        //if we find the window's size equals to p, then we have to move left (narrow the window) to find the new match window</span><br><span class="line">        //++ to reset the hash because we kicked out the left</span><br><span class="line">        //only increase the count if the character is in p</span><br><span class="line">        //the count &gt;= 0 indicate it was original in the hash, cuz it won't go below 0</span><br><span class="line">        if (right - left == p.length() ) &#123;</span><br><span class="line">           </span><br><span class="line">            if (hash[s.charAt(left)] &gt;= 0) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            hash[s.charAt(left)]++;</span><br><span class="line">            left++;</span><br><span class="line">        </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">        return list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">### Thoughts</span><br><span class="line">https://discuss.leetcode.com/topic/64434/shortest-concise-java-o-n-sliding-window-solution/4</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-438-Find-All-Anagrams-in-a-String&quot;&gt;&lt;a href=&quot;#Question-438-Find-All-Anagrams-in-a-String&quot; class=&quot;headerlink&quot; title=&quot;Question: 438. Find All Anagrams in a String&quot;&gt;&lt;/a&gt;Question: 438. Find All Anagrams in a String&lt;/h3&gt;&lt;p&gt;Given a string s and a non-empty string p, find all the start indices of p’s anagrams in s.&lt;/p&gt;
+&lt;p&gt;Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.&lt;/p&gt;
+&lt;p&gt;The order of output does not matter.&lt;/p&gt;
+&lt;p&gt;Example 1:&lt;/p&gt;
+&lt;p&gt;Input:&lt;br&gt;s: “cbaebabacd” p: “abc”&lt;/p&gt;
+&lt;p&gt;Output:&lt;br&gt;[0, 6]&lt;/p&gt;
+&lt;p&gt;Explanation:&lt;br&gt;The substring with start index = 0 is “cba”, which is an anagram of “abc”.&lt;br&gt;The substring with start index = 6 is “bac”, which is an anagram of “abc”.&lt;br&gt;Example 2:&lt;/p&gt;
+&lt;p&gt;Input:&lt;br&gt;s: “abab” p: “ab”&lt;/p&gt;
+&lt;p&gt;Output:&lt;br&gt;[0, 1, 2]&lt;/p&gt;
+&lt;p&gt;Explanation:&lt;br&gt;The substring with start index = 0 is “ab”, which is an anagram of “ab”.&lt;br&gt;The substring with start index = 1 is “ba”, which is an anagram of “ab”.&lt;br&gt;The substring with start index = 2 is “ab”, which is an anagram of “ab”.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode 409 Longest Palindrome</title>
+    <link href="http://xytian315.github.io/2016/12/11/leetcode-409-Longest-Palindrome/"/>
+    <id>http://xytian315.github.io/2016/12/11/leetcode-409-Longest-Palindrome/</id>
+    <published>2016-12-12T05:24:46.000Z</published>
+    <updated>2016-12-12T05:28:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-409-Longest-Palindrome"><a href="#Question-409-Longest-Palindrome" class="headerlink" title="Question: 409. Longest Palindrome"></a>Question: 409. Longest Palindrome</h3><p>Given a string which consists of lowercase or uppercase letters, find the length of the longest palindromes that can be built with those letters.</p>
+<p>This is case sensitive, for example “Aa” is not considered a palindrome here.</p>
+<p>Note:<br>Assume the length of given string will not exceed 1,010.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        Set&lt;Character&gt; set = <span class="keyword">new</span> HashSet&lt;Character&gt;();</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(set.contains(c))&#123;</span><br><span class="line">                set.remove(c);</span><br><span class="line">                count+=<span class="number">2</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                set.add(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!set.isEmpty()) count++;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p> just count the number of same pairs, then this can be used to put in the different direction to consist of palindrome. Then if there exist more chars, we can put one in the middle</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-409-Longest-Palindrome&quot;&gt;&lt;a href=&quot;#Question-409-Longest-Palindrome&quot; class=&quot;headerlink&quot; title=&quot;Question: 409. Longest Palindrome&quot;&gt;&lt;/a&gt;Question: 409. Longest Palindrome&lt;/h3&gt;&lt;p&gt;Given a string which consists of lowercase or uppercase letters, find the length of the longest palindromes that can be built with those letters.&lt;/p&gt;
+&lt;p&gt;This is case sensitive, for example “Aa” is not considered a palindrome here.&lt;/p&gt;
+&lt;p&gt;Note:&lt;br&gt;Assume the length of given string will not exceed 1,010.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
+    
+  </entry>
   
   <entry>
     <title>389 find the difference</title>
@@ -665,72 +744,6 @@
 &lt;p&gt;Example 1:&lt;br&gt;Input: [7, 1, 5, 3, 6, 4]&lt;br&gt;Output: 5&lt;/p&gt;
 &lt;p&gt;max. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)&lt;br&gt;Example 2:&lt;br&gt;Input: [7, 6, 4, 3, 1]&lt;br&gt;Output: 0&lt;/p&gt;
 &lt;p&gt;In this case, no transaction is done, i.e. max profit = 0.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 119 pascals traingle II</title>
-    <link href="http://xytian315.github.io/2016/12/02/leetcode-119-pascals-traingle-II/"/>
-    <id>http://xytian315.github.io/2016/12/02/leetcode-119-pascals-traingle-II/</id>
-    <published>2016-12-03T06:31:44.000Z</published>
-    <updated>2016-12-06T05:12:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-119-Pascal’s-Triangle-II"><a href="#Question-119-Pascal’s-Triangle-II" class="headerlink" title="Question: 119. Pascal’s Triangle II"></a>Question: 119. Pascal’s Triangle II</h3><p>Given an index k, return the kth row of the Pascal’s triangle.</p>
-<p>For example, given k = 3,<br>Return [1,3,3,1].</p>
-<p>Note:<br>Could you optimize your algorithm to use only O(k) extra space?<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//My solution, not O(k) space</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">getRow</span><span class="params">(<span class="keyword">int</span> rowIndex)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">if</span>(rowIndex&lt;<span class="number">0</span>) <span class="keyword">return</span> result;</span><br><span class="line">        List&lt;Integer&gt; last = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        last.add(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(rowIndex==<span class="number">0</span>) <span class="keyword">return</span> last;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j =<span class="number">1</span>; j&lt;=rowIndex; j++)&#123;</span><br><span class="line">            result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">            result.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;last.size()-<span class="number">1</span>;i++)&#123;</span><br><span class="line">                result.add(last.get(i)+last.get(i+<span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            result.add(<span class="number">1</span>);</span><br><span class="line">            last = result;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//O(k) space</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">getRow</span><span class="params">(<span class="keyword">int</span> rowIndex)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">if</span>(rowIndex&lt;<span class="number">0</span>) <span class="keyword">return</span> result;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=rowIndex;i++)&#123;</span><br><span class="line">            result.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i-<span class="number">1</span>;j&gt;<span class="number">0</span>;j--)&#123;</span><br><span class="line">                result.set(j, result.get(j)+result.get(j-<span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>思路： 从后往前算 in place replace</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-119-Pascal’s-Triangle-II&quot;&gt;&lt;a href=&quot;#Question-119-Pascal’s-Triangle-II&quot; class=&quot;headerlink&quot; title=&quot;Question: 119. Pascal’s Triangle II&quot;&gt;&lt;/a&gt;Question: 119. Pascal’s Triangle II&lt;/h3&gt;&lt;p&gt;Given an index k, return the kth row of the Pascal’s triangle.&lt;/p&gt;
-&lt;p&gt;For example, given k = 3,&lt;br&gt;Return [1,3,3,1].&lt;/p&gt;
-&lt;p&gt;Note:&lt;br&gt;Could you optimize your algorithm to use only O(k) extra space?&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 118 pascal&#39;s triangle</title>
-    <link href="http://xytian315.github.io/2016/12/02/leetcode-118-pascal-s-triangle/"/>
-    <id>http://xytian315.github.io/2016/12/02/leetcode-118-pascal-s-triangle/</id>
-    <published>2016-12-03T05:35:44.000Z</published>
-    <updated>2016-12-06T05:12:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-118-Pascal’s-Triangle"><a href="#Question-118-Pascal’s-Triangle" class="headerlink" title="Question: 118. Pascal’s Triangle"></a>Question: 118. Pascal’s Triangle</h3><p>Given numRows, generate the first numRows of Pascal’s triangle.</p>
-<p>For example, given numRows = 5,<br>Return</p>
-<p>[<br>     [1],<br>    [1,1],<br>   [1,2,1],<br>  [1,3,3,1],<br> [1,4,6,4,1]<br>]<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; generate(<span class="keyword">int</span> numRows) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(numRows&lt;=<span class="number">0</span>) <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; first = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        first.add(<span class="number">1</span>);</span><br><span class="line">        result.add(first);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=numRows;i++)&#123;</span><br><span class="line">            List&lt;Integer&gt; current = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">            List&lt;Integer&gt; last = result.get(result.size()-<span class="number">1</span>);</span><br><span class="line">            current.add(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;last.size()-<span class="number">1</span>;j++)&#123;</span><br><span class="line">                current.add(last.get(j)+last.get(j+<span class="number">1</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            current.add(<span class="number">1</span>);</span><br><span class="line">            result.add(current);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-118-Pascal’s-Triangle&quot;&gt;&lt;a href=&quot;#Question-118-Pascal’s-Triangle&quot; class=&quot;headerlink&quot; title=&quot;Question: 118. Pascal’s Triangle&quot;&gt;&lt;/a&gt;Question: 118. Pascal’s Triangle&lt;/h3&gt;&lt;p&gt;Given numRows, generate the first numRows of Pascal’s triangle.&lt;/p&gt;
-&lt;p&gt;For example, given numRows = 5,&lt;br&gt;Return&lt;/p&gt;
-&lt;p&gt;[&lt;br&gt;     [1],&lt;br&gt;    [1,1],&lt;br&gt;   [1,2,1],&lt;br&gt;  [1,3,3,1],&lt;br&gt; [1,4,6,4,1]&lt;br&gt;]&lt;br&gt;
     
     </summary>
     

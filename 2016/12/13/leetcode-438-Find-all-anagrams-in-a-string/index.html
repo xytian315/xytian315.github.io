@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,array,medium,two pointers," />
+  <meta name="keywords" content="leetcode,easy,hash table," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="Question: 11. Container With Most Waterhttps://leetcode.com/problems/container-with-most-water/Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n verti">
+<meta name="description" content="Question: 438. Find All Anagrams in a StringGiven a string s and a non-empty string p, find all the start indices of p’s anagrams in s.
+Strings consists of lowercase English letters only and the lengt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 11 Container With Most Water">
-<meta property="og:url" content="http://xytian315.github.io/2016/09/08/leetcode-11/index.html">
+<meta property="og:title" content="leetcode 438 Find all anagrams in a string">
+<meta property="og:url" content="http://xytian315.github.io/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 11. Container With Most Waterhttps://leetcode.com/problems/container-with-most-water/Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n verti">
-<meta property="og:updated_time" content="2016-12-06T05:12:48.000Z">
+<meta property="og:description" content="Question: 438. Find All Anagrams in a StringGiven a string s and a non-empty string p, find all the start indices of p’s anagrams in s.
+Strings consists of lowercase English letters only and the lengt">
+<meta property="og:updated_time" content="2016-12-13T08:12:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 11 Container With Most Water">
-<meta name="twitter:description" content="Question: 11. Container With Most Waterhttps://leetcode.com/problems/container-with-most-water/Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n verti">
+<meta name="twitter:title" content="leetcode 438 Find all anagrams in a string">
+<meta name="twitter:description" content="Question: 438. Find All Anagrams in a StringGiven a string s and a non-empty string p, find all the start indices of p’s anagrams in s.
+Strings consists of lowercase English letters only and the lengt">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/09/08/leetcode-11/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/"/>
 
 
 
 
 
-  <title> leetcode 11 Container With Most Water | Kristy's blog </title>
+  <title> leetcode 438 Find all anagrams in a string | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -258,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/09/08/leetcode-11/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -282,7 +285,7 @@
             
             
               
-                leetcode 11 Container With Most Water
+                leetcode 438 Find all anagrams in a string
               
             
           </h1>
@@ -295,8 +298,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-08T19:44:35-07:00">
-                2016-09-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-13T00:11:15-08:00">
+                2016-12-13
               </time>
             
 
@@ -329,8 +332,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/09/08/leetcode-11/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/08/leetcode-11/" itemprop="commentCount"></span>
+                <a href="/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,9 +359,18 @@
       
 
       
-        <h3 id="Question-11-Container-With-Most-Water"><a href="#Question-11-Container-With-Most-Water" class="headerlink" title="Question: 11. Container With Most Water"></a>Question: 11. Container With Most Water</h3><p><a href="https://leetcode.com/problems/container-with-most-water/" target="_blank" rel="external">https://leetcode.com/problems/container-with-most-water/</a><br>Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>
-<p>Note: You may not slant the container.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h3 id="Question-438-Find-All-Anagrams-in-a-String"><a href="#Question-438-Find-All-Anagrams-in-a-String" class="headerlink" title="Question: 438. Find All Anagrams in a String"></a>Question: 438. Find All Anagrams in a String</h3><p>Given a string s and a non-empty string p, find all the start indices of p’s anagrams in s.</p>
+<p>Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.</p>
+<p>The order of output does not matter.</p>
+<p>Example 1:</p>
+<p>Input:<br>s: “cbaebabacd” p: “abc”</p>
+<p>Output:<br>[0, 6]</p>
+<p>Explanation:<br>The substring with start index = 0 is “cba”, which is an anagram of “abc”.<br>The substring with start index = 6 is “bac”, which is an anagram of “abc”.<br>Example 2:</p>
+<p>Input:<br>s: “abab” p: “ab”</p>
+<p>Output:<br>[0, 1, 2]</p>
+<p>Explanation:<br>The substring with start index = 0 is “ab”, which is an anagram of “ab”.<br>The substring with start index = 1 is “ba”, which is an anagram of “ab”.<br>The substring with start index = 2 is “ab”, which is an anagram of “ab”.<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">public class Solution &#123;</span><br><span class="line">    public List&lt;Integer&gt; findAnagrams(String s, String p) &#123;</span><br><span class="line">        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">    if (s == null || s.length() == 0 || p == null || p.length() == 0) return list;</span><br><span class="line">    </span><br><span class="line">    int[] hash = new int[256]; //character hash</span><br><span class="line">    </span><br><span class="line">    //record each character in p to hash</span><br><span class="line">    for (char c : p.toCharArray()) &#123;</span><br><span class="line">        hash[c]++;</span><br><span class="line">    &#125;</span><br><span class="line">    //two points, initialize count to p's length</span><br><span class="line">    int left = 0, right = 0, count = p.length();</span><br><span class="line">    </span><br><span class="line">    while (right &lt; s.length()) &#123;</span><br><span class="line">        //move right everytime, if the character exists in p's hash, decrease the count</span><br><span class="line">        //current hash value &gt;= 1 means the character is existing in p</span><br><span class="line">        if (hash[s.charAt(right)] &gt;= 1) &#123;</span><br><span class="line">            count--;</span><br><span class="line">        &#125;</span><br><span class="line">        hash[s.charAt(right)]--;</span><br><span class="line">        right++;</span><br><span class="line">        </span><br><span class="line">        //when the count is down to 0, means we found the right anagram</span><br><span class="line">        //then add window's left to result list</span><br><span class="line">        if (count == 0) &#123;</span><br><span class="line">            list.add(left);</span><br><span class="line">        &#125;</span><br><span class="line">        //if we find the window's size equals to p, then we have to move left (narrow the window) to find the new match window</span><br><span class="line">        //++ to reset the hash because we kicked out the left</span><br><span class="line">        //only increase the count if the character is in p</span><br><span class="line">        //the count &gt;= 0 indicate it was original in the hash, cuz it won't go below 0</span><br><span class="line">        if (right - left == p.length() ) &#123;</span><br><span class="line">           </span><br><span class="line">            if (hash[s.charAt(left)] &gt;= 0) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            hash[s.charAt(left)]++;</span><br><span class="line">            left++;</span><br><span class="line">        </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">        return list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">### Thoughts</span><br><span class="line">https://discuss.leetcode.com/topic/64434/shortest-concise-java-o-n-sliding-window-solution/4</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -383,11 +395,9 @@
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/array/" rel="tag"># array</a>
+            <a href="/tags/easy/" rel="tag"># easy</a>
           
-            <a href="/tags/medium/" rel="tag"># medium</a>
-          
-            <a href="/tags/two-pointers/" rel="tag"># two pointers</a>
+            <a href="/tags/hash-table/" rel="tag"># hash table</a>
           
         </div>
       
@@ -396,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/31/leetcode-169-Majority-element/" rel="next" title="leetcode 169 Majority element">
-                <i class="fa fa-chevron-left"></i> leetcode 169 Majority element
+              <a href="/2016/12/11/leetcode-409-Longest-Palindrome/" rel="next" title="leetcode 409 Longest Palindrome">
+                <i class="fa fa-chevron-left"></i> leetcode 409 Longest Palindrome
               </a>
             
           </div>
@@ -405,10 +415,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/12/leetcode-189/" rel="prev" title="leetcode 189 Rotate Array">
-                leetcode 189 Rotate Array <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -546,7 +552,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-11-Container-With-Most-Water"><span class="nav-number">1.</span> <span class="nav-text">Question: 11. Container With Most Water</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-438-Find-All-Anagrams-in-a-String"><span class="nav-number">1.</span> <span class="nav-text">Question: 438. Find All Anagrams in a String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li></ol></div>
             
 
           </div>
@@ -677,9 +683,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/09/08/leetcode-11/';
+      var disqus_identifier = '2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/';
 
-      var disqus_title = "leetcode 11 Container With Most Water";
+      var disqus_title = "leetcode 438 Find all anagrams in a string";
 
 
       function run_disqus_script(disqus_script) {
