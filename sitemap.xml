@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2017/01/22/leetcode-21-Merged-two-sortd-list/</loc>
+    
+    <lastmod>2017-01-23T06:27:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2017/01/21/leetcode-19-Remove-nth-node-from-end-of-list/</loc>
     
     <lastmod>2017-01-22T03:48:47.000Z</lastmod>
