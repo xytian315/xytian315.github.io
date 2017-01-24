@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2017-01-23T06:36:37.000Z</updated>
+  <updated>2017-01-24T04:06:45.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 24 Swap Nodes in Pairs</title>
+    <link href="http://xytian315.github.io/2017/01/23/leetcode-24-Swap-Nodes-in-Pairs/"/>
+    <id>http://xytian315.github.io/2017/01/23/leetcode-24-Swap-Nodes-in-Pairs/</id>
+    <published>2017-01-24T04:02:49.000Z</published>
+    <updated>2017-01-24T04:06:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-24-Swap-Nodes-in-Pairs"><a href="#Question-24-Swap-Nodes-in-Pairs" class="headerlink" title="Question: 24. Swap Nodes in Pairs"></a>Question: 24. Swap Nodes in Pairs</h3><p>Given a linked list, swap every two adjacent nodes and return its head.</p>
+<p>For example,<br>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</p>
+<p>Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my first time solution</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">      ListNode current = head;</span><br><span class="line">      <span class="keyword">if</span>(current == <span class="keyword">null</span> || current.next==<span class="keyword">null</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> current;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          ListNode temp1=current;</span><br><span class="line">          ListNode temp2=current.next;</span><br><span class="line">          ListNode temp3;</span><br><span class="line">          <span class="keyword">if</span>(temp2.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            temp3=temp2.next;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">else</span>&#123;</span><br><span class="line">            temp3=<span class="keyword">null</span>;</span><br><span class="line">          &#125;</span><br><span class="line">         current=temp2;</span><br><span class="line">         temp2.next=temp1;</span><br><span class="line">         <span class="keyword">if</span>(temp3==<span class="keyword">null</span>)&#123;</span><br><span class="line">             temp1.next=<span class="keyword">null</span>;</span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             temp1.next=swapPairs(temp3);</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> current;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//better solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next==<span class="keyword">null</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> head;</span><br><span class="line">      &#125;</span><br><span class="line">      ListNode temp = head.next;</span><br><span class="line">      head.next=swapPairs(head.next.next);</span><br><span class="line">      temp.next=head;</span><br><span class="line">      <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>recursive</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-24-Swap-Nodes-in-Pairs&quot;&gt;&lt;a href=&quot;#Question-24-Swap-Nodes-in-Pairs&quot; class=&quot;headerlink&quot; title=&quot;Question: 24. Swap Nodes in Pa
+    
+    </summary>
+    
+    
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 21 Merged two sortd list</title>
@@ -724,37 +753,6 @@
 &lt;p&gt;You may assume that each input would have exactly one solution.&lt;/p&gt;
 &lt;p&gt;Example:&lt;br&gt;Given nums = [2, 7, 11, 15], target = 9,&lt;/p&gt;
 &lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,&lt;br&gt;return [0, 1].&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 219 contains duplicate II</title>
-    <link href="http://xytian315.github.io/2016/12/04/leetcode-219-contains-duplicate-II/"/>
-    <id>http://xytian315.github.io/2016/12/04/leetcode-219-contains-duplicate-II/</id>
-    <published>2016-12-04T18:17:25.000Z</published>
-    <updated>2016-12-09T04:17:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-219-Contains-Duplicate-II"><a href="#Question-219-Contains-Duplicate-II" class="headerlink" title="Question: 219. Contains Duplicate II"></a>Question: 219. Contains Duplicate II</h3><p>Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my solution use a hashmap</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length&lt;=<span class="number">1</span> || k&lt;<span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i&lt; nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(nums[i]) &amp;&amp; (i-map.get(nums[i])&lt;=k))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(nums[i],i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//better solution you can use hashset </span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsNearbyDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i &gt; k) set.remove(nums[i-k-<span class="number">1</span>]);</span><br><span class="line">            <span class="keyword">if</span>(!set.add(nums[i])) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-219-Contains-Duplicate-II&quot;&gt;&lt;a href=&quot;#Question-219-Contains-Duplicate-II&quot; class=&quot;headerlink&quot; title=&quot;Question: 219. Contains Duplicate II&quot;&gt;&lt;/a&gt;Question: 219. Contains Duplicate II&lt;/h3&gt;&lt;p&gt;Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.&lt;br&gt;
     
     </summary>
     
