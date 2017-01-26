@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2017-01-25T05:48:25.000Z</updated>
+  <updated>2017-01-26T06:25:37.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Leetcode 141 Linked List Cycle</title>
+    <link href="http://xytian315.github.io/2017/01/25/Leetcode-141-Linked-List-Cycle/"/>
+    <id>http://xytian315.github.io/2017/01/25/Leetcode-141-Linked-List-Cycle/</id>
+    <published>2017-01-26T05:57:17.000Z</published>
+    <updated>2017-01-26T06:25:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-141-Linked-List-Cycle"><a href="#Question-141-Linked-List-Cycle" class="headerlink" title="Question: 141. Linked List Cycle"></a>Question: 141. Linked List Cycle</h3><p>Given a linked list, determine if it has a cycle in it.</p>
+<p>Follow up:<br>Can you solve it without using extra space?</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my first time solution</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123;</span><br><span class="line"> *         val = x;</span><br><span class="line"> *         next = null;</span><br><span class="line"> *     &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Set&lt;ListNode&gt; set = <span class="keyword">new</span> HashSet&lt;ListNode&gt;();</span><br><span class="line">        <span class="keyword">while</span>(head.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.add(head))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">             head=head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//better solution!</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        ListNode walker = head;</span><br><span class="line">        ListNode runner = head;</span><br><span class="line">        <span class="keyword">while</span>(runner.next!=<span class="keyword">null</span>&amp;&amp; runner.next.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            walker = walker.next;</span><br><span class="line">            runner = runner.next.next;</span><br><span class="line">            <span class="keyword">if</span>(walker == runner)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h3><p>Floyd’s cycle-finding algorithm, also know as tortoise and hare algorithm. The idea is to have two pointers to the list and move them at different speeds. Move one forward by 1 node and the other by 2 nodes. If the linked list has a loop they will definitely meet.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-141-Linked-List-Cycle&quot;&gt;&lt;a href=&quot;#Question-141-Linked-List-Cycle&quot; class=&quot;headerlink&quot; title=&quot;Question: 141. Linked List Cycle
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
+      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 83 Removed duplicates from sorted list</title>
@@ -187,11 +217,11 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
-    
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
       <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
+      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
   </entry>
   
@@ -350,9 +380,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
+    
+      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
       <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
     
@@ -716,9 +746,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
   </entry>
   
@@ -747,59 +777,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
-  </entry>
-  
-  <entry>
-    <title>leetcode 27 remove element</title>
-    <link href="http://xytian315.github.io/2016/12/04/leetcode-27-remove-element-0/"/>
-    <id>http://xytian315.github.io/2016/12/04/leetcode-27-remove-element-0/</id>
-    <published>2016-12-04T20:28:35.000Z</published>
-    <updated>2016-12-06T05:13:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-27-Remove-Element"><a href="#Question-27-Remove-Element" class="headerlink" title="Question: 27. Remove Element"></a>Question: 27. Remove Element</h3><p>Given an array and a value, remove all instances of that value in place and return the new length.</p>
-<p>Do not allocate extra space for another array, you must do this in place with constant memory.</p>
-<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
-<p>Example:<br>Given input array nums = [3,2,2,3], val = 3</p>
-<p>Your function should return length = 2, with the first two elements of nums being 2.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">//my solution</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span>{
-        <span class="keyword">int</span> current =<span class="number">0</span>;
-        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;nums.length;i++){
-            <span class="keyword">if</span>(nums[i]!=val){
-                nums[current]=nums[i];
-                current++;
-            }
-        }
-        <span class="keyword">return</span> current;
-    }
-}
-</code></pre>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>return current not (current+1)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-27-Remove-Element&quot;&gt;&lt;a href=&quot;#Question-27-Remove-Element&quot; class=&quot;headerlink&quot; title=&quot;Question: 27. Remove Element&quot;&gt;&lt;/a&gt;Question: 27. Remove Element&lt;/h3&gt;&lt;p&gt;Given an array and a value, remove all instances of that value in place and return the new length.&lt;/p&gt;
-&lt;p&gt;Do not allocate extra space for another array, you must do this in place with constant memory.&lt;/p&gt;
-&lt;p&gt;The order of elements can be changed. It doesn’t matter what you leave beyond the new length.&lt;/p&gt;
-&lt;p&gt;Example:&lt;br&gt;Given input array nums = [3,2,2,3], val = 3&lt;/p&gt;
-&lt;p&gt;Your function should return length = 2, with the first two elements of nums being 2.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
   </entry>
   

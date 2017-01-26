@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2017/01/25/Leetcode-141-Linked-List-Cycle/</loc>
+    
+    <lastmod>2017-01-26T06:25:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2017/01/24/leetcode-83-Removed-duplicates-from-sorted-list/</loc>
     
     <lastmod>2017-01-25T05:48:25.000Z</lastmod>

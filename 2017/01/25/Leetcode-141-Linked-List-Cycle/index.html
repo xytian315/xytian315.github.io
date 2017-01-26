@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,two pointers,array,medium," />
+  <meta name="keywords" content="leetcode,easy,linked list,two pointers," />
 
 
 
@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="Question: 11. Container With Most Waterhttps://leetcode.com/problems/container-with-most-water/Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n verti">
+<meta name="description" content="Question: 141. Linked List CycleGiven a linked list, determine if it has a cycle in it.
+Follow up:Can you solve it without using extra space?
+Solution12345678910111213141516171819202122232425262728293">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 11 Container With Most Water">
-<meta property="og:url" content="http://xytian315.github.io/2016/09/08/leetcode-11/index.html">
+<meta property="og:title" content="Leetcode 141 Linked List Cycle">
+<meta property="og:url" content="http://xytian315.github.io/2017/01/25/Leetcode-141-Linked-List-Cycle/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 11. Container With Most Waterhttps://leetcode.com/problems/container-with-most-water/Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n verti">
-<meta property="og:updated_time" content="2016-12-06T05:12:48.000Z">
+<meta property="og:description" content="Question: 141. Linked List CycleGiven a linked list, determine if it has a cycle in it.
+Follow up:Can you solve it without using extra space?
+Solution12345678910111213141516171819202122232425262728293">
+<meta property="og:updated_time" content="2017-01-26T06:25:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 11 Container With Most Water">
-<meta name="twitter:description" content="Question: 11. Container With Most Waterhttps://leetcode.com/problems/container-with-most-water/Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n verti">
+<meta name="twitter:title" content="Leetcode 141 Linked List Cycle">
+<meta name="twitter:description" content="Question: 141. Linked List CycleGiven a linked list, determine if it has a cycle in it.
+Follow up:Can you solve it without using extra space?
+Solution12345678910111213141516171819202122232425262728293">
 
 
 
@@ -121,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/09/08/leetcode-11/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2017/01/25/Leetcode-141-Linked-List-Cycle/"/>
 
 
 
 
 
-  <title> leetcode 11 Container With Most Water | Kristy's blog </title>
+  <title> Leetcode 141 Linked List Cycle | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -258,7 +264,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/09/08/leetcode-11/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/01/25/Leetcode-141-Linked-List-Cycle/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -282,7 +288,7 @@
             
             
               
-                leetcode 11 Container With Most Water
+                Leetcode 141 Linked List Cycle
               
             
           </h1>
@@ -295,8 +301,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-08T19:44:35-07:00">
-                2016-09-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-25T21:57:17-08:00">
+                2017-01-25
               </time>
             
 
@@ -306,31 +312,13 @@
           </span>
 
           
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/09/08/leetcode-11/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/08/leetcode-11/" itemprop="commentCount"></span>
+                <a href="/2017/01/25/Leetcode-141-Linked-List-Cycle/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/25/Leetcode-141-Linked-List-Cycle/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,9 +344,11 @@
       
 
       
-        <h3 id="Question-11-Container-With-Most-Water"><a href="#Question-11-Container-With-Most-Water" class="headerlink" title="Question: 11. Container With Most Water"></a>Question: 11. Container With Most Water</h3><p><a href="https://leetcode.com/problems/container-with-most-water/" target="_blank" rel="external">https://leetcode.com/problems/container-with-most-water/</a><br>Given n non-negative integers a1, a2, …, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.</p>
-<p>Note: You may not slant the container.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h3 id="Question-141-Linked-List-Cycle"><a href="#Question-141-Linked-List-Cycle" class="headerlink" title="Question: 141. Linked List Cycle"></a>Question: 141. Linked List Cycle</h3><p>Given a linked list, determine if it has a cycle in it.</p>
+<p>Follow up:<br>Can you solve it without using extra space?</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//my first time solution</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123;</span><br><span class="line"> *         val = x;</span><br><span class="line"> *         next = null;</span><br><span class="line"> *     &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Set&lt;ListNode&gt; set = <span class="keyword">new</span> HashSet&lt;ListNode&gt;();</span><br><span class="line">        <span class="keyword">while</span>(head.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.add(head))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">             head=head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//better solution!</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        ListNode walker = head;</span><br><span class="line">        ListNode runner = head;</span><br><span class="line">        <span class="keyword">while</span>(runner.next!=<span class="keyword">null</span>&amp;&amp; runner.next.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            walker = walker.next;</span><br><span class="line">            runner = runner.next.next;</span><br><span class="line">            <span class="keyword">if</span>(walker == runner)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h3><p>Floyd’s cycle-finding algorithm, also know as tortoise and hare algorithm. The idea is to have two pointers to the list and move them at different speeds. Move one forward by 1 node and the other by 2 nodes. If the linked list has a loop they will definitely meet.</p>
+
       
     </div>
 
@@ -383,11 +373,11 @@
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
+            <a href="/tags/easy/" rel="tag"># easy</a>
+          
+            <a href="/tags/linked-list/" rel="tag"># linked list</a>
+          
             <a href="/tags/two-pointers/" rel="tag"># two pointers</a>
-          
-            <a href="/tags/array/" rel="tag"># array</a>
-          
-            <a href="/tags/medium/" rel="tag"># medium</a>
           
         </div>
       
@@ -396,8 +386,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/31/leetcode-169-Majority-element/" rel="next" title="leetcode 169 Majority element">
-                <i class="fa fa-chevron-left"></i> leetcode 169 Majority element
+              <a href="/2017/01/24/leetcode-83-Removed-duplicates-from-sorted-list/" rel="next" title="leetcode 83 Removed duplicates from sorted list">
+                <i class="fa fa-chevron-left"></i> leetcode 83 Removed duplicates from sorted list
               </a>
             
           </div>
@@ -405,10 +395,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/12/leetcode-189/" rel="prev" title="leetcode 189 Rotate Array">
-                leetcode 189 Rotate Array <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -546,7 +532,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-11-Container-With-Most-Water"><span class="nav-number">1.</span> <span class="nav-text">Question: 11. Container With Most Water</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-141-Linked-List-Cycle"><span class="nav-number">1.</span> <span class="nav-text">Question: 141. Linked List Cycle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">3.</span> <span class="nav-text">Notes:</span></a></li></ol></div>
             
 
           </div>
@@ -677,9 +663,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/09/08/leetcode-11/';
+      var disqus_identifier = '2017/01/25/Leetcode-141-Linked-List-Cycle/';
 
-      var disqus_title = "leetcode 11 Container With Most Water";
+      var disqus_title = "Leetcode 141 Linked List Cycle";
 
 
       function run_disqus_script(disqus_script) {
