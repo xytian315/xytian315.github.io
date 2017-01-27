@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,medium," />
+  <meta name="keywords" content="leetcode,easy,linked list," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="Question: 5. Longest Palindromic SubstringGiven a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palind">
+<meta name="description" content="Question: 160. Intersection of Two Linked ListsWrite a program to find the node at which the intersection of two singly linked lists begins.For example, the following two linked lists:
+A:          a1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 5 Longest Palindromic Substring">
-<meta property="og:url" content="http://xytian315.github.io/2016/08/05/leetcode-5/index.html">
+<meta property="og:title" content="leetcode 160 Intersection of Two Linked Lists">
+<meta property="og:url" content="http://xytian315.github.io/2017/01/26/leetcode-160-Intersection-of-Two-Linked-Lists/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 5. Longest Palindromic SubstringGiven a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palind">
-<meta property="og:updated_time" content="2016-12-06T05:13:37.000Z">
+<meta property="og:description" content="Question: 160. Intersection of Two Linked ListsWrite a program to find the node at which the intersection of two singly linked lists begins.For example, the following two linked lists:
+A:          a1">
+<meta property="og:updated_time" content="2017-01-27T06:26:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 5 Longest Palindromic Substring">
-<meta name="twitter:description" content="Question: 5. Longest Palindromic SubstringGiven a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palind">
+<meta name="twitter:title" content="leetcode 160 Intersection of Two Linked Lists">
+<meta name="twitter:description" content="Question: 160. Intersection of Two Linked ListsWrite a program to find the node at which the intersection of two singly linked lists begins.For example, the following two linked lists:
+A:          a1">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/08/05/leetcode-5/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2017/01/26/leetcode-160-Intersection-of-Two-Linked-Lists/"/>
 
 
 
 
 
-  <title> leetcode 5 Longest Palindromic Substring | Kristy's blog </title>
+  <title> leetcode 160 Intersection of Two Linked Lists | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -258,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/08/05/leetcode-5/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/01/26/leetcode-160-Intersection-of-Two-Linked-Lists/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -282,7 +285,7 @@
             
             
               
-                leetcode 5 Longest Palindromic Substring
+                leetcode 160 Intersection of Two Linked Lists
               
             
           </h1>
@@ -295,8 +298,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-05T07:00:47-07:00">
-                2016-08-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-26T21:23:55-08:00">
+                2017-01-26
               </time>
             
 
@@ -306,31 +309,13 @@
           </span>
 
           
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/08/05/leetcode-5/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/05/leetcode-5/" itemprop="commentCount"></span>
+                <a href="/2017/01/26/leetcode-160-Intersection-of-Two-Linked-Lists/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/26/leetcode-160-Intersection-of-Two-Linked-Lists/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,8 +341,14 @@
       
 
       
-        <h3 id="Question-5-Longest-Palindromic-Substring"><a href="#Question-5-Longest-Palindromic-Substring" class="headerlink" title="Question: 5. Longest Palindromic Substring"></a>Question: 5. Longest Palindromic Substring</h3><p>Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * I only did the brute force solution O(n3)</span><br><span class="line"> */</span></span><br><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.isEmpty() || s.length() == <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">        String result = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i+<span class="number">1</span>; j&lt; s.length(); j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(isPalindrome(s, i, j) &amp;&amp; result.length() &lt; j-i+<span class="number">1</span>)&#123;</span><br><span class="line">                     result = s.substring(i,j+<span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> </span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Boolean <span class="title">isPalindrome</span><span class="params">(String s, <span class="keyword">int</span> i , <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s.charAt(i)!=s.charAt(j))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            i++;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="Question-160-Intersection-of-Two-Linked-Lists"><a href="#Question-160-Intersection-of-Two-Linked-Lists" class="headerlink" title="Question: 160. Intersection of Two Linked Lists"></a>Question: 160. Intersection of Two Linked Lists</h3><p>Write a program to find the node at which the intersection of two singly linked lists begins.<br>For example, the following two linked lists:</p>
+<p>A:          a1 → a2<br>                   ↘<br>                     c1 → c2 → c3<br>                   ↗<br>B:     b1 → b2 → b3<br>begin to intersect at node c1.</p>
+<p>Notes:<br>If the two linked lists have no intersection at all, return null.<br>The linked lists must retain their original structure after the function returns.<br>You may assume there are no cycles anywhere in the entire linked structure.<br>Your code should preferably run in O(n) time and use only O(1) memory.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123;</span><br><span class="line"> *         val = x;</span><br><span class="line"> *         next = null;</span><br><span class="line"> *     &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//best solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(headA==<span class="keyword">null</span> || headB==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        ListNode a=headA;</span><br><span class="line">        ListNode b=headB;</span><br><span class="line">        <span class="keyword">while</span>(a!=b)&#123;</span><br><span class="line">            a= a==<span class="keyword">null</span> ? headB : a.next;</span><br><span class="line">            b= b==<span class="keyword">null</span> ? headA : b.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//another solution easy to understand</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="number">1</span>, Get the length of the two lists.</span><br><span class="line"><span class="number">2</span>, Align them to the same start point.</span><br><span class="line"><span class="number">3</span>, Move them together until finding the intersection point, or the end <span class="keyword">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(headA==<span class="keyword">null</span> || headB==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> lengthA=length(headA);</span><br><span class="line">        <span class="keyword">int</span> lengthB=length(headB);</span><br><span class="line">        <span class="keyword">while</span>(lengthA&gt;lengthB)&#123;</span><br><span class="line">            headA=headA.next;</span><br><span class="line">            lengthA--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(lengthA&lt;lengthB)&#123;</span><br><span class="line">            headB=headB.next;</span><br><span class="line">            lengthB--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(headA!=headB)&#123;</span><br><span class="line">            headA=headA.next;</span><br><span class="line">            headB=headB.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> headA;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">length</span><span class="params">(ListNode node)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(node.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            node=node.next;</span><br><span class="line">            result++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h3><p><a href="https://discuss.leetcode.com/topic/28067/java-solution-without-knowing-the-difference-in-len" target="_blank" rel="external">https://discuss.leetcode.com/topic/28067/java-solution-without-knowing-the-difference-in-len</a><br>We can use two iterations to do that. In the first iteration, we will reset the pointer of one linkedlist to the head of another linkedlist after it reaches the tail node. In the second iteration, we will move two pointers until they points to the same node. Our operations in first iteration will help us counteract the difference. So if two linkedlist intersects, the meeting point in second iteration must be the intersection point. If the two linked lists have no intersection at all, then the meeting pointer in second iteration must be the tail node of both lists, which is null</p>
+<p> the two iterations will both run for listA.length + listB.length and will reach the intersection point at the same time after switching the pointer.</p>
+
       
     </div>
 
@@ -382,7 +373,9 @@
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/medium/" rel="tag"># medium</a>
+            <a href="/tags/easy/" rel="tag"># easy</a>
+          
+            <a href="/tags/linked-list/" rel="tag"># linked list</a>
           
         </div>
       
@@ -391,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/04/leetcode-3/" rel="next" title="leetcode 3 Longest Substring Without Repeating Characters">
-                <i class="fa fa-chevron-left"></i> leetcode 3 Longest Substring Without Repeating Characters
+              <a href="/2017/01/25/Leetcode-141-Linked-List-Cycle/" rel="next" title="Leetcode 141 Linked List Cycle">
+                <i class="fa fa-chevron-left"></i> Leetcode 141 Linked List Cycle
               </a>
             
           </div>
@@ -400,10 +393,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/08/leetcode-6/" rel="prev" title="leetcode 6 ZigZag Conversion">
-                leetcode 6 ZigZag Conversion <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,7 +530,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-5-Longest-Palindromic-Substring"><span class="nav-number">1.</span> <span class="nav-text">Question: 5. Longest Palindromic Substring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-160-Intersection-of-Two-Linked-Lists"><span class="nav-number">1.</span> <span class="nav-text">Question: 160. Intersection of Two Linked Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">3.</span> <span class="nav-text">Notes:</span></a></li></ol></div>
             
 
           </div>
@@ -672,9 +661,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/08/05/leetcode-5/';
+      var disqus_identifier = '2017/01/26/leetcode-160-Intersection-of-Two-Linked-Lists/';
 
-      var disqus_title = "leetcode 5 Longest Palindromic Substring";
+      var disqus_title = "leetcode 160 Intersection of Two Linked Lists";
 
 
       function run_disqus_script(disqus_script) {
