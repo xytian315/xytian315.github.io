@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2017/01/27/leetcode-206-Reverse-Linked-List/</loc>
+    
+    <lastmod>2017-01-28T06:41:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2017/01/27/leetcode-203-Remove-Linked-List-Elements/</loc>
     
     <lastmod>2017-01-28T05:39:57.000Z</lastmod>
