@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2017-01-27T06:28:36.000Z</updated>
+  <updated>2017-01-28T05:39:57.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 203 Remove Linked List Elements</title>
+    <link href="http://xytian315.github.io/2017/01/27/leetcode-203-Remove-Linked-List-Elements/"/>
+    <id>http://xytian315.github.io/2017/01/27/leetcode-203-Remove-Linked-List-Elements/</id>
+    <published>2017-01-28T05:23:25.000Z</published>
+    <updated>2017-01-28T05:39:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-203-Remove-Linked-List-Elements"><a href="#Question-203-Remove-Linked-List-Elements" class="headerlink" title="Question: 203. Remove Linked List Elements"></a>Question: 203. Remove Linked List Elements</h3><p>Remove all elements from a linked list of integers that have value val.</p>
+<p>Example<br>Given: 1 –&gt; 2 –&gt; 6 –&gt; 3 –&gt; 4 –&gt; 5 –&gt; 6, val = 6<br>Return: 1 –&gt; 2 –&gt; 3 –&gt; 4 –&gt; 5</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//my one time pass solution haha:)</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeElements</span><span class="params">(ListNode head, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">        <span class="keyword">if</span>(head.val==val) <span class="keyword">return</span> removeElements(head.next,val);</span><br><span class="line">        head.next = removeElements(head.next,val);</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//we can refactor a little bit</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeElements</span><span class="params">(ListNode head, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        head.next = removeElements(head.next, val);</span><br><span class="line">        <span class="keyword">return</span>  head.val == val ? head.next : head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>recursive</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-203-Remove-Linked-List-Elements&quot;&gt;&lt;a href=&quot;#Question-203-Remove-Linked-List-Elements&quot; class=&quot;headerlink&quot; title=&quot;Question: 20
+    
+    </summary>
+    
+    
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 160 Intersection of Two Linked Lists</title>
@@ -737,49 +765,6 @@
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
       <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 414 Third Maximum number</title>
-    <link href="http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/"/>
-    <id>http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/</id>
-    <published>2016-12-06T05:55:27.000Z</published>
-    <updated>2016-12-06T05:58:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-414-Third-Maximum-Number"><a href="#Question-414-Third-Maximum-Number" class="headerlink" title="Question: 414. Third Maximum Number"></a>Question: 414. Third Maximum Number</h3><p>Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).</p>
-<p>Example 1:<br>Input: [3, 2, 1]</p>
-<p>Output: 1</p>
-<p>Explanation: The third maximum is 1.<br>Example 2:<br>Input: [1, 2]</p>
-<p>Output: 2</p>
-<p>Explanation: The third maximum does not exist, so the maximum (2) is returned instead.<br>Example 3:<br>Input: [2, 2, 3, 1]</p>
-<p>Output: 1</p>
-<p>Explanation: Note that the third maximum here means the third maximum distinct number.<br>Both numbers with value 2 are both considered as second maximum.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">thirdMax</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> max = Long.MIN_VALUE;</span><br><span class="line">        <span class="keyword">long</span> mid = Long.MIN_VALUE;;</span><br><span class="line">        <span class="keyword">long</span> min = Long.MIN_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&gt;max)&#123;</span><br><span class="line">                min=mid;</span><br><span class="line">                mid=max;</span><br><span class="line">                max=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i&lt;max &amp;&amp; i&gt;mid)&#123;</span><br><span class="line">                min=mid;</span><br><span class="line">                mid=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i&gt;min &amp;&amp; i&lt;mid)&#123;</span><br><span class="line">                min=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(min!=Long.MIN_VALUE)&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)min;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)max;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>should use long to initiate min value</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-414-Third-Maximum-Number&quot;&gt;&lt;a href=&quot;#Question-414-Third-Maximum-Number&quot; class=&quot;headerlink&quot; title=&quot;Question: 414. Third Maximum Number&quot;&gt;&lt;/a&gt;Question: 414. Third Maximum Number&lt;/h3&gt;&lt;p&gt;Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).&lt;/p&gt;
-&lt;p&gt;Example 1:&lt;br&gt;Input: [3, 2, 1]&lt;/p&gt;
-&lt;p&gt;Output: 1&lt;/p&gt;
-&lt;p&gt;Explanation: The third maximum is 1.&lt;br&gt;Example 2:&lt;br&gt;Input: [1, 2]&lt;/p&gt;
-&lt;p&gt;Output: 2&lt;/p&gt;
-&lt;p&gt;Explanation: The third maximum does not exist, so the maximum (2) is returned instead.&lt;br&gt;Example 3:&lt;br&gt;Input: [2, 2, 3, 1]&lt;/p&gt;
-&lt;p&gt;Output: 1&lt;/p&gt;
-&lt;p&gt;Explanation: Note that the third maximum here means the third maximum distinct number.&lt;br&gt;Both numbers with value 2 are both considered as second maximum.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
     
   </entry>
   
