@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2017-01-29T06:54:18.000Z</updated>
+  <updated>2017-01-30T02:12:14.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 237 Delete Node in a Linked List</title>
+    <link href="http://xytian315.github.io/2017/01/29/leetcode-237-Delete-Node-in-a-Linked-List/"/>
+    <id>http://xytian315.github.io/2017/01/29/leetcode-237-Delete-Node-in-a-Linked-List/</id>
+    <published>2017-01-30T02:11:13.000Z</published>
+    <updated>2017-01-30T02:12:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-237-Delete-Node-in-a-Linked-List"><a href="#Question-237-Delete-Node-in-a-Linked-List" class="headerlink" title="Question: 237. Delete Node in a Linked List"></a>Question: 237. Delete Node in a Linked List</h3><p>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.</p>
+<p>Supposed the linked list is 1 -&gt; 2 -&gt; 3 -&gt; 4 and you are given the third node with value 3, the linked list should become 1 -&gt; 2 -&gt; 4 after calling your function.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(ListNode node)</span> </span>&#123;</span><br><span class="line">        node.val=node.next.val;</span><br><span class="line">        node.next=node.next.next;</span><br><span class="line">            </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-237-Delete-Node-in-a-Linked-List&quot;&gt;&lt;a href=&quot;#Question-237-Delete-Node-in-a-Linked-List&quot; class=&quot;headerlink&quot; title=&quot;Question: 
+    
+    </summary>
+    
+    
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 234 Palindrome Linked List</title>
@@ -32,11 +59,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -111,11 +138,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -139,11 +166,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -170,11 +197,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -198,11 +225,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
@@ -269,11 +296,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -298,11 +325,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -347,11 +374,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -378,11 +405,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
@@ -755,46 +782,6 @@
       &lt;h3 id=&quot;Question-204-Count-Primes&quot;&gt;&lt;a href=&quot;#Question-204-Count-Primes&quot; class=&quot;headerlink&quot; title=&quot;Question: 204. Count Primes&quot;&gt;&lt;/a&gt;Question: 204. Count Primes&lt;/h3&gt;&lt;p&gt;Description:&lt;br&gt;Count the number of prime numbers less than a non-negative number, n.&lt;br&gt;
     
     </summary>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
-    
-      <category term="math" scheme="http://xytian315.github.io/tags/math/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 202 Happy number</title>
-    <link href="http://xytian315.github.io/2016/12/06/leetcode-202-Happy-number/"/>
-    <id>http://xytian315.github.io/2016/12/06/leetcode-202-Happy-number/</id>
-    <published>2016-12-07T06:43:35.000Z</published>
-    <updated>2016-12-07T06:47:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-202-Happy-Number"><a href="#Question-202-Happy-Number" class="headerlink" title="Question: 202. Happy Number"></a>Question: 202. Happy Number</h3><p>Write an algorithm to determine if a number is “happy”.</p>
-<p>A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.</p>
-<p>Example: 19 is a happy number</p>
-<p>12 + 92 = 82<br>82 + 22 = 68<br>62 + 82 = 100<br>12 + 02 + 02 = 1<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(set.add(n))&#123;</span><br><span class="line">            sum=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                sum +=(n%<span class="number">10</span>)*(n%<span class="number">10</span>);</span><br><span class="line">                n=n/<span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(sum==<span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            n=sum;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><ol>
-<li>Endless cycle is the hint for using the set to track the numbers since if it is endless cycle, it must return the same number again.</li>
-<li>Use a while loop to keep summing the numbers</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-202-Happy-Number&quot;&gt;&lt;a href=&quot;#Question-202-Happy-Number&quot; class=&quot;headerlink&quot; title=&quot;Question: 202. Happy Number&quot;&gt;&lt;/a&gt;Question: 202. Happy Number&lt;/h3&gt;&lt;p&gt;Write an algorithm to determine if a number is “happy”.&lt;/p&gt;
-&lt;p&gt;A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.&lt;/p&gt;
-&lt;p&gt;Example: 19 is a happy number&lt;/p&gt;
-&lt;p&gt;12 + 92 = 82&lt;br&gt;82 + 22 = 68&lt;br&gt;62 + 82 = 100&lt;br&gt;12 + 02 + 02 = 1&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
     
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>

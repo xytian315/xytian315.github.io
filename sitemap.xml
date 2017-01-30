@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2017/01/29/leetcode-237-Delete-Node-in-a-Linked-List/</loc>
+    
+    <lastmod>2017-01-30T02:12:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2017/01/28/leetcode-234-Palindrome-Linked-List/</loc>
     
     <lastmod>2017-01-29T06:54:18.000Z</lastmod>
