@@ -259,6 +259,181 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/01/31/leetcode-9-Palindrome-Number/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Kristy Tian">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/4520812?v=3&s=460">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Kristy's blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Kristy's blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/31/leetcode-9-Palindrome-Number/" itemprop="url">
+                  leetcode 9 Palindrome Number
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-31T00:01:38-08:00">
+                2017-01-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2017/01/31/leetcode-9-Palindrome-Number/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/31/leetcode-9-Palindrome-Number/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Question"><a href="#Question" class="headerlink" title="Question:"></a>Question:</h3><ol>
+<li>Palindrome Number<br>Determine whether an integer is a palindrome. Do this without extra space.</li>
+</ol>
+<p>Some hints:<br>Could negative integers be palindromes? (ie, -1)</p>
+<p>If you are thinking of converting the integer to string, note the restriction of using extra space.</p>
+<p>You could also try reversing an integer. However, if you have solved the problem “Reverse Integer”, you know that the reversed integer might overflow. How would you handle such case?</p>
+<p>There is a more generic way of solving this problem.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">//my solution</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>{
+        <span class="keyword">if</span>(x&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;
+        <span class="comment">//find the length</span>
+        <span class="keyword">int</span> temp = x;
+        <span class="keyword">int</span> length=<span class="number">0</span>;
+        <span class="keyword">while</span>(temp!=<span class="number">0</span>){
+            temp=temp/<span class="number">10</span>;
+            length++;
+        }
+        <span class="comment">// calculate the middle number</span>
+        <span class="keyword">int</span> middle = length%<span class="number">2</span> !=<span class="number">0</span> ? length/<span class="number">2</span>+<span class="number">1</span> : length/<span class="number">2</span>;
+        <span class="comment">//first half</span>
+        <span class="keyword">int</span> front=x;
+        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>; i&lt;=middle;i++){
+            front=front/<span class="number">10</span>;
+        }
+        <span class="comment">//second half and reverse</span>
+        <span class="keyword">int</span> value=x;
+        <span class="keyword">int</span> back=<span class="number">0</span>;
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=length-middle;i++){
+            <span class="keyword">int</span> tail = value%<span class="number">10</span>;
+            back=back*<span class="number">10</span>+tail;
+            value=value/<span class="number">10</span>;
+        }
+        <span class="keyword">return</span> front==back;
+
+    }
+}
+
+<span class="comment">//smarter solution</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>{
+        <span class="keyword">if</span> (x&lt;<span class="number">0</span> || (x!=<span class="number">0</span> &amp;&amp; x%<span class="number">10</span>==<span class="number">0</span>)) <span class="keyword">return</span> <span class="keyword">false</span>;
+        <span class="keyword">int</span> rev = <span class="number">0</span>;
+        <span class="keyword">while</span> (x&gt;rev){
+          rev = rev*<span class="number">10</span> + x%<span class="number">10</span>;
+          x = x/<span class="number">10</span>;
+        }
+        <span class="keyword">return</span> (x==rev || x==rev/<span class="number">10</span>);
+    }
+}
+</code></pre>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Negative number is not palindrome. </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/01/29/leetcode-237-Delete-Node-in-a-Linked-List/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1506,136 +1681,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/01/21/leetcode-19-Remove-nth-node-from-end-of-list/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Kristy Tian">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/4520812?v=3&s=460">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Kristy's blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Kristy's blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/21/leetcode-19-Remove-nth-node-from-end-of-list/" itemprop="url">
-                  leetcode 19 Remove nth node from end of list
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-21T18:57:37-08:00">
-                2017-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2017/01/21/leetcode-19-Remove-nth-node-from-end-of-list/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/21/leetcode-19-Remove-nth-node-from-end-of-list/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Question-19-Remove-Nth-Node-From-End-of-List"><a href="#Question-19-Remove-Nth-Node-From-End-of-List" class="headerlink" title="Question: 19. Remove Nth Node From End of List"></a>Question: 19. Remove Nth Node From End of List</h3><p>Given a linked list, remove the nth node from the end of list and return its head.</p>
-<p>For example,</p>
-<p>   Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.</p>
-<p>   After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.<br>Note:<br>Given n will always be valid.<br>Try to do this in one pass.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for singly-linked list.</span><br><span class="line"> * public class ListNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     ListNode next;</span><br><span class="line"> *     ListNode(int x) &#123; val = x; &#125;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeNthFromEnd</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//use two pointers one slow, one fast</span></span><br><span class="line">        ListNode start = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode slow = start;</span><br><span class="line">        ListNode fast = start;</span><br><span class="line">        slow.next = head;</span><br><span class="line">        <span class="comment">//make the gap between slow and fast to be n </span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n;i++)&#123;</span><br><span class="line">            fast = fast.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//move the slow and fast pointer until the end of the node, keep the same distance</span></span><br><span class="line">        <span class="keyword">while</span>(fast.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            fast = fast.next;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//slow's next one is the one we want to remove</span></span><br><span class="line">        slow.next = slow.next.next;</span><br><span class="line">        <span class="comment">//return the orginal head</span></span><br><span class="line">        <span class="keyword">return</span> start.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p><a href="https://discuss.leetcode.com/topic/7031/simple-java-solution-in-one-pass" target="_blank" rel="external">https://discuss.leetcode.com/topic/7031/simple-java-solution-in-one-pass</a><br>Move one pointer fast –&gt; n+1 places forward, to maintain a gap of n between the two pointers and then move both at the same speed. Finally, when the fast pointer reaches the end, the slow pointer will be n+1 places behind - just the right spot for it to be able to skip the next node.</p>
-<p>Since the question gives that n is valid, not too many checks have to be put in place. Otherwise, this would be necessary.</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1681,7 +1726,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">45</span>
+              <span class="site-state-item-count">46</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

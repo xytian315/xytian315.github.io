@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode," />
+  <meta name="keywords" content="leetcode,easy," />
 
 
 
@@ -92,7 +92,7 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
 <meta property="og:site_name" content="Kristy's blog">
 <meta property="og:description" content="Question: 7. Reverse IntegerReverse digits of an integer.
 Example1: x = 123, return 321Example2: x = -123, return -321">
-<meta property="og:updated_time" content="2017-01-30T02:21:13.000Z">
+<meta property="og:updated_time" content="2017-01-31T08:03:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode 7 Reverse Integer">
 <meta name="twitter:description" content="Question: 7. Reverse IntegerReverse digits of an integer.
@@ -360,9 +360,16 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
 
       
         <h3 id="Question-7-Reverse-Integer"><a href="#Question-7-Reverse-Integer" class="headerlink" title="Question: 7. Reverse Integer"></a>Question: 7. Reverse Integer</h3><p>Reverse digits of an integer.</p>
-<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>Do not forget to think about overflow problem.</p>
+<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321<br><a id="more"></a><br>Have you thought about this?<br>Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!</p>
+<p>If the integer’s last digit is 0, what should the output be? ie, cases such as 10, 100.</p>
+<p>Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?</p>
+<p>For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> tail,newResult;</span><br><span class="line">        <span class="keyword">while</span>(x!=<span class="number">0</span>)&#123;</span><br><span class="line">            tail=x%<span class="number">10</span>;</span><br><span class="line">            newResult=result*<span class="number">10</span>+tail;</span><br><span class="line">            <span class="keyword">if</span>((newResult-tail)/<span class="number">10</span>!=result)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            result=newResult;</span><br><span class="line">            x=x/<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><ol>
+<li>keep moving the tail into the front and mutliply by 10</li>
+<li>There is no difference between positive and negative nubmer while(x!=0)</li>
+<li>Do not forget to think about overflow problem. use newResult and result to check</li>
+</ol>
 
       
     </div>
@@ -387,6 +394,8 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
         <div class="post-tags">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+            <a href="/tags/easy/" rel="tag"># easy</a>
           
         </div>
       
@@ -482,7 +491,7 @@ Example1: x = 123, return 321Example2: x = -123, return -321">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">45</span>
+              <span class="site-state-item-count">46</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

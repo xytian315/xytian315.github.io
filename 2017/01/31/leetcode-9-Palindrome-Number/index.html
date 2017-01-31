@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,easy,array,hash table," />
+  <meta name="keywords" content="leetcode,easy,math," />
 
 
 
@@ -84,16 +84,28 @@
 
 
 
-<meta name="description" content="Question: 217. Contains DuplicateGiven an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should">
+<meta name="description" content="Question:
+Palindrome NumberDetermine whether an integer is a palindrome. Do this without extra space.
+
+Some hints:Could negative integers be palindromes? (ie, -1)
+If you are thinking of converting the">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 217 contains duplicate">
-<meta property="og:url" content="http://xytian315.github.io/2016/12/03/leetcode-217-contains-duplicate/index.html">
+<meta property="og:title" content="leetcode 9 Palindrome Number">
+<meta property="og:url" content="http://xytian315.github.io/2017/01/31/leetcode-9-Palindrome-Number/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 217. Contains DuplicateGiven an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should">
-<meta property="og:updated_time" content="2016-12-09T04:15:00.000Z">
+<meta property="og:description" content="Question:
+Palindrome NumberDetermine whether an integer is a palindrome. Do this without extra space.
+
+Some hints:Could negative integers be palindromes? (ie, -1)
+If you are thinking of converting the">
+<meta property="og:updated_time" content="2017-01-31T08:18:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 217 contains duplicate">
-<meta name="twitter:description" content="Question: 217. Contains DuplicateGiven an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should">
+<meta name="twitter:title" content="leetcode 9 Palindrome Number">
+<meta name="twitter:description" content="Question:
+Palindrome NumberDetermine whether an integer is a palindrome. Do this without extra space.
+
+Some hints:Could negative integers be palindromes? (ie, -1)
+If you are thinking of converting the">
 
 
 
@@ -121,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/12/03/leetcode-217-contains-duplicate/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2017/01/31/leetcode-9-Palindrome-Number/"/>
 
 
 
 
 
-  <title> leetcode 217 contains duplicate | Kristy's blog </title>
+  <title> leetcode 9 Palindrome Number | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -258,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/03/leetcode-217-contains-duplicate/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/01/31/leetcode-9-Palindrome-Number/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -282,7 +294,7 @@
             
             
               
-                leetcode 217 contains duplicate
+                leetcode 9 Palindrome Number
               
             
           </h1>
@@ -295,8 +307,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-03T15:21:20-08:00">
-                2016-12-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-31T00:01:38-08:00">
+                2017-01-31
               </time>
             
 
@@ -306,31 +318,13 @@
           </span>
 
           
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/03/leetcode-217-contains-duplicate/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/03/leetcode-217-contains-duplicate/" itemprop="commentCount"></span>
+                <a href="/2017/01/31/leetcode-9-Palindrome-Number/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/31/leetcode-9-Palindrome-Number/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,8 +350,58 @@
       
 
       
-        <h3 id="Question-217-Contains-Duplicate"><a href="#Question-217-Contains-Duplicate" class="headerlink" title="Question: 217. Contains Duplicate"></a>Question: 217. Contains Duplicate</h3><p>Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//time O(n) space O(n)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsDuplicate</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(set.contains(nums[i]))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                set.add(nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="Question"><a href="#Question" class="headerlink" title="Question:"></a>Question:</h3><ol>
+<li>Palindrome Number<br>Determine whether an integer is a palindrome. Do this without extra space.</li>
+</ol>
+<p>Some hints:<br>Could negative integers be palindromes? (ie, -1)</p>
+<p>If you are thinking of converting the integer to string, note the restriction of using extra space.</p>
+<p>You could also try reversing an integer. However, if you have solved the problem “Reverse Integer”, you know that the reversed integer might overflow. How would you handle such case?</p>
+<p>There is a more generic way of solving this problem.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">//my solution</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>{
+        <span class="keyword">if</span>(x&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;
+        <span class="comment">//find the length</span>
+        <span class="keyword">int</span> temp = x;
+        <span class="keyword">int</span> length=<span class="number">0</span>;
+        <span class="keyword">while</span>(temp!=<span class="number">0</span>){
+            temp=temp/<span class="number">10</span>;
+            length++;
+        }
+        <span class="comment">// calculate the middle number</span>
+        <span class="keyword">int</span> middle = length%<span class="number">2</span> !=<span class="number">0</span> ? length/<span class="number">2</span>+<span class="number">1</span> : length/<span class="number">2</span>;
+        <span class="comment">//first half</span>
+        <span class="keyword">int</span> front=x;
+        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>; i&lt;=middle;i++){
+            front=front/<span class="number">10</span>;
+        }
+        <span class="comment">//second half and reverse</span>
+        <span class="keyword">int</span> value=x;
+        <span class="keyword">int</span> back=<span class="number">0</span>;
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=length-middle;i++){
+            <span class="keyword">int</span> tail = value%<span class="number">10</span>;
+            back=back*<span class="number">10</span>+tail;
+            value=value/<span class="number">10</span>;
+        }
+        <span class="keyword">return</span> front==back;
+
+    }
+}
+
+<span class="comment">//smarter solution</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>{
+        <span class="keyword">if</span> (x&lt;<span class="number">0</span> || (x!=<span class="number">0</span> &amp;&amp; x%<span class="number">10</span>==<span class="number">0</span>)) <span class="keyword">return</span> <span class="keyword">false</span>;
+        <span class="keyword">int</span> rev = <span class="number">0</span>;
+        <span class="keyword">while</span> (x&gt;rev){
+          rev = rev*<span class="number">10</span> + x%<span class="number">10</span>;
+          x = x/<span class="number">10</span>;
+        }
+        <span class="keyword">return</span> (x==rev || x==rev/<span class="number">10</span>);
+    }
+}
+</code></pre>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Negative number is not palindrome. </p>
 
       
     </div>
@@ -385,9 +429,7 @@
           
             <a href="/tags/easy/" rel="tag"># easy</a>
           
-            <a href="/tags/array/" rel="tag"># array</a>
-          
-            <a href="/tags/hash-table/" rel="tag"># hash table</a>
+            <a href="/tags/math/" rel="tag"># math</a>
           
         </div>
       
@@ -396,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/03/leetcode-121-best-time-to-buy-and-sell-stock/" rel="next" title="leetcode 121 best time to buy and sell stock">
-                <i class="fa fa-chevron-left"></i> leetcode 121 best time to buy and sell stock
+              <a href="/2017/01/29/leetcode-237-Delete-Node-in-a-Linked-List/" rel="next" title="leetcode 237 Delete Node in a Linked List">
+                <i class="fa fa-chevron-left"></i> leetcode 237 Delete Node in a Linked List
               </a>
             
           </div>
@@ -405,10 +447,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/04/leetcode-219-contains-duplicate-II/" rel="prev" title="leetcode 219 contains duplicate II">
-                leetcode 219 contains duplicate II <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -546,7 +584,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-217-Contains-Duplicate"><span class="nav-number">1.</span> <span class="nav-text">Question: 217. Contains Duplicate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question"><span class="nav-number">1.</span> <span class="nav-text">Question:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">3.</span> <span class="nav-text">Notes</span></a></li></ol></div>
             
 
           </div>
@@ -677,9 +715,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/12/03/leetcode-217-contains-duplicate/';
+      var disqus_identifier = '2017/01/31/leetcode-9-Palindrome-Number/';
 
-      var disqus_title = "leetcode 217 contains duplicate";
+      var disqus_title = "leetcode 9 Palindrome Number";
 
 
       function run_disqus_script(disqus_script) {
