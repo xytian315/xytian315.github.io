@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2016/08/31/leetcode-66-Plus-one/</loc>
+    
+    <lastmod>2017-02-01T08:30:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xytian315.github.io/2017/01/31/leetcode-13-Roman-to-Integer/</loc>
+    
+    <lastmod>2017-02-01T07:09:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2017/01/31/leetcode-9-Palindrome-Number/</loc>
     
     <lastmod>2017-01-31T08:18:54.000Z</lastmod>
@@ -222,13 +236,6 @@
     <loc>http://xytian315.github.io/2016/12/05/leetcode-88-merge-sorted-array-0/</loc>
     
     <lastmod>2016-12-06T05:14:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xytian315.github.io/2016/08/31/leetcode-66-Plus-one/</loc>
-    
-    <lastmod>2016-12-06T05:13:49.000Z</lastmod>
     
   </url>
   
