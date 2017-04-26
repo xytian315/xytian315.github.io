@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2017-02-05T05:57:00.000Z</updated>
+  <updated>2017-04-26T05:50:02.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 167 Two Sum II - Input array is sorted</title>
+    <link href="http://xytian315.github.io/2017/04/25/leetcode-167-Two-Sum-II-Input-array-is-sorted/"/>
+    <id>http://xytian315.github.io/2017/04/25/leetcode-167-Two-Sum-II-Input-array-is-sorted/</id>
+    <published>2017-04-26T05:05:54.000Z</published>
+    <updated>2017-04-26T05:50:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Question-167-Two-Sum-II-Input-array-is-sorted"><a href="#Question-167-Two-Sum-II-Input-array-is-sorted" class="headerlink" title="Question 167. Two Sum II - Input array is sorted"></a>Question 167. Two Sum II - Input array is sorted</h3><p>Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.</p>
+<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.</p>
+<p>You may assume that each input would have exactly one solution and you may not use the same element twice.</p>
+<p>Input: numbers={2, 7, 11, 15}, target=9<br>Output: index1=1, index2=2</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//two pointer solution</span></span><br><span class="line"><span class="comment">//my solution not good O(n2)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> slow=<span class="number">0</span>; slow&lt;numbers.length-<span class="number">1</span>;slow++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> fast=slow+<span class="number">1</span>;fast&lt;=numbers.length-<span class="number">1</span>; fast++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(numbers[fast]==target-numbers[slow])&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;slow+<span class="number">1</span>,fast+<span class="number">1</span>&#125;;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(numbers[fast]&gt; target-numbers[slow])&#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//better solution O(n)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span> slow = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> fast = numbers.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(slow&lt;fast)&#123;</span><br><span class="line">            <span class="keyword">if</span>(numbers[slow] + numbers[fast] == target)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;slow+<span class="number">1</span>,fast+<span class="number">1</span>&#125;;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(numbers[slow] + numbers[fast] &gt; target)&#123;</span><br><span class="line">                fast--;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                slow++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Question-167-Two-Sum-II-Input-array-is-sorted&quot;&gt;&lt;a href=&quot;#Question-167-Two-Sum-II-Input-array-is-sorted&quot; class=&quot;headerlink&quot; title=&quot;Qu
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
+    
+      <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="binary search" scheme="http://xytian315.github.io/tags/binary-search/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 69 sqrt(x)</title>
@@ -780,39 +811,6 @@
     
       &lt;h3 id=&quot;Question-349-Intersection-of-Two-Arrays&quot;&gt;&lt;a href=&quot;#Question-349-Intersection-of-Two-Arrays&quot; class=&quot;headerlink&quot; title=&quot;Question: 349. Intersection of Two Arrays&quot;&gt;&lt;/a&gt;Question: 349. Intersection of Two Arrays&lt;/h3&gt;&lt;p&gt;Given two arrays, write a function to compute their intersection.&lt;/p&gt;
 &lt;p&gt;Example:&lt;br&gt;Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].&lt;br&gt;Note:&lt;br&gt;Each element in the result must be unique.&lt;br&gt;The result can be in any order.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 290 word pattern</title>
-    <link href="http://xytian315.github.io/2016/12/09/leetcode-290-word-pattern/"/>
-    <id>http://xytian315.github.io/2016/12/09/leetcode-290-word-pattern/</id>
-    <published>2016-12-10T07:37:22.000Z</published>
-    <updated>2016-12-10T07:58:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-290-Word-Pattern"><a href="#Question-290-Word-Pattern" class="headerlink" title="Question: 290. Word Pattern"></a>Question: 290. Word Pattern</h3><p>Given a pattern and a string str, find if str follows the same pattern.</p>
-<p>Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in str.</p>
-<p>Examples:<br>pattern = “abba”, str = “dog cat cat dog” should return true.<br>pattern = “abba”, str = “dog cat cat fish” should return false.<br>pattern = “aaaa”, str = “dog cat cat dog” should return false.<br>pattern = “abba”, str = “dog dog dog dog” should return false.<br>Notes:<br>You may assume pattern contains only lowercase letters, and str contains lowercase letters separated by a single space.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// the question is exactly same as isomorphic string</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordPattern</span><span class="params">(String pattern, String str)</span> </span>&#123;</span><br><span class="line">        String[] strings =str.split(<span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span>(pattern.length()!=strings.length) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Map&lt;Character, String&gt; map = <span class="keyword">new</span> HashMap&lt;Character, String&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pattern.length();i++)&#123;</span><br><span class="line">            <span class="comment">//has seen the key(char) before the value must be the same</span></span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(pattern.charAt(i)))&#123;</span><br><span class="line">                <span class="keyword">if</span>(map.get(pattern.charAt(i)).compareTo(strings[i])!=<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="comment">//same value can not be mapping to different keys</span></span><br><span class="line">                <span class="keyword">if</span>(map.containsValue(strings[i])) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                map.put(pattern.charAt(i), strings[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//my Solution</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordPattern</span><span class="params">(String pattern, String str)</span> </span>&#123;</span><br><span class="line">        String[] strings =str.split(<span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span>(pattern.length()!=strings.length) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">        <span class="keyword">int</span> last=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pattern.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(pattern.charAt(i)))&#123;</span><br><span class="line">                <span class="keyword">int</span> index = map.get(pattern.charAt(i));</span><br><span class="line">                <span class="keyword">if</span>(strings[i].compareTo(strings[index])!=<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(!map.isEmpty() &amp;&amp; strings[i].compareTo(strings[last])==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                map.put(pattern.charAt(i),i);</span><br><span class="line">                last =i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>This question is exactly same as isomorphic string<br>in isomorphic string is char mapping to char, here is char mapping to string</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-290-Word-Pattern&quot;&gt;&lt;a href=&quot;#Question-290-Word-Pattern&quot; class=&quot;headerlink&quot; title=&quot;Question: 290. Word Pattern&quot;&gt;&lt;/a&gt;Question: 290. Word Pattern&lt;/h3&gt;&lt;p&gt;Given a pattern and a string str, find if str follows the same pattern.&lt;/p&gt;
-&lt;p&gt;Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in str.&lt;/p&gt;
-&lt;p&gt;Examples:&lt;br&gt;pattern = “abba”, str = “dog cat cat dog” should return true.&lt;br&gt;pattern = “abba”, str = “dog cat cat fish” should return false.&lt;br&gt;pattern = “aaaa”, str = “dog cat cat dog” should return false.&lt;br&gt;pattern = “abba”, str = “dog dog dog dog” should return false.&lt;br&gt;Notes:&lt;br&gt;You may assume pattern contains only lowercase letters, and str contains lowercase letters separated by a single space.&lt;br&gt;
     
     </summary>
     
