@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,easy,array," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,15 @@
 
 
 
-<meta name="description" content="Question: 414. Third Maximum NumberGiven a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O">
-<meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 414 Third Maximum number">
-<meta property="og:url" content="http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/index.html">
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kristy's blog">
+<meta property="og:url" content="http://xytian315.github.io/page/6/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 414. Third Maximum NumberGiven a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O">
-<meta property="og:updated_time" content="2016-12-06T05:58:09.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 414 Third Maximum number">
-<meta name="twitter:description" content="Question: 414. Third Maximum NumberGiven a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O">
+<meta name="twitter:title" content="Kristy's blog">
+<meta name="twitter:description">
 
 
 
@@ -121,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/"/>
+  <link rel="canonical" href="http://xytian315.github.io/page/6/"/>
 
 
 
 
 
-  <title> leetcode 414 Third Maximum number | Kristy's blog </title>
+  <title> Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -148,7 +147,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -258,7 +259,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/12/05/leetcode-414-Third-Maximum-number/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/07/19/leetcode-2-Add-two-numbers/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -282,7 +283,10 @@
             
             
               
-                leetcode 414 Third Maximum number
+                
+                <a class="post-title-link" href="/2016/07/19/leetcode-2-Add-two-numbers/" itemprop="url">
+                  leetcode 2 Add Two Numbers
+                </a>
               
             
           </h1>
@@ -295,8 +299,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-05T21:55:27-08:00">
-                2016-12-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-19T23:34:59-07:00">
+                2016-07-19
               </time>
             
 
@@ -329,8 +333,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/05/leetcode-414-Third-Maximum-number/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/05/leetcode-414-Third-Maximum-number/" itemprop="commentCount"></span>
+                <a href="/2016/07/19/leetcode-2-Add-two-numbers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/19/leetcode-2-Add-two-numbers/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,81 +360,49 @@
       
 
       
-        <h3 id="Question-414-Third-Maximum-Number"><a href="#Question-414-Third-Maximum-Number" class="headerlink" title="Question: 414. Third Maximum Number"></a>Question: 414. Third Maximum Number</h3><p>Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).</p>
-<p>Example 1:<br>Input: [3, 2, 1]</p>
-<p>Output: 1</p>
-<p>Explanation: The third maximum is 1.<br>Example 2:<br>Input: [1, 2]</p>
-<p>Output: 2</p>
-<p>Explanation: The third maximum does not exist, so the maximum (2) is returned instead.<br>Example 3:<br>Input: [2, 2, 3, 1]</p>
-<p>Output: 1</p>
-<p>Explanation: Note that the third maximum here means the third maximum distinct number.<br>Both numbers with value 2 are both considered as second maximum.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">thirdMax</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> max = Long.MIN_VALUE;</span><br><span class="line">        <span class="keyword">long</span> mid = Long.MIN_VALUE;;</span><br><span class="line">        <span class="keyword">long</span> min = Long.MIN_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&gt;max)&#123;</span><br><span class="line">                min=mid;</span><br><span class="line">                mid=max;</span><br><span class="line">                max=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i&lt;max &amp;&amp; i&gt;mid)&#123;</span><br><span class="line">                min=mid;</span><br><span class="line">                mid=i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i&gt;min &amp;&amp; i&lt;mid)&#123;</span><br><span class="line">                min=i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(min!=Long.MIN_VALUE)&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)min;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">int</span>)max;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>should use long to initiate min value</p>
-
+        
+          <h3 id="Question-2-Add-Two-Numbers"><a href="#Question-2-Add-Two-Numbers" class="headerlink" title="Question: 2. Add Two Numbers"></a>Question: 2. Add Two Numbers</h3><p><a href="https://leetcode.com/problems/add-two-numbers/">https://leetcode.com/problems/add-two-numbers/</a><br>You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.<br>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>Output: 7 -&gt; 0 -&gt; 8<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/19/leetcode-2-Add-two-numbers/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
-          
-            <a href="/tags/easy/" rel="tag"># easy</a>
-          
-            <a href="/tags/array/" rel="tag"># array</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/12/05/leetcode-88-merge-sorted-array-0/" rel="next" title="leetcode 88 Merge sorted array">
-                <i class="fa fa-chevron-left"></i> leetcode 88 Merge sorted array
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/06/leetcode-36-valid-sudoku/" rel="prev" title="leetcode 36 valid sudoku">
-                leetcode 36 valid sudoku <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+  </nav>
+
 
 
           </div>
@@ -438,17 +410,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -468,17 +429,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/4520812?v=3&s=460"
@@ -542,22 +494,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-414-Third-Maximum-Number"><span class="nav-number">1.</span> <span class="nav-text">Question: 414. Third Maximum Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
@@ -663,10 +599,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 
@@ -683,9 +615,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/12/05/leetcode-414-Third-Maximum-number/';
+      var disqus_identifier = 'page/6/index.html';
 
-      var disqus_title = "leetcode 414 Third Maximum number";
+      var disqus_title = "";
 
 
       function run_disqus_script(disqus_script) {
@@ -698,13 +630,6 @@
 
       run_disqus_script('count.js');
 
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
       
 
     </script>

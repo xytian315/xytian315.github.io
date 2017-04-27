@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,easy,array," />
+  <meta name="keywords" content="leetcode,two pointers,string," />
 
 
 
@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="Question: 169. Majority ElementGiven an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
-You may assume that the array is non-empty">
+<meta name="description" content="Question: 125. Valid PalindromeGiven a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+For example,“A man, a plan, a canal: Panama” is a palindrom">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 169 Majority element">
-<meta property="og:url" content="http://xytian315.github.io/2016/08/31/leetcode-169-Majority-element/index.html">
+<meta property="og:title" content="leetcode 125 Valid palindrome">
+<meta property="og:url" content="http://xytian315.github.io/2017/04/26/leetcode-125-Valid-palindrome/index.html">
 <meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 169. Majority ElementGiven an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
-You may assume that the array is non-empty">
-<meta property="og:updated_time" content="2016-12-06T05:13:00.000Z">
+<meta property="og:description" content="Question: 125. Valid PalindromeGiven a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+For example,“A man, a plan, a canal: Panama” is a palindrom">
+<meta property="og:updated_time" content="2017-04-27T05:11:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode 169 Majority element">
-<meta name="twitter:description" content="Question: 169. Majority ElementGiven an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
-You may assume that the array is non-empty">
+<meta name="twitter:title" content="leetcode 125 Valid palindrome">
+<meta name="twitter:description" content="Question: 125. Valid PalindromeGiven a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+For example,“A man, a plan, a canal: Panama” is a palindrom">
 
 
 
@@ -124,13 +124,13 @@ You may assume that the array is non-empty">
 
 
 
-  <link rel="canonical" href="http://xytian315.github.io/2016/08/31/leetcode-169-Majority-element/"/>
+  <link rel="canonical" href="http://xytian315.github.io/2017/04/26/leetcode-125-Valid-palindrome/"/>
 
 
 
 
 
-  <title> leetcode 169 Majority element | Kristy's blog </title>
+  <title> leetcode 125 Valid palindrome | Kristy's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -261,7 +261,7 @@ You may assume that the array is non-empty">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2016/08/31/leetcode-169-Majority-element/">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/04/26/leetcode-125-Valid-palindrome/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Kristy Tian">
@@ -285,7 +285,7 @@ You may assume that the array is non-empty">
             
             
               
-                leetcode 169 Majority element
+                leetcode 125 Valid palindrome
               
             
           </h1>
@@ -298,8 +298,8 @@ You may assume that the array is non-empty">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-31T23:12:06-07:00">
-                2016-08-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-26T21:57:20-07:00">
+                2017-04-26
               </time>
             
 
@@ -309,31 +309,13 @@ You may assume that the array is non-empty">
           </span>
 
           
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/08/31/leetcode-169-Majority-element/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/31/leetcode-169-Majority-element/" itemprop="commentCount"></span>
+                <a href="/2017/04/26/leetcode-125-Valid-palindrome/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/04/26/leetcode-125-Valid-palindrome/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -359,11 +341,57 @@ You may assume that the array is non-empty">
       
 
       
-        <h3 id="Question-169-Majority-Element"><a href="#Question-169-Majority-Element" class="headerlink" title="Question: 169. Majority Element"></a>Question: 169. Majority Element</h3><p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.</p>
-<p>You may assume that the array is non-empty and the majority element always exist in the array.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/** my solution sort**/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">return</span> nums[nums.length/<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** my solution map notes: remember to return immediately if the value is more n/2 times **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">1</span>) <span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt; nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(nums[i]))&#123;</span><br><span class="line">                <span class="keyword">if</span>(map.get(nums[i])&gt;=nums.length/<span class="number">2</span>)</span><br><span class="line">                    <span class="keyword">return</span> nums[i];</span><br><span class="line">                map.replace(nums[i], map.get(nums[i])+<span class="number">1</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(nums[i], <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>sort will be o(nlog) time; hashmap will be o(n) time<br>there are also another genius solution o(n) time o(1) space so called Moores’s Voting algorithm<br><a href="https://discuss.leetcode.com/topic/8692/o-n-time-o-1-space-fastest-solution" target="_blank" rel="external">https://discuss.leetcode.com/topic/8692/o-n-time-o-1-space-fastest-solution</a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] num)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> major=num[<span class="number">0</span>], count = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;num.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(count==<span class="number">0</span>)&#123;</span><br><span class="line">                count++;</span><br><span class="line">                major=num[i];</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(major==num[i])&#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;<span class="keyword">else</span> count--;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> major;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="Question-125-Valid-Palindrome"><a href="#Question-125-Valid-Palindrome" class="headerlink" title="Question: 125. Valid Palindrome"></a>Question: 125. Valid Palindrome</h3><p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p>
+<p>For example,<br>“A man, a plan, a canal: Panama” is a palindrome.<br>“race a car” is not a palindrome.</p>
+<p>Note:<br>Have you consider that the string might be empty? This is a good question to ask during an interview.</p>
+<p>For the purpose of this problem, we define empty string as valid palindrome.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>{
+        ArrayList&lt;Character&gt; chars = <span class="keyword">new</span> ArrayList&lt;Character&gt;();
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=s.length()-<span class="number">1</span>;i++){
+            <span class="keyword">char</span> c=Character.toLowerCase(s.charAt(i));
+            <span class="keyword">if</span>((c&gt;=<span class="string">'a'</span> &amp;&amp; c&lt;=<span class="string">'z'</span>) || (c&gt;=<span class="string">'0'</span> &amp;&amp; c&lt;=<span class="string">'9'</span>)){
+                chars.add(c);
+            }
+        }
+        <span class="keyword">if</span>(chars.size()==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;
+        <span class="keyword">int</span> start = <span class="number">0</span>;
+        <span class="keyword">int</span> end = chars.size()-<span class="number">1</span>;
+        <span class="keyword">while</span>(start&lt;end){
+            <span class="keyword">if</span>(chars.get(start)!=chars.get(end)){
+                <span class="keyword">return</span> <span class="keyword">false</span>;
+            }
+            start++;
+            end--;
+        }
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    }
+}
 
+<span class="comment">//refactor</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>{
+        <span class="keyword">if</span>(s.length()==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">true</span>;
+        <span class="keyword">int</span> start = <span class="number">0</span>;
+        <span class="keyword">int</span> end = s.length()-<span class="number">1</span>;
+        <span class="keyword">while</span>(start&lt;end){
+            <span class="keyword">if</span>(!Character.isLetterOrDigit(s.charAt(start))){
+                start++;
+            } <span class="keyword">else</span> <span class="keyword">if</span>(!Character.isLetterOrDigit(s.charAt(end))){
+                end--;
+            } <span class="keyword">else</span> {
+                <span class="keyword">if</span> (Character.toLowerCase(s.charAt(start))!=Character.toLowerCase(s.charAt(end))){
+                    <span class="keyword">return</span> <span class="keyword">false</span>;
+                }
+                start++;
+                end--;
+            }
+        }
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    }
+}
+</code></pre>
+<h3 id="Notes-Notice-it-is-if-else-if-else"><a href="#Notes-Notice-it-is-if-else-if-else" class="headerlink" title="Notes: Notice it is if; else if;else"></a>Notes: Notice it is if; else if;else</h3>
       
     </div>
 
@@ -388,9 +416,9 @@ You may assume that the array is non-empty">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/easy/" rel="tag"># easy</a>
+            <a href="/tags/two-pointers/" rel="tag"># two pointers</a>
           
-            <a href="/tags/array/" rel="tag"># array</a>
+            <a href="/tags/string/" rel="tag"># string</a>
           
         </div>
       
@@ -399,8 +427,8 @@ You may assume that the array is non-empty">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/31/leetcode-66-Plus-one/" rel="next" title="leetcode 66 Plus one">
-                <i class="fa fa-chevron-left"></i> leetcode 66 Plus one
+              <a href="/2017/04/25/leetcode-167-Two-Sum-II-Input-array-is-sorted/" rel="next" title="leetcode 167 Two Sum II - Input array is sorted">
+                <i class="fa fa-chevron-left"></i> leetcode 167 Two Sum II - Input array is sorted
               </a>
             
           </div>
@@ -408,10 +436,6 @@ You may assume that the array is non-empty">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/08/leetcode-11/" rel="prev" title="leetcode 11 Container With Most Water">
-                leetcode 11 Container With Most Water <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -549,7 +573,7 @@ You may assume that the array is non-empty">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-169-Majority-Element"><span class="nav-number">1.</span> <span class="nav-text">Question: 169. Majority Element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thoughts"><span class="nav-number">3.</span> <span class="nav-text">Thoughts</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Question-125-Valid-Palindrome"><span class="nav-number">1.</span> <span class="nav-text">Question: 125. Valid Palindrome</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes-Notice-it-is-if-else-if-else"><span class="nav-number">3.</span> <span class="nav-text">Notes: Notice it is if; else if;else</span></a></li></ol></div>
             
 
           </div>
@@ -680,9 +704,9 @@ You may assume that the array is non-empty">
 
     <script type="text/javascript">
       var disqus_shortname = 'http-xytian315-github-io';
-      var disqus_identifier = '2016/08/31/leetcode-169-Majority-element/';
+      var disqus_identifier = '2017/04/26/leetcode-125-Valid-palindrome/';
 
-      var disqus_title = "leetcode 169 Majority element";
+      var disqus_title = "leetcode 125 Valid palindrome";
 
 
       function run_disqus_script(disqus_script) {
