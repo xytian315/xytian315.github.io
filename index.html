@@ -256,6 +256,132 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/06/01/leetcode-14-longest-common-prefix/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Kristy Tian">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/4520812?v=3&s=460">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Kristy's blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Kristy's blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/01/leetcode-14-longest-common-prefix/" itemprop="url">
+                  leetcode 14 longest common prefix
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-01T15:26:11-07:00">
+                2017-06-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2017/06/01/leetcode-14-longest-common-prefix/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/06/01/leetcode-14-longest-common-prefix/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="14-Longest-Common-Prefix"><a href="#14-Longest-Common-Prefix" class="headerlink" title="14. Longest Common Prefix"></a>14. Longest Common Prefix</h3><p>Write a function to find the longest common prefix string amongst an array of strings.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//on 06/01/2017</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</div><div class="line">      <span class="comment">//brute force o(n2)</span></div><div class="line">      <span class="keyword">if</span>(strs.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">      <span class="keyword">char</span>[] firstChars = strs[<span class="number">0</span>].toCharArray();</div><div class="line">      StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;firstChars.length;i++)&#123;</div><div class="line">        <span class="keyword">char</span> c = firstChars[i];</div><div class="line">        <span class="keyword">int</span> j =<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(j&lt;strs.length)&#123;</div><div class="line">          <span class="keyword">if</span>(i&gt;strs[j].length()-<span class="number">1</span> || strs[j].charAt(i)!=c)&#123;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">          &#125;</div><div class="line">          j++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(j==strs.length)&#123;</div><div class="line">          sb.append(c);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">          <span class="keyword">return</span> sb.toString();</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> sb.toString();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//discusion solution</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span>(strs == <span class="keyword">null</span> || strs.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">      String result = strs[<span class="number">0</span>];</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span>; i&lt;strs.length;i++)&#123;</div><div class="line">        <span class="keyword">while</span>(strs[i].indexOf(result)!=<span class="number">0</span>)&#123;</div><div class="line">          result = result.substring(<span class="number">0</span>, result.length()-<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>use string method indexOf()  and substring()<br><a href="http://beginnersbook.com/2013/12/java-string-indexof-method-example/" target="_blank" rel="external">http://beginnersbook.com/2013/12/java-string-indexof-method-example/</a><br><a href="http://beginnersbook.com/2013/12/java-string-substring-method-example/" target="_blank" rel="external">http://beginnersbook.com/2013/12/java-string-substring-method-example/</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/05/17/leetcode-35-Search-Insert-Position/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1001,7 +1127,7 @@
 <p>Input is guaranteed to be within the range from 1 to 3999.</p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//my first time solution on 01/31/2017</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character,Integer&gt;();</div><div class="line">        map.put(<span class="string">'I'</span>,<span class="number">1</span>);</div><div class="line">        map.put(<span class="string">'V'</span>,<span class="number">5</span>);</div><div class="line">        map.put(<span class="string">'X'</span>,<span class="number">10</span>);</div><div class="line">        map.put(<span class="string">'L'</span>,<span class="number">50</span>);</div><div class="line">        map.put(<span class="string">'C'</span>,<span class="number">100</span>);</div><div class="line">        map.put(<span class="string">'D'</span>,<span class="number">500</span>);</div><div class="line">        map.put(<span class="string">'M'</span>,<span class="number">1000</span>);</div><div class="line">        <span class="keyword">int</span> result=<span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> index =<span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(index&lt;=s.length()-<span class="number">2</span>)&#123;</div><div class="line">            Character c1 = s.charAt(index);</div><div class="line">            Character c2 = s.charAt(index+<span class="number">1</span>);</div><div class="line">            <span class="keyword">int</span> value1 = map.get(c1);</div><div class="line">            <span class="keyword">int</span> value2 = map.get(c2);</div><div class="line">            <span class="keyword">if</span>(value1&gt;=value2)&#123;</div><div class="line">                result+=value1;</div><div class="line">                index++;</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                result+=value2-value1;</div><div class="line">                index+=<span class="number">2</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(index==s.length()-<span class="number">1</span>)</div><div class="line">            result+=map.get(s.charAt(index));</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//refactor a little bit, MMXIV = M+M+X-I+V I was thinking "M+M+X+(V-I)" :(</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character,Integer&gt;();</div><div class="line">        map.put(<span class="string">'I'</span>,<span class="number">1</span>);</div><div class="line">        map.put(<span class="string">'V'</span>,<span class="number">5</span>);</div><div class="line">        map.put(<span class="string">'X'</span>,<span class="number">10</span>);</div><div class="line">        map.put(<span class="string">'L'</span>,<span class="number">50</span>);</div><div class="line">        map.put(<span class="string">'C'</span>,<span class="number">100</span>);</div><div class="line">        map.put(<span class="string">'D'</span>,<span class="number">500</span>);</div><div class="line">        map.put(<span class="string">'M'</span>,<span class="number">1000</span>);</div><div class="line">        <span class="keyword">int</span> result=<span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> index =<span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(index&lt;=s.length()-<span class="number">2</span>)&#123;</div><div class="line">            Character c1 = s.charAt(index);</div><div class="line">            Character c2 = s.charAt(index+<span class="number">1</span>);</div><div class="line">            <span class="keyword">int</span> value1 = map.get(c1);</div><div class="line">            <span class="keyword">int</span> value2 = map.get(c2);</div><div class="line">            <span class="keyword">if</span>(value1&gt;=value2)&#123;</div><div class="line">                result+=value1;</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                result-=value1;</div><div class="line">            &#125;</div><div class="line">            index++;</div><div class="line">        &#125;</div><div class="line">        result+=map.get(s.charAt(index));</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//06/01/2017 </span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">      Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</div><div class="line">      map.put(<span class="string">'I'</span>, <span class="number">1</span>);</div><div class="line">      map.put(<span class="string">'V'</span>, <span class="number">5</span>);</div><div class="line">      map.put(<span class="string">'X'</span>, <span class="number">10</span>);</div><div class="line">      map.put(<span class="string">'L'</span>, <span class="number">50</span>);</div><div class="line">      map.put(<span class="string">'C'</span>, <span class="number">100</span>);</div><div class="line">      map.put(<span class="string">'D'</span>, <span class="number">500</span>);</div><div class="line">      map.put(<span class="string">'M'</span>, <span class="number">1000</span>);</div><div class="line">      <span class="keyword">int</span> result = <span class="number">0</span>;</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length()-<span class="number">1</span>;i++)&#123;</div><div class="line">        <span class="keyword">int</span> value = map.get(s.charAt(i));</div><div class="line">        <span class="keyword">int</span> next = map.get(s.charAt(i+<span class="number">1</span>));</div><div class="line">        <span class="keyword">if</span>(next&lt;=value)&#123;</div><div class="line">          result+=value;</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">          result-=value;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> result+map.get(s.charAt(s.length()-<span class="number">1</span>));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>besides map, we could also put into an array</p>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>besides map, we could also put into an integer array</p>
 
           
         
@@ -1456,184 +1582,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://xytian315.github.io/2017/01/27/leetcode-206-Reverse-Linked-List/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Kristy Tian">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/4520812?v=3&s=460">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Kristy's blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Kristy's blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/27/leetcode-206-Reverse-Linked-List/" itemprop="url">
-                  leetcode 206 Reverse Linked List
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-27T21:44:33-08:00">
-                2017-01-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2017/01/27/leetcode-206-Reverse-Linked-List/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/27/leetcode-206-Reverse-Linked-List/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Question-206-Reverse-Linked-List"><a href="#Question-206-Reverse-Linked-List" class="headerlink" title="Question: 206. Reverse Linked List"></a>Question: 206. Reverse Linked List</h3><p>Reverse a singly linked list.<br>recursive and iterative</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */</span>
-
-<span class="comment">//my passed recursive solution </span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head==<span class="keyword">null</span>|| head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        ListNode node = head.next;
-        <span class="keyword">if</span>(node.next!=<span class="keyword">null</span>){
-            node=reverseList(node);
-        }
-        ListNode node2=node;
-        <span class="keyword">while</span>(node2.next!=<span class="keyword">null</span>){
-            node2=node2.next;
-        }
-        node2.next=head;
-        head.next=<span class="keyword">null</span>;
-        <span class="keyword">return</span> node;
-    }
-}
-<span class="comment">//cleaner recursive solution</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head==<span class="keyword">null</span>|| head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        ListNode nodeNext = head.next;
-        ListNode newHead = reverseList(nodeNext);
-        nodeNext.next = head;
-        head.next = <span class="keyword">null</span>;
-        <span class="keyword">return</span> newHead;
-    }
-}
-
-<span class="comment">//iterative solution</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head==<span class="keyword">null</span>|| head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        ListNode newHead = <span class="keyword">null</span>;
-        <span class="keyword">while</span>(head!=<span class="keyword">null</span>){
-            ListNode nodeNext = head.next;
-            head.next=newHead;
-            newHead=head;
-            head=nodeNext;
-        }
-        <span class="keyword">return</span> newHead;
-    }
-}
-</code></pre>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>recursive and iterative</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1679,7 +1627,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-count">53</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
