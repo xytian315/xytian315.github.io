@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,easy,array," />
+  <meta name="keywords" content="leetcode,array,easy," />
 
 
 
@@ -84,19 +84,17 @@
 
 
 
-<meta name="description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
-Find all the elements of [1, n]">
+<meta name="description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once. Find all the elements of [1, n]">
+<meta name="keywords" content="leetcode,array,easy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode 448 Find All Numbers Disappeared in an Array">
 <meta property="og:url" content="http://xytian315.github.io/2016/12/01/leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/index.html">
-<meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
-Find all the elements of [1, n]">
+<meta property="og:site_name" content="Kristy&#39;s blog">
+<meta property="og:description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once. Find all the elements of [1, n]">
 <meta property="og:updated_time" content="2016-12-06T05:13:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode 448 Find All Numbers Disappeared in an Array">
-<meta name="twitter:description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
-Find all the elements of [1, n]">
+<meta name="twitter:description" content="Question: Find All Numbers Disappeared in an ArrayGiven an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once. Find all the elements of [1, n]">
 
 
 
@@ -366,8 +364,8 @@ Find all the elements of [1, n]">
 <p>Input:<br>[4,3,2,7,8,2,3,1]</p>
 <p>Output:<br>[5,6]</p>
 <h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts:"></a>Thoughts:</h3><p>思路：<br>第一种简单解法O(n) space O(n) time<br>1把数组中的所有数字放到一个set中<br>2loop 从1到n, 如果数字i不在set中，即是答案disappeared number<br>第二种优化解法O(1) space O(n)time<br>1用index来标记是否数字出现于数组中， 如果数字在数组中，相应的index变成负数。nums[nums[i]-1] = -nums[nums[i]-1]<br>2loop array, 如果数字是正数，说明这个数字没有出现在数组中，既是答案<br>注：因为index是从0开始的，0到n-1, 而我们需要1到n, 所以纪录时要减1，最后结果要加1</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//O(n) space O(n) time</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i&lt;nums.length;i++)&#123;</span><br><span class="line">            set.add(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;= nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.contains(i))&#123;</span><br><span class="line">                result.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// NO extra space solution O(1) space O(n)time</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span> ; i&lt;nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> value = Math.abs(nums[i])-<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[value]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                nums[value] = -nums[value];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                result.add(i+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//O(n) space O(n) time</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</div><div class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i&lt;nums.length;i++)&#123;</div><div class="line">            set.add(nums[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;= nums.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span>(!set.contains(i))&#123;</div><div class="line">                result.add(i);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// NO extra space solution O(1) space O(n)time</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</div><div class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span> ; i&lt;nums.length; i++)&#123;</div><div class="line">            <span class="keyword">int</span> value = Math.abs(nums[i])-<span class="number">1</span>;</div><div class="line">            <span class="keyword">if</span>(nums[value]&gt;<span class="number">0</span>)&#123;</div><div class="line">                nums[value] = -nums[value];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(nums[i]&gt;<span class="number">0</span>)&#123;</div><div class="line">                result.add(i+<span class="number">1</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -393,9 +391,9 @@ Find all the elements of [1, n]">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/easy/" rel="tag"># easy</a>
-          
             <a href="/tags/array/" rel="tag"># array</a>
+          
+            <a href="/tags/easy/" rel="tag"># easy</a>
           
         </div>
       
@@ -491,7 +489,7 @@ Find all the elements of [1, n]">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">52</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

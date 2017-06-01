@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,easy,array,hash table," />
+  <meta name="keywords" content="leetcode,array,easy,hash table," />
 
 
 
@@ -84,22 +84,17 @@
 
 
 
-<meta name="description" content="Question: 1. Two SumGiven an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution.
-Example:Gi">
+<meta name="description" content="Question: 1. Two SumGiven an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution. Example:Gi">
+<meta name="keywords" content="leetcode,array,easy,hash table">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode 1 two sum">
 <meta property="og:url" content="http://xytian315.github.io/2016/12/04/leetcode-1-two-sum/index.html">
-<meta property="og:site_name" content="Kristy's blog">
-<meta property="og:description" content="Question: 1. Two SumGiven an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution.
-Example:Gi">
+<meta property="og:site_name" content="Kristy&#39;s blog">
+<meta property="og:description" content="Question: 1. Two SumGiven an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution. Example:Gi">
 <meta property="og:updated_time" content="2016-12-07T05:33:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode 1 two sum">
-<meta name="twitter:description" content="Question: 1. Two SumGiven an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution.
-Example:Gi">
+<meta name="twitter:description" content="Question: 1. Two SumGiven an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution. Example:Gi">
 
 
 
@@ -366,7 +361,7 @@ Example:Gi">
 <p>You may assume that each input would have exactly one solution.</p>
 <p>Example:<br>Given nums = [2, 7, 11, 15], target = 9,</p>
 <p>Because nums[0] + nums[1] = 2 + 7 = 9,<br>return [0, 1].<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(target-nums[i]))&#123;</span><br><span class="line">                result[<span class="number">0</span>]=map.get(target-nums[i]);</span><br><span class="line">                result[<span class="number">1</span>]=i;</span><br><span class="line">                <span class="keyword">return</span> result;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                map.put(nums[i], i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</div><div class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</div><div class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;nums.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span>(map.containsKey(target-nums[i]))&#123;</div><div class="line">                result[<span class="number">0</span>]=map.get(target-nums[i]);</div><div class="line">                result[<span class="number">1</span>]=i;</div><div class="line">                <span class="keyword">return</span> result;</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                map.put(nums[i], i);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -391,9 +386,9 @@ Example:Gi">
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/easy/" rel="tag"># easy</a>
-          
             <a href="/tags/array/" rel="tag"># array</a>
+          
+            <a href="/tags/easy/" rel="tag"># easy</a>
           
             <a href="/tags/hash-table/" rel="tag"># hash table</a>
           
@@ -491,7 +486,7 @@ Example:Gi">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-count">52</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
