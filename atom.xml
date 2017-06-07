@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2017-06-05T23:36:30.000Z</updated>
+  <updated>2017-06-07T03:58:08.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 28 Implement strStr()</title>
+    <link href="http://xytian315.github.io/2017/06/06/leetcode-28-Implement-strStr/"/>
+    <id>http://xytian315.github.io/2017/06/06/leetcode-28-Implement-strStr/</id>
+    <published>2017-06-07T03:38:10.000Z</published>
+    <updated>2017-06-07T03:58:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="28-Implement-strStr"><a href="#28-Implement-strStr" class="headerlink" title="28. Implement strStr()"></a>28. Implement strStr()</h3><p>Implement strStr().<br>Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//my first time solution</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span>(needle.length()==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">      <span class="keyword">if</span>(haystack.length() ==<span class="number">0</span>) <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;haystack.length(); i++)&#123;</div><div class="line">        <span class="keyword">if</span>(haystack.charAt(i) == needle.charAt(<span class="number">0</span>) &amp;&amp; (i+needle.length()-<span class="number">1</span>&lt;=haystack.length()-<span class="number">1</span>))&#123;</div><div class="line">          <span class="keyword">int</span> j = <span class="number">1</span>;</div><div class="line">          <span class="keyword">while</span>(j&lt;needle.length())&#123;</div><div class="line">            <span class="keyword">if</span>(haystack.charAt(i+j) != needle.charAt(j))&#123;</div><div class="line">              <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            j++;</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">if</span>(j==needle.length())&#123;</div><div class="line">            <span class="keyword">return</span> i;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//better readable solution</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span>(needle.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i&lt;=haystack.length()-needle.length(); i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;needle.length() &amp;&amp; haystack.charAt(i+j) == needle.charAt(j); j++)&#123;</div><div class="line">          <span class="keyword">if</span>(j == needle.length() -<span class="number">1</span>) <span class="keyword">return</span> i;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;28-Implement-strStr&quot;&gt;&lt;a href=&quot;#28-Implement-strStr&quot; class=&quot;headerlink&quot; title=&quot;28. Implement strStr()&quot;&gt;&lt;/a&gt;28. Implement strStr()&lt;/h3
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
+    
+      <category term="string" scheme="http://xytian315.github.io/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode 20 Valid Parenthese</title>
     <link href="http://xytian315.github.io/2017/06/05/leetcode-20-Valid-Parenthese/"/>
     <id>http://xytian315.github.io/2017/06/05/leetcode-20-Valid-Parenthese/</id>
     <published>2017-06-05T23:30:33.000Z</published>
-    <updated>2017-06-05T23:36:30.000Z</updated>
+    <updated>2017-06-05T23:39:01.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="20-Valid-Parentheses"><a href="#20-Valid-Parentheses" class="headerlink" title="20. Valid Parentheses"></a>20. Valid Parentheses</h3><p>Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.<br>The brackets must close in the correct order, “()” and “()[]{}” are all valid but “(]” and “([)]” are not.</p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//06/05/2017</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span>(s.length()%<span class="number">2</span>!=<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">      Stack&lt;Character&gt; st = <span class="keyword">new</span> Stack&lt;&gt;();</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++) &#123;</div><div class="line">        <span class="keyword">if</span>(s.charAt(i) == <span class="string">'('</span>)&#123;</div><div class="line">          st.push(<span class="string">')'</span>);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i) == <span class="string">'['</span>)&#123;</div><div class="line">          st.push(<span class="string">']'</span>);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(s.charAt(i) == <span class="string">'&#123;'</span>)&#123;</div><div class="line">          st.push(<span class="string">'&#125;'</span>);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (st.isEmpty() || s.charAt(i) !=st.pop())&#123;</div><div class="line">          <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> st.isEmpty();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
@@ -362,11 +387,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -387,11 +412,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -466,11 +491,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -494,11 +519,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -525,11 +550,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -553,11 +578,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
@@ -624,11 +649,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -653,11 +678,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -702,11 +727,11 @@
     </summary>
     
     
+      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
+    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
@@ -733,60 +758,13 @@
     </summary>
     
     
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
       <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
-      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 438 Find all anagrams in a string</title>
-    <link href="http://xytian315.github.io/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/"/>
-    <id>http://xytian315.github.io/2016/12/13/leetcode-438-Find-all-anagrams-in-a-string/</id>
-    <published>2016-12-13T08:11:15.000Z</published>
-    <updated>2016-12-13T08:14:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-438-Find-All-Anagrams-in-a-String"><a href="#Question-438-Find-All-Anagrams-in-a-String" class="headerlink" title="Question: 438. Find All Anagrams in a String"></a>Question: 438. Find All Anagrams in a String</h3><p>Given a string s and a non-empty string p, find all the start indices of p’s anagrams in s.</p>
-<p>Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.</p>
-<p>The order of output does not matter.</p>
-<p>Example 1:</p>
-<p>Input:<br>s: “cbaebabacd” p: “abc”</p>
-<p>Output:<br>[0, 6]</p>
-<p>Explanation:<br>The substring with start index = 0 is “cba”, which is an anagram of “abc”.<br>The substring with start index = 6 is “bac”, which is an anagram of “abc”.<br>Example 2:</p>
-<p>Input:<br>s: “abab” p: “ab”</p>
-<p>Output:<br>[0, 1, 2]</p>
-<p>Explanation:<br>The substring with start index = 0 is “ab”, which is an anagram of “ab”.<br>The substring with start index = 1 is “ba”, which is an anagram of “ab”.<br>The substring with start index = 2 is “ab”, which is an anagram of “ab”.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findAnagrams</span><span class="params">(String s, String p)</span> </span>&#123;</div><div class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span> || p == <span class="keyword">null</span> || p.length() == <span class="number">0</span>) <span class="keyword">return</span> list;</div><div class="line">    </div><div class="line">    <span class="keyword">int</span>[] hash = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">256</span>]; <span class="comment">//character hash</span></div><div class="line">    </div><div class="line">    <span class="comment">//record each character in p to hash</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> c : p.toCharArray()) &#123;</div><div class="line">        hash[c]++;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//two points, initialize count to p's length</span></div><div class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>, count = p.length();</div><div class="line">    </div><div class="line">    <span class="keyword">while</span> (right &lt; s.length()) &#123;</div><div class="line">        <span class="comment">//move right everytime, if the character exists in p's hash, decrease the count</span></div><div class="line">        <span class="comment">//current hash value &gt;= 1 means the character is existing in p</span></div><div class="line">        <span class="keyword">if</span> (hash[s.charAt(right)] &gt;= <span class="number">1</span>) &#123;</div><div class="line">            count--;</div><div class="line">        &#125;</div><div class="line">        hash[s.charAt(right)]--;</div><div class="line">        right++;</div><div class="line">        </div><div class="line">        <span class="comment">//when the count is down to 0, means we found the right anagram</span></div><div class="line">        <span class="comment">//then add window's left to result list</span></div><div class="line">        <span class="keyword">if</span> (count == <span class="number">0</span>) &#123;</div><div class="line">            list.add(left);</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//if we find the window's size equals to p, then we have to move left (narrow the window) to find the new match window</span></div><div class="line">        <span class="comment">//++ to reset the hash because we kicked out the left</span></div><div class="line">        <span class="comment">//only increase the count if the character is in p</span></div><div class="line">        <span class="comment">//the count &gt;= 0 indicate it was original in the hash, cuz it won't go below 0</span></div><div class="line">        <span class="keyword">if</span> (right - left == p.length() ) &#123;</div><div class="line">           </div><div class="line">            <span class="keyword">if</span> (hash[s.charAt(left)] &gt;= <span class="number">0</span>) &#123;</div><div class="line">                count++;</div><div class="line">            &#125;</div><div class="line">            hash[s.charAt(left)]++;</div><div class="line">            left++;</div><div class="line">        </div><div class="line">        &#125;</div><div class="line"></div><div class="line">        </div><div class="line">    &#125;</div><div class="line">        <span class="keyword">return</span> list;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p><a href="https://discuss.leetcode.com/topic/64434/shortest-concise-java-o-n-sliding-window-solution/4" target="_blank" rel="external">https://discuss.leetcode.com/topic/64434/shortest-concise-java-o-n-sliding-window-solution/4</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-438-Find-All-Anagrams-in-a-String&quot;&gt;&lt;a href=&quot;#Question-438-Find-All-Anagrams-in-a-String&quot; class=&quot;headerlink&quot; title=&quot;Question: 438. Find All Anagrams in a String&quot;&gt;&lt;/a&gt;Question: 438. Find All Anagrams in a String&lt;/h3&gt;&lt;p&gt;Given a string s and a non-empty string p, find all the start indices of p’s anagrams in s.&lt;/p&gt;
-&lt;p&gt;Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.&lt;/p&gt;
-&lt;p&gt;The order of output does not matter.&lt;/p&gt;
-&lt;p&gt;Example 1:&lt;/p&gt;
-&lt;p&gt;Input:&lt;br&gt;s: “cbaebabacd” p: “abc”&lt;/p&gt;
-&lt;p&gt;Output:&lt;br&gt;[0, 6]&lt;/p&gt;
-&lt;p&gt;Explanation:&lt;br&gt;The substring with start index = 0 is “cba”, which is an anagram of “abc”.&lt;br&gt;The substring with start index = 6 is “bac”, which is an anagram of “abc”.&lt;br&gt;Example 2:&lt;/p&gt;
-&lt;p&gt;Input:&lt;br&gt;s: “abab” p: “ab”&lt;/p&gt;
-&lt;p&gt;Output:&lt;br&gt;[0, 1, 2]&lt;/p&gt;
-&lt;p&gt;Explanation:&lt;br&gt;The substring with start index = 0 is “ab”, which is an anagram of “ab”.&lt;br&gt;The substring with start index = 1 is “ba”, which is an anagram of “ab”.&lt;br&gt;The substring with start index = 2 is “ab”, which is an anagram of “ab”.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/categories/leetcode/"/>
-    
-    
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
       <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
     
-      <category term="hash table" scheme="http://xytian315.github.io/tags/hash-table/"/>
+      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
   </entry>
   
