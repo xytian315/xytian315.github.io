@@ -340,12 +340,15 @@
 
       
         
-          
-            <h3 id="Question-237-Delete-Node-in-a-Linked-List"><a href="#Question-237-Delete-Node-in-a-Linked-List" class="headerlink" title="Question: 237. Delete Node in a Linked List"></a>Question: 237. Delete Node in a Linked List</h3><p>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.</p>
-<p>Supposed the linked list is 1 -&gt; 2 -&gt; 3 -&gt; 4 and you are given the third node with value 3, the linked list should become 1 -&gt; 2 -&gt; 4 after calling your function.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * public class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(ListNode node)</span> </span>&#123;</div><div class="line">        node.val=node.next.val;</div><div class="line">        node.next=node.next.next;</div><div class="line">            </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
+          <h3 id="Question-237-Delete-Node-in-a-Linked-List"><a href="#Question-237-Delete-Node-in-a-Linked-List" class="headerlink" title="Question: 237. Delete Node in a Linked List"></a>Question: 237. Delete Node in a Linked List</h3><p>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.</p>
+<p>Supposed the linked list is 1 -&gt; 2 -&gt; 3 -&gt; 4 and you are given the third node with value 3, the linked list should become 1 -&gt; 2 -&gt; 4 after calling your function.<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/29/leetcode-237-Delete-Node-in-a-Linked-List/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -466,10 +469,14 @@
 
       
         
-          
-            <h3 id="Question-234-Palindrome-Linked-List"><a href="#Question-234-Palindrome-Linked-List" class="headerlink" title="Question: 234. Palindrome Linked List"></a>Question: 234. Palindrome Linked List</h3><p>Given a singly linked list, determine if it is a palindrome.<br>Follow up:<br>Could you do it in O(n) time and O(1) space?</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * public class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(ListNode head)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="comment">//calculate the length of the node</span></div><div class="line">        <span class="keyword">int</span> length=<span class="number">0</span>;</div><div class="line">        ListNode temp = head;</div><div class="line">        <span class="keyword">while</span>(temp!=<span class="keyword">null</span>)&#123;</div><div class="line">            temp=temp.next;</div><div class="line">            length++;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//find the middle of the ListNode</span></div><div class="line">        ListNode middle=head;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>; i&lt;=length/<span class="number">2</span>-<span class="number">1</span>;i++)&#123;</div><div class="line">            middle=middle.next;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(length%<span class="number">2</span>!=<span class="number">0</span>)</div><div class="line">            middle=middle.next;</div><div class="line">        <span class="comment">//reverse the second half of the listNode</span></div><div class="line">        ListNode newMiddle=reverse(middle);</div><div class="line">        <span class="comment">//compare first half and reversed harlf of the listNode</span></div><div class="line">        <span class="keyword">while</span>(head!=<span class="keyword">null</span> &amp;&amp; newMiddle!=<span class="keyword">null</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(head.val!=newMiddle.val)</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            head=head.next;</div><div class="line">            newMiddle=newMiddle.next;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    <span class="function">ListNode <span class="title">reverse</span><span class="params">(ListNode node)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(node==<span class="keyword">null</span> || node.next==<span class="keyword">null</span>) <span class="keyword">return</span> node;</div><div class="line">        ListNode temp = node.next;</div><div class="line">        ListNode newHead=reverse(temp);</div><div class="line">        temp.next=node;</div><div class="line">        node.next=<span class="keyword">null</span>;</div><div class="line">        <span class="keyword">return</span> newHead;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//refactor a little bit, we don't need to get the length to find the middle of the ListNode,</span></div><div class="line"><span class="comment">//we can just use the two pointers to find the middle of the ListNode;</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(ListNode head)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="comment">//find the middle of the ListNode;</span></div><div class="line">        <span class="comment">//use two pointers one move one step, the other one move two steps</span></div><div class="line">        ListNode slow = head;</div><div class="line">        ListNode fast = head;</div><div class="line">        <span class="keyword">while</span>(fast!=<span class="keyword">null</span> &amp;&amp; fast.next!=<span class="keyword">null</span>)&#123;</div><div class="line">            slow=slow.next;</div><div class="line">            fast=fast.next.next;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//odd numbers move one more into the other half</span></div><div class="line">        <span class="keyword">if</span>(fast!=<span class="keyword">null</span>)</div><div class="line">            slow=slow.next;</div><div class="line">        <span class="comment">//reverse the second half of the listNode</span></div><div class="line">        ListNode newMiddle=reverse(slow);</div><div class="line">        <span class="comment">//compare first half and reversed harlf of the listNode</span></div><div class="line">        <span class="keyword">while</span>(head!=<span class="keyword">null</span> &amp;&amp; newMiddle!=<span class="keyword">null</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(head.val!=newMiddle.val)</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            head=head.next;</div><div class="line">            newMiddle=newMiddle.next;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    <span class="function">ListNode <span class="title">reverse</span><span class="params">(ListNode node)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(node==<span class="keyword">null</span> || node.next==<span class="keyword">null</span>) <span class="keyword">return</span> node;</div><div class="line">        ListNode temp = node.next;</div><div class="line">        ListNode newHead=reverse(temp);</div><div class="line">        temp.next=node;</div><div class="line">        node.next=<span class="keyword">null</span>;</div><div class="line">        <span class="keyword">return</span> newHead;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
+          <h3 id="Question-234-Palindrome-Linked-List"><a href="#Question-234-Palindrome-Linked-List" class="headerlink" title="Question: 234. Palindrome Linked List"></a>Question: 234. Palindrome Linked List</h3><p>Given a singly linked list, determine if it is a palindrome.<br>Follow up:<br>Could you do it in O(n) time and O(1) space?<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/28/leetcode-234-Palindrome-Linked-List/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -590,64 +597,14 @@
 
       
         
-          
-            <h3 id="Question-206-Reverse-Linked-List"><a href="#Question-206-Reverse-Linked-List" class="headerlink" title="Question: 206. Reverse Linked List"></a>Question: 206. Reverse Linked List</h3><p>Reverse a singly linked list.<br>recursive and iterative</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */</span>
-
-<span class="comment">//my passed recursive solution </span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head==<span class="keyword">null</span>|| head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        ListNode node = head.next;
-        <span class="keyword">if</span>(node.next!=<span class="keyword">null</span>){
-            node=reverseList(node);
-        }
-        ListNode node2=node;
-        <span class="keyword">while</span>(node2.next!=<span class="keyword">null</span>){
-            node2=node2.next;
-        }
-        node2.next=head;
-        head.next=<span class="keyword">null</span>;
-        <span class="keyword">return</span> node;
-    }
-}
-<span class="comment">//cleaner recursive solution</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head==<span class="keyword">null</span>|| head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        ListNode nodeNext = head.next;
-        ListNode newHead = reverseList(nodeNext);
-        nodeNext.next = head;
-        head.next = <span class="keyword">null</span>;
-        <span class="keyword">return</span> newHead;
-    }
-}
-
-<span class="comment">//iterative solution</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head==<span class="keyword">null</span>|| head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        ListNode newHead = <span class="keyword">null</span>;
-        <span class="keyword">while</span>(head!=<span class="keyword">null</span>){
-            ListNode nodeNext = head.next;
-            head.next=newHead;
-            newHead=head;
-            head=nodeNext;
-        }
-        <span class="keyword">return</span> newHead;
-    }
-}
-</code></pre>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>recursive and iterative</p>
-
-          
+          <h3 id="Question-206-Reverse-Linked-List"><a href="#Question-206-Reverse-Linked-List" class="headerlink" title="Question: 206. Reverse Linked List"></a>Question: 206. Reverse Linked List</h3><p>Reverse a singly linked list.<br>recursive and iterative<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/27/leetcode-206-Reverse-Linked-List/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -768,13 +725,15 @@
 
       
         
-          
-            <h3 id="Question-203-Remove-Linked-List-Elements"><a href="#Question-203-Remove-Linked-List-Elements" class="headerlink" title="Question: 203. Remove Linked List Elements"></a>Question: 203. Remove Linked List Elements</h3><p>Remove all elements from a linked list of integers that have value val.</p>
-<p>Example<br>Given: 1 –&gt; 2 –&gt; 6 –&gt; 3 –&gt; 4 –&gt; 5 –&gt; 6, val = 6<br>Return: 1 –&gt; 2 –&gt; 3 –&gt; 4 –&gt; 5</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//my one time pass solution haha:)</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * public class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeElements</span><span class="params">(ListNode head, <span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span>) <span class="keyword">return</span> head;</div><div class="line">        <span class="keyword">if</span>(head.val==val) <span class="keyword">return</span> removeElements(head.next,val);</div><div class="line">        head.next = removeElements(head.next,val);</div><div class="line">        <span class="keyword">return</span> head;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//we can refactor a little bit</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeElements</span><span class="params">(ListNode head, <span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">        head.next = removeElements(head.next, val);</div><div class="line">        <span class="keyword">return</span>  head.val == val ? head.next : head;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>recursive</p>
-
-          
+          <h3 id="Question-203-Remove-Linked-List-Elements"><a href="#Question-203-Remove-Linked-List-Elements" class="headerlink" title="Question: 203. Remove Linked List Elements"></a>Question: 203. Remove Linked List Elements</h3><p>Remove all elements from a linked list of integers that have value val.</p>
+<p>Example<br>Given: 1 –&gt; 2 –&gt; 6 –&gt; 3 –&gt; 4 –&gt; 5 –&gt; 6, val = 6<br>Return: 1 –&gt; 2 –&gt; 3 –&gt; 4 –&gt; 5<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/27/leetcode-203-Remove-Linked-List-Elements/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -895,16 +854,16 @@
 
       
         
-          
-            <h3 id="Question-160-Intersection-of-Two-Linked-Lists"><a href="#Question-160-Intersection-of-Two-Linked-Lists" class="headerlink" title="Question: 160. Intersection of Two Linked Lists"></a>Question: 160. Intersection of Two Linked Lists</h3><p>Write a program to find the node at which the intersection of two singly linked lists begins.<br>For example, the following two linked lists:</p>
+          <h3 id="Question-160-Intersection-of-Two-Linked-Lists"><a href="#Question-160-Intersection-of-Two-Linked-Lists" class="headerlink" title="Question: 160. Intersection of Two Linked Lists"></a>Question: 160. Intersection of Two Linked Lists</h3><p>Write a program to find the node at which the intersection of two singly linked lists begins.<br>For example, the following two linked lists:</p>
 <p>A:          a1 → a2<br>                   ↘<br>                     c1 → c2 → c3<br>                   ↗<br>B:     b1 → b2 → b3<br>begin to intersect at node c1.</p>
-<p>Notes:<br>If the two linked lists have no intersection at all, return null.<br>The linked lists must retain their original structure after the function returns.<br>You may assume there are no cycles anywhere in the entire linked structure.<br>Your code should preferably run in O(n) time and use only O(1) memory.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * public class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123;</div><div class="line"> *         val = x;</div><div class="line"> *         next = null;</div><div class="line"> *     &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"></div><div class="line"><span class="comment">//best solution</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(headA==<span class="keyword">null</span> || headB==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">        ListNode a=headA;</div><div class="line">        ListNode b=headB;</div><div class="line">        <span class="keyword">while</span>(a!=b)&#123;</div><div class="line">            a= a==<span class="keyword">null</span> ? headB : a.next;</div><div class="line">            b= b==<span class="keyword">null</span> ? headA : b.next;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//another solution easy to understand</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//1, Get the length of the two lists.</span></div><div class="line"><span class="comment">//2, Align them to the same start point.</span></div><div class="line"><span class="comment">//3, Move them together until finding the intersection point, or the end null</span></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(headA==<span class="keyword">null</span> || headB==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">int</span> lengthA=length(headA);</div><div class="line">        <span class="keyword">int</span> lengthB=length(headB);</div><div class="line">        <span class="keyword">while</span>(lengthA&gt;lengthB)&#123;</div><div class="line">            headA=headA.next;</div><div class="line">            lengthA--;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span>(lengthA&lt;lengthB)&#123;</div><div class="line">            headB=headB.next;</div><div class="line">            lengthB--;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span>(headA!=headB)&#123;</div><div class="line">            headA=headA.next;</div><div class="line">            headB=headB.next;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> headA;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">length</span><span class="params">(ListNode node)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> result=<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(node.next!=<span class="keyword">null</span>)&#123;</div><div class="line">            node=node.next;</div><div class="line">            result++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h3><p><a href="https://discuss.leetcode.com/topic/28067/java-solution-without-knowing-the-difference-in-len" target="_blank" rel="external">https://discuss.leetcode.com/topic/28067/java-solution-without-knowing-the-difference-in-len</a><br>We can use two iterations to do that. In the first iteration, we will reset the pointer of one linkedlist to the head of another linkedlist after it reaches the tail node. In the second iteration, we will move two pointers until they points to the same node. Our operations in first iteration will help us counteract the difference. So if two linkedlist intersects, the meeting point in second iteration must be the intersection point. If the two linked lists have no intersection at all, then the meeting pointer in second iteration must be the tail node of both lists, which is null</p>
-<p> the two iterations will both run for listA.length + listB.length and will reach the intersection point at the same time after switching the pointer.</p>
-
-          
+<p>Notes:<br>If the two linked lists have no intersection at all, return null.<br>The linked lists must retain their original structure after the function returns.<br>You may assume there are no cycles anywhere in the entire linked structure.<br>Your code should preferably run in O(n) time and use only O(1) memory.<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/26/leetcode-160-Intersection-of-Two-Linked-Lists/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1025,13 +984,15 @@
 
       
         
-          
-            <h3 id="Question-141-Linked-List-Cycle"><a href="#Question-141-Linked-List-Cycle" class="headerlink" title="Question: 141. Linked List Cycle"></a>Question: 141. Linked List Cycle</h3><p>Given a linked list, determine if it has a cycle in it.</p>
-<p>Follow up:<br>Can you solve it without using extra space?</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//my first time solution</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123;</div><div class="line"> *         val = x;</div><div class="line"> *         next = null;</div><div class="line"> *     &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        Set&lt;ListNode&gt; set = <span class="keyword">new</span> HashSet&lt;ListNode&gt;();</div><div class="line">        <span class="keyword">while</span>(head.next!=<span class="keyword">null</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(!set.add(head))&#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">             head=head.next;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//better solution!</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        ListNode walker = head;</div><div class="line">        ListNode runner = head;</div><div class="line">        <span class="keyword">while</span>(runner.next!=<span class="keyword">null</span>&amp;&amp; runner.next.next!=<span class="keyword">null</span>)&#123;</div><div class="line">            walker = walker.next;</div><div class="line">            runner = runner.next.next;</div><div class="line">            <span class="keyword">if</span>(walker == runner)</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h3><p>Floyd’s cycle-finding algorithm, also know as tortoise and hare algorithm. The idea is to have two pointers to the list and move them at different speeds. Move one forward by 1 node and the other by 2 nodes. If the linked list has a loop they will definitely meet.</p>
-
-          
+          <h3 id="Question-141-Linked-List-Cycle"><a href="#Question-141-Linked-List-Cycle" class="headerlink" title="Question: 141. Linked List Cycle"></a>Question: 141. Linked List Cycle</h3><p>Given a linked list, determine if it has a cycle in it.</p>
+<p>Follow up:<br>Can you solve it without using extra space?<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/25/Leetcode-141-Linked-List-Cycle/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1152,54 +1113,15 @@
 
       
         
-          
-            <h3 id="Question-83-Remove-Duplicates-from-Sorted-List"><a href="#Question-83-Remove-Duplicates-from-Sorted-List" class="headerlink" title="Question: 83. Remove Duplicates from Sorted List"></a>Question: 83. Remove Duplicates from Sorted List</h3><p>Given a sorted linked list, delete all duplicates such that each element appear only once.</p>
-<p>For example,<br>Given 1-&gt;1-&gt;2, return 1-&gt;2.<br>Given 1-&gt;1-&gt;2-&gt;3-&gt;3, return 1-&gt;2-&gt;3.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">//my first time solution</span>
-<span class="comment">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        ListNode slow = head;
-        ListNode fast = head.next;
-        <span class="keyword">int</span> temp=slow.val;
-        <span class="keyword">while</span>(slow!=<span class="keyword">null</span>&amp;&amp;fast!=<span class="keyword">null</span>){
-           <span class="keyword">while</span>(fast.val==temp&amp;&amp;fast.next!=<span class="keyword">null</span>)
-                fast=fast.next;
-            <span class="keyword">if</span>(fast.val==temp){
-                slow.next=<span class="keyword">null</span>;
-                <span class="keyword">break</span>;
-            }
-            slow.next=fast;
-            slow=slow.next;
-            fast=fast.next;
-            temp=slow.val;
-        }
-        <span class="keyword">return</span> head;
-
-    }
-}
-
-<span class="comment">//better solution</span>
-
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        head.next=deleteDuplicates(head.next);
-        <span class="keyword">return</span> head.val==head.next.val ? head.next : head;
-    }
-}
-</code></pre>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Recursive</p>
-
-          
+          <h3 id="Question-83-Remove-Duplicates-from-Sorted-List"><a href="#Question-83-Remove-Duplicates-from-Sorted-List" class="headerlink" title="Question: 83. Remove Duplicates from Sorted List"></a>Question: 83. Remove Duplicates from Sorted List</h3><p>Given a sorted linked list, delete all duplicates such that each element appear only once.</p>
+<p>For example,<br>Given 1-&gt;1-&gt;2, return 1-&gt;2.<br>Given 1-&gt;1-&gt;2-&gt;3-&gt;3, return 1-&gt;2-&gt;3.<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/24/leetcode-83-Removed-duplicates-from-sorted-list/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1320,14 +1242,16 @@
 
       
         
-          
-            <h3 id="Question-24-Swap-Nodes-in-Pairs"><a href="#Question-24-Swap-Nodes-in-Pairs" class="headerlink" title="Question: 24. Swap Nodes in Pairs"></a>Question: 24. Swap Nodes in Pairs</h3><p>Given a linked list, swap every two adjacent nodes and return its head.</p>
+          <h3 id="Question-24-Swap-Nodes-in-Pairs"><a href="#Question-24-Swap-Nodes-in-Pairs" class="headerlink" title="Question: 24. Swap Nodes in Pairs"></a>Question: 24. Swap Nodes in Pairs</h3><p>Given a linked list, swap every two adjacent nodes and return its head.</p>
 <p>For example,<br>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</p>
-<p>Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//my first time solution</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * public class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</div><div class="line">      ListNode current = head;</div><div class="line">      <span class="keyword">if</span>(current == <span class="keyword">null</span> || current.next==<span class="keyword">null</span>)&#123;</div><div class="line">          <span class="keyword">return</span> current;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">          ListNode temp1=current;</div><div class="line">          ListNode temp2=current.next;</div><div class="line">          ListNode temp3;</div><div class="line">          <span class="keyword">if</span>(temp2.next!=<span class="keyword">null</span>)&#123;</div><div class="line">            temp3=temp2.next;</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">else</span>&#123;</div><div class="line">            temp3=<span class="keyword">null</span>;</div><div class="line">          &#125;</div><div class="line">         current=temp2;</div><div class="line">         temp2.next=temp1;</div><div class="line">         <span class="keyword">if</span>(temp3==<span class="keyword">null</span>)&#123;</div><div class="line">             temp1.next=<span class="keyword">null</span>;</div><div class="line">         &#125;<span class="keyword">else</span>&#123;</div><div class="line">             temp1.next=swapPairs(temp3);</div><div class="line">         &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> current;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//better solution</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</div><div class="line">      <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next==<span class="keyword">null</span>)&#123;</div><div class="line">          <span class="keyword">return</span> head;</div><div class="line">      &#125;</div><div class="line">      ListNode temp = head.next;</div><div class="line">      head.next=swapPairs(head.next.next);</div><div class="line">      temp.next=head;</div><div class="line">      <span class="keyword">return</span> temp;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>recursive</p>
-
-          
+<p>Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/23/leetcode-24-Swap-Nodes-in-Pairs/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1448,34 +1372,14 @@
 
       
         
-          
-            <h3 id="Question-21-Merge-Two-Sorted-Lists"><a href="#Question-21-Merge-Two-Sorted-Lists" class="headerlink" title="Question: 21. Merge Two Sorted Lists"></a>Question: 21. Merge Two Sorted Lists</h3><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">mergeTwoLists</span><span class="params">(ListNode l1, ListNode l2)</span> </span>{
-        <span class="keyword">if</span>(l1==<span class="keyword">null</span>) <span class="keyword">return</span> l2;
-        <span class="keyword">if</span>(l2==<span class="keyword">null</span>) <span class="keyword">return</span> l1;
-        <span class="keyword">if</span>(l1.val&lt;l2.val){
-            l1.next=mergeTwoLists(l1.next, l2);
-            <span class="keyword">return</span> l1;
-        }<span class="keyword">else</span>{
-            l2.next=mergeTwoLists(l2.next,l1);
-            <span class="keyword">return</span> l2;
-        }
-
-    }
-}
-</code></pre>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Recursive</p>
-
-          
+          <h3 id="Question-21-Merge-Two-Sorted-Lists"><a href="#Question-21-Merge-Two-Sorted-Lists" class="headerlink" title="Question: 21. Merge Two Sorted Lists"></a>Question: 21. Merge Two Sorted Lists</h3><p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/22/leetcode-21-Merged-two-sortd-list/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1596,16 +1500,17 @@
 
       
         
-          
-            <h3 id="Question-19-Remove-Nth-Node-From-End-of-List"><a href="#Question-19-Remove-Nth-Node-From-End-of-List" class="headerlink" title="Question: 19. Remove Nth Node From End of List"></a>Question: 19. Remove Nth Node From End of List</h3><p>Given a linked list, remove the nth node from the end of list and return its head.</p>
+          <h3 id="Question-19-Remove-Nth-Node-From-End-of-List"><a href="#Question-19-Remove-Nth-Node-From-End-of-List" class="headerlink" title="Question: 19. Remove Nth Node From End of List"></a>Question: 19. Remove Nth Node From End of List</h3><p>Given a linked list, remove the nth node from the end of list and return its head.</p>
 <p>For example,</p>
 <p>   Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.</p>
-<p>   After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.<br>Note:<br>Given n will always be valid.<br>Try to do this in one pass.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for singly-linked list.</div><div class="line"> * public class ListNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     ListNode next;</div><div class="line"> *     ListNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeNthFromEnd</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">        <span class="comment">//use two pointers one slow, one fast</span></div><div class="line">        ListNode start = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</div><div class="line">        ListNode slow = start;</div><div class="line">        ListNode fast = start;</div><div class="line">        slow.next = head;</div><div class="line">        <span class="comment">//make the gap between slow and fast to be n </span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n;i++)&#123;</div><div class="line">            fast = fast.next;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//move the slow and fast pointer until the end of the node, keep the same distance</span></div><div class="line">        <span class="keyword">while</span>(fast.next!=<span class="keyword">null</span>)&#123;</div><div class="line">            fast = fast.next;</div><div class="line">            slow = slow.next;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//slow's next one is the one we want to remove</span></div><div class="line">        slow.next = slow.next.next;</div><div class="line">        <span class="comment">//return the orginal head</span></div><div class="line">        <span class="keyword">return</span> start.next;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p><a href="https://discuss.leetcode.com/topic/7031/simple-java-solution-in-one-pass" target="_blank" rel="external">https://discuss.leetcode.com/topic/7031/simple-java-solution-in-one-pass</a><br>Move one pointer fast –&gt; n+1 places forward, to maintain a gap of n between the two pointers and then move both at the same speed. Finally, when the fast pointer reaches the end, the slow pointer will be n+1 places behind - just the right spot for it to be able to skip the next node.</p>
-<p>Since the question gives that n is valid, not too many checks have to be put in place. Otherwise, this would be necessary.</p>
-
-          
+<p>   After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.<br>Note:<br>Given n will always be valid.<br>Try to do this in one pass.<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/21/leetcode-19-Remove-nth-node-from-end-of-list/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

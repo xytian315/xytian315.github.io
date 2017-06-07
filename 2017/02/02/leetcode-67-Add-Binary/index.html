@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="Question: 67. Add BinaryGiven two binary strings, return their sum (also a binary string). For example,a = “11”b = “1”Return “100”. Solution1234567891011121314151617181920public class Solution &amp;#123;">
+<meta name="description" content="Question: 67. Add BinaryGiven two binary strings, return their sum (also a binary string). For example,a = “11”b = “1”Return “100”.">
 <meta name="keywords" content="leetcode,easy,math">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode 67 Add Binary">
 <meta property="og:url" content="http://xytian315.github.io/2017/02/02/leetcode-67-Add-Binary/index.html">
 <meta property="og:site_name" content="Kristy&#39;s blog">
-<meta property="og:description" content="Question: 67. Add BinaryGiven two binary strings, return their sum (also a binary string). For example,a = “11”b = “1”Return “100”. Solution1234567891011121314151617181920public class Solution &amp;#123;">
-<meta property="og:updated_time" content="2017-02-03T19:43:34.000Z">
+<meta property="og:description" content="Question: 67. Add BinaryGiven two binary strings, return their sum (also a binary string). For example,a = “11”b = “1”Return “100”.">
+<meta property="og:updated_time" content="2017-06-07T04:17:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode 67 Add Binary">
-<meta name="twitter:description" content="Question: 67. Add BinaryGiven two binary strings, return their sum (also a binary string). For example,a = “11”b = “1”Return “100”. Solution1234567891011121314151617181920public class Solution &amp;#123;">
+<meta name="twitter:description" content="Question: 67. Add BinaryGiven two binary strings, return their sum (also a binary string). For example,a = “11”b = “1”Return “100”.">
 
 
 
@@ -340,7 +340,7 @@
 
       
         <h3 id="Question-67-Add-Binary"><a href="#Question-67-Add-Binary" class="headerlink" title="Question: 67. Add Binary"></a>Question: 67. Add Binary</h3><p>Given two binary strings, return their sum (also a binary string).</p>
-<p>For example,<br>a = “11”<br>b = “1”<br>Return “100”.</p>
+<p>For example,<br>a = “11”<br>b = “1”<br>Return “100”.<br><a id="more"></a></p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">addBinary</span><span class="params">(String a, String b)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i=a.length()-<span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> j=b.length()-<span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</div><div class="line">        StringBuilder sb= <span class="keyword">new</span> StringBuilder();</div><div class="line">        <span class="keyword">while</span>(i&gt;=<span class="number">0</span> || j&gt;=<span class="number">0</span>)&#123;</div><div class="line">            <span class="keyword">int</span> temp=carry;</div><div class="line">            <span class="keyword">if</span>(i&gt;=<span class="number">0</span>)</div><div class="line">                temp+=a.charAt(i--)-<span class="string">'0'</span>;</div><div class="line">            <span class="keyword">if</span>(j&gt;=<span class="number">0</span>)</div><div class="line">                temp+=b.charAt(j--)-<span class="string">'0'</span>;</div><div class="line">            sb.append(temp%<span class="number">2</span>);</div><div class="line">            carry=temp/<span class="number">2</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(carry!=<span class="number">0</span>)</div><div class="line">            sb.append(carry);</div><div class="line">        <span class="keyword">return</span> sb.reverse().toString();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>use StringBuilder;<br>StringBuilder has reverse() method;<br>there could be 3 use ()%2 and ()/2 to calculate the value and carry</p>
 
