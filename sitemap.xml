@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2017/06/07/leetcode-38-Count-and-Say/</loc>
+    
+    <lastmod>2017-06-08T05:50:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2017/01/31/leetcode-9-Palindrome-Number/</loc>
     
     <lastmod>2017-06-07T04:17:25.000Z</lastmod>
