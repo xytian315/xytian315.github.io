@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xytian315.github.io/2017/02/02/leetcode-67-Add-Binary/</loc>
+    
+    <lastmod>2017-07-06T03:54:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xytian315.github.io/2017/07/05/leetcode-67-Add-Binary-1/</loc>
+    
+    <lastmod>2017-07-06T03:49:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xytian315.github.io/2017/06/08/leetcode-58-Lenght-of-Last-Word/</loc>
     
     <lastmod>2017-06-09T04:48:23.000Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>http://xytian315.github.io/2017/02/04/leetcode-69-sqrt-x/</loc>
     
     <lastmod>2017-06-07T04:17:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xytian315.github.io/2017/02/02/leetcode-67-Add-Binary/</loc>
-    
-    <lastmod>2017-06-07T04:17:13.000Z</lastmod>
     
   </url>
   
