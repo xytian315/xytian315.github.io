@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xytian315.github.io/"/>
-  <updated>2017-07-06T03:49:48.000Z</updated>
+  <updated>2017-08-30T04:59:28.000Z</updated>
   <id>http://xytian315.github.io/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 5 Longest Palindromic Substring</title>
+    <link href="http://xytian315.github.io/2017/08/29/leetcode-5-Longest-Palindromic-Substring/"/>
+    <id>http://xytian315.github.io/2017/08/29/leetcode-5-Longest-Palindromic-Substring/</id>
+    <published>2017-08-30T04:57:18.000Z</published>
+    <updated>2017-08-30T04:59:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5. Longest Palindromic Substring"></a>5. Longest Palindromic Substring</h3><p><a href="https://leetcode.com/problems/longest-palindromic-substring/description/" target="_blank" rel="external">https://leetcode.com/problems/longest-palindromic-substring/description/</a><br>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</p>
+<p>Example:</p>
+<p>Input: “babad”</p>
+<p>Output: “bab”</p>
+<p>Note: “aba” is also a valid answer.<br>Example:</p>
+<p>Input: “cbbd”</p>
+<p>Output: “bb”<br><a id="more"></a></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> startIndex, maxLength = <span class="number">0</span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (s.length() &lt;= <span class="number">1</span>) <span class="keyword">return</span> s;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length()-<span class="number">1</span>; i++) &#123;</div><div class="line">            extendFromCenter(s, i, i);</div><div class="line">            extendFromCenter(s, i, i+<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> s.substring(startIndex, startIndex + maxLength);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">extendFromCenter</span><span class="params">(String s, <span class="keyword">int</span> j, <span class="keyword">int</span> k)</span> </span>&#123;</div><div class="line">        <span class="keyword">while</span> (j&gt;=<span class="number">0</span> &amp;&amp; k&lt;=s.length()-<span class="number">1</span> &amp;&amp; s.charAt(j) == s.charAt(k)) &#123;</div><div class="line">            j--;</div><div class="line">            k++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (k-j-<span class="number">1</span> &gt; maxLength) &#123;</div><div class="line">          startIndex = j+<span class="number">1</span>;</div><div class="line">          maxLength = k-j-<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;5-Longest-Palindromic-Substring&quot;&gt;&lt;a href=&quot;#5-Longest-Palindromic-Substring&quot; class=&quot;headerlink&quot; title=&quot;5. Longest Palindromic Substring&quot;&gt;&lt;/a&gt;5. Longest Palindromic Substring&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/longest-palindromic-substring/description/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://leetcode.com/problems/longest-palindromic-substring/description/&lt;/a&gt;&lt;br&gt;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;Input: “babad”&lt;/p&gt;
+&lt;p&gt;Output: “bab”&lt;/p&gt;
+&lt;p&gt;Note: “aba” is also a valid answer.&lt;br&gt;Example:&lt;/p&gt;
+&lt;p&gt;Input: “cbbd”&lt;/p&gt;
+&lt;p&gt;Output: “bb”&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
+    
+      <category term="medium" scheme="http://xytian315.github.io/tags/medium/"/>
+    
+      <category term="string" scheme="http://xytian315.github.io/tags/string/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 67 Add Binary</title>
@@ -275,9 +313,9 @@
     
       <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
     
-      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
-    
       <category term="array" scheme="http://xytian315.github.io/tags/array/"/>
+    
+      <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
     
       <category term="binary search" scheme="http://xytian315.github.io/tags/binary-search/"/>
     
@@ -338,7 +376,7 @@
     <link href="http://xytian315.github.io/2017/02/02/leetcode-67-Add-Binary/"/>
     <id>http://xytian315.github.io/2017/02/02/leetcode-67-Add-Binary/</id>
     <published>2017-02-03T07:15:14.000Z</published>
-    <updated>2017-07-06T03:54:54.000Z</updated>
+    <updated>2017-07-06T03:55:26.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Question-67-Add-Binary"><a href="#Question-67-Add-Binary" class="headerlink" title="Question: 67. Add Binary"></a>Question: 67. Add Binary</h3><p>Given two binary strings, return their sum (also a binary string).</p>
 <p>For example,<br>a = “11”<br>b = “1”<br>Return “100”.<br><a id="more"></a></p>
@@ -699,76 +737,6 @@
       <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
       <category term="two pointers" scheme="http://xytian315.github.io/tags/two-pointers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 83 Removed duplicates from sorted list</title>
-    <link href="http://xytian315.github.io/2017/01/24/leetcode-83-Removed-duplicates-from-sorted-list/"/>
-    <id>http://xytian315.github.io/2017/01/24/leetcode-83-Removed-duplicates-from-sorted-list/</id>
-    <published>2017-01-25T02:44:58.000Z</published>
-    <updated>2017-06-07T04:17:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Question-83-Remove-Duplicates-from-Sorted-List"><a href="#Question-83-Remove-Duplicates-from-Sorted-List" class="headerlink" title="Question: 83. Remove Duplicates from Sorted List"></a>Question: 83. Remove Duplicates from Sorted List</h3><p>Given a sorted linked list, delete all duplicates such that each element appear only once.</p>
-<p>For example,<br>Given 1-&gt;1-&gt;2, return 1-&gt;2.<br>Given 1-&gt;1-&gt;2-&gt;3-&gt;3, return 1-&gt;2-&gt;3.<br><a id="more"></a></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><pre><code class="java"><span class="comment">//my first time solution</span>
-<span class="comment">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        ListNode slow = head;
-        ListNode fast = head.next;
-        <span class="keyword">int</span> temp=slow.val;
-        <span class="keyword">while</span>(slow!=<span class="keyword">null</span>&amp;&amp;fast!=<span class="keyword">null</span>){
-           <span class="keyword">while</span>(fast.val==temp&amp;&amp;fast.next!=<span class="keyword">null</span>)
-                fast=fast.next;
-            <span class="keyword">if</span>(fast.val==temp){
-                slow.next=<span class="keyword">null</span>;
-                <span class="keyword">break</span>;
-            }
-            slow.next=fast;
-            slow=slow.next;
-            fast=fast.next;
-            temp=slow.val;
-        }
-        <span class="keyword">return</span> head;
-
-    }
-}
-
-<span class="comment">//better solution</span>
-
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
-    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>{
-        <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next==<span class="keyword">null</span>) <span class="keyword">return</span> head;
-        head.next=deleteDuplicates(head.next);
-        <span class="keyword">return</span> head.val==head.next.val ? head.next : head;
-    }
-}
-</code></pre>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>Recursive</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Question-83-Remove-Duplicates-from-Sorted-List&quot;&gt;&lt;a href=&quot;#Question-83-Remove-Duplicates-from-Sorted-List&quot; class=&quot;headerlink&quot; title=&quot;Question: 83. Remove Duplicates from Sorted List&quot;&gt;&lt;/a&gt;Question: 83. Remove Duplicates from Sorted List&lt;/h3&gt;&lt;p&gt;Given a sorted linked list, delete all duplicates such that each element appear only once.&lt;/p&gt;
-&lt;p&gt;For example,&lt;br&gt;Given 1-&amp;gt;1-&amp;gt;2, return 1-&amp;gt;2.&lt;br&gt;Given 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3, return 1-&amp;gt;2-&amp;gt;3.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://xytian315.github.io/tags/leetcode/"/>
-    
-      <category term="easy" scheme="http://xytian315.github.io/tags/easy/"/>
-    
-      <category term="linked list" scheme="http://xytian315.github.io/tags/linked-list/"/>
     
   </entry>
   
